@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+  <title>Cov19 Thane Vaccination</title>
+  <link rel="stylesheet" href="OneUI/oui.min.css">
+  <link rel="stylesheet" href="materialize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/brands.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/solid.min.css">
+  <link rel="icon" href="images/COV.ico">
+  <style>
+    @font-face {
+      font-family: 'SamsungOne 400';
+      src: local('SamsungOne 400'), url('SamsungOne-400.woff') format('woff');
+    }
+
+    * {
+      font-family: 'SamsungOne 400';
+      font-size: larger;
+    }
+
+    .oui-button {
+      font-family: 'SamsungOne 400';
+    }
+
+    .card-panel {
+      border-radius: 15px;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="materialize.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.fixed-action-btn').openFAB();
+      $('.fixed-action-btn').closeFAB();
+      $('.fixed-action-btn.toolbar').openToolbar();
+      $('.fixed-action-btn.toolbar').closeToolbar();
+      $('.tooltipped').tooltip({
+        delay: 50
+      });
+    })
+    $(document).ready(function () {
+      $('.modal').modal();
+      $('#modal2').modal();
+    });
+  </script>
+</head>
+
+<body oncontextmenu="return false;" onload="location.href='#view'">
+  <main class="containr">
+    <div class="oui-viewing center-align">
+      <h4>COVID 19 DASHBOARDS</h4>
+    </div>
+    <div class="interaction center-align">
+      <!--Interaction area-->
+      <div class="oui-bubble black white-text" id="view">
+        <div class="fixed-action-btn">
+          <a class="btn-floating btn-large blue darken-1 btn tooltipped pulse z-depth-5 modal-trigger"
+            data-position="top" data-delay="50" data-tooltip="Menu" href="#modal2" id="menu">
+            <i class="large fas fa-bars"></i>
+          </a>
+        </div>
+        <!--Menu-->
+        <div id="modal2" class="modal bottom-sheet right-align black white-text">
+          <div class="modal-content">
+            <a href="#!" onclick="location.reload()" class="blue-text text-darken-1 tooltipped" data-tooltip="Refresh"
+              data-position="top"><i class="small fas fa-sync-alt"></i></a>
+            <ul class="collection left-align" style="border-width: 0px;">
+              <li class="collection-item avatar black oui-bubble" onclick="location.href='index.html'">
+                <a href="#!"><i class="fas fa-home circle blue darken-1"></i></a>
+                <p style="font-size: x-large;">Cov19 Home</p>
+                <p>Back to India's Dashboard (Home)</p>
+              </li>
+              <li class="collection-item avatar black oui-bubble" onclick="location.href='country.html'">
+                <a href="#!"><i class="fas fa-globe circle blue darken-1"></i></a>
+                <p style="font-size: x-large;">Countries</p>
+                <p>Covid19 Affected Countries list with all their numbers, Courtesy: coronatracker.com</p>
+              </li>
+              <li class="collection-item avatar black oui-bubble" onclick="location.href='maha.html'">
+                <a href="#!"><i class="circle blue darken-1"><b>MH</b></i></a>
+                <p style="font-size: x-large;">Maharashtra</p>
+                <p>Covid19 Dashboard of Maharashtra State & it's Districts</p>
+              </li>
+              <li class="collection-item avatar black oui-bubble" onclick="location.href='mumreg.html'">
+                <a href="#!"><i class="circle blue darken-1"><b>MR</b></i></a>
+                <p style="font-size: x-large;">Mumbai Region</p>
+                <p>Mumbai Region Dashboard, Districts - Mumbai, Palghar, Raigad, Thane</p>
+              </li>
+              <li class="collection-item avatar black oui-bubble" onclick="location.href='about.html'">
+                <a href="#!"><i class="fas fa-info circle blue darken-1"></i></a>
+                <p style="font-size: x-large;">About</p>
+                <p>About this Website</p>
+              </li>
+              <li class="collection-item black"></li>
+            </ul>
+          </div>
+        </div>
+        <h5>VACCINE ONLINE SLOT TRACKERS FOR MUMBAI REGION (4 Districts)</h5>
+        <h6 class="grey-text text-lighten-2">Select as per your Age group & Dose <i class="fas fa-syringe"></i> 1, 2
+          below for updates</h6>
+        <div class="row">
+          <div class="col s12 m6 l3">
+            <div class="card-panel grey darken-4 white-text">
+              <h5 class="center"><b>MUMBAI</b></h5>
+              <a href="https://t.me/s/u45mumbaidose1" class="oui-button blue darken-1 white-text" target="_blank">Age 18
+                to 45 <i class="fas fa-syringe"></i> 1</a><br><br>
+              <a href="https://t.me/s/u45mumbaidose2" class="oui-button blue darken-1 white-text" target="_blank">Age 18
+                to 45 <i class="fas fa-syringe"></i> 2</a><br><br>
+              <a href="https://t.me/s/cowinvaccinetracker" class="oui-button blue darken-1 white-text"
+                target="_blank">Age 45+</a>
+            </div>
+          </div>
+          <div class="col s12 m6 l3">
+            <div class="card-panel grey darken-4 white-text">
+              <h5 class="center"><b>PALGHAR</b></h5>
+              <a href="https://telegram.me/joinchat/PjXux-PpuSBhMTU1" class="oui-button blue darken-1 white-text"
+                target="_blank">Age 18 to 45 <i class="fas fa-syringe"></i> 1</a><br><br>
+              <a href="https://t.me/s/u45palghardose2" class="oui-button blue darken-1 white-text" target="_blank">Age
+                18 to 45 <i class="fas fa-syringe"></i> 2</a><br><br>
+              <a href="https://t.me/s/A45PALGHARVACCINETRACKER" class="oui-button blue darken-1 white-text"
+                target="_blank">Age 45+</a>
+            </div>
+          </div>
+          <div class="col s12 m6 l3">
+            <div class="card-panel grey darken-4 white-text">
+              <h5 class="center"><b>RAIGAD</b></h5>
+              <a href="https://t.me/s/u45raigaddose1channel" class="oui-button blue darken-1 white-text"
+                target="_blank">Age 18 to 45 <i class="fas fa-syringe"></i> 1</a><br><br>
+              <a href="https://t.me/s/u45raigaddose2" class="oui-button blue darken-1 white-text" target="_blank">Age 18
+                to 45 <i class="fas fa-syringe"></i> 2</a><br><br>
+              <a href="https://t.me/s/A45RAIGADVACCINETRACKER" class="oui-button blue darken-1 white-text"
+                target="_blank">Age 45+</a>
+            </div>
+          </div>
+          <div class="col s12 m6 l3">
+            <div class="card-panel grey darken-4 white-text">
+              <h5 class="center"><b>THANE</b></h5>
+              <a href="https://t.me/s/u45thanedose1" class="oui-button blue darken-1 white-text" target="_blank">Age 18
+                to 45 <i class="fas fa-syringe"></i> 1</a><br><br>
+              <a href="https://t.me/s/u45thanedose2" class="oui-button blue darken-1 white-text" target="_blank">Age 18
+                to 45 <i class="fas fa-syringe"></i> 2</a><br><br>
+              <a href="https://t.me/s/A45THANEVACCINETRACKER" class="oui-button blue darken-1 white-text"
+                target="_blank">Age 45+</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+  </main>
+</body>
+
+</html>

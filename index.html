@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+  <meta name="msvalidate.01" content="FC10FA22248EFBF4FA3A591D08BDD039" />
+  <meta http-equiv="content-language" content="en-us">
+  <meta name="description"
+    content="Covid19 Dashboards for India, States, Maharashtra & Mumbai Region with Vaccine slot trackers">
+  <title>Cov19 Dashboard Home</title>
+  <link rel="stylesheet" href="OneUI/oui.min.css">
+  <link rel="stylesheet" href="materialize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/brands.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/solid.min.css">
+  <link rel="icon" href="images/COV.ico">
+  <link rel="manifest" href="manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Covid19 Dashboards">
+  <meta name="apple-mobile-web-app-title" content="Covid19 Dashboards">
+  <meta name="theme-color" content="#000000">
+  <meta name="msapplication-navbutton-color" content="#000000">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="msapplication-starturl" content="index.html">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/picture3.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="32x32" href="images/picture3.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="images/picture4.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="48x48" href="images/picture4.png">
+  <link rel="icon" type="image/png" sizes="60x60" href="images/picture5.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="images/picture5.png">
+  <link rel="icon" type="image/png" sizes="128x128" href="images/picture6.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="128x128" href="images/picture6.png">
+  <link rel="icon" type="image/png" sizes="144x144" href="images/picture7.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="144x144" href="images/picture7.png">
+  <link rel="icon" type="image/png" sizes="256x256" href="images/picture2.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="256x256" href="images/picture2.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="images/picture1.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="512x512" href="images/picture1.png">
+  <style>
+    @font-face {
+      font-family: 'SamsungOne 400';
+      src: local('SamsungOne 400'), url('SamsungOne-400.woff') format('woff');
+    }
+
+    * {
+      font-family: 'SamsungOne 400';
+      font-size: larger;
+    }
+
+    .oui-button {
+      font-family: 'SamsungOne 400';
+    }
+
+    img {
+      border-radius: 15px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .card-panel {
+      border-radius: 15px;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="materialize.js">
+  </script>
+  <script>
+    $(document).ready(function () {
+      $('.fixed-action-btn').openFAB();
+      $('.fixed-action-btn').closeFAB();
+      $('.fixed-action-btn.toolbar').openToolbar();
+      $('.fixed-action-btn.toolbar').closeToolbar();
+      $('.tooltipped').tooltip({
+        delay: 50
+      });
+    })
+    $(document).ready(function () {
+      $('.modal').modal();
+      $('#modal2').modal();
+    });
+  </script>
+</head>
+
+<body oncontextmenu="return false;" onload="location.href='#view'">
+  <main class="containr">
+    <div class="oui-viewing center-align">
+      <h4>COVID 19 DASHBOARDS</h4>
+    </div>
+    <div class="oui-interaction center-align">
+      <!--Interaction area-->
+      <div class="oui-bubble black white-text" id="view">
+        <div class="fixed-action-btn">
+          <a class="btn-floating btn-large blue darken-1 btn tooltipped pulse z-depth-5 modal-trigger"
+            data-position="top" data-delay="50" data-tooltip="Menu" href="#modal2" id="menu">
+            <i class="large fas fa-bars"></i>
+          </a>
+        </div>
+        <!--Menu-->
+        <div id="modal2" class="modal bottom-sheet right-align black white-text">
+          <div class="modal-content">
+            <a href="#!" onclick="location.reload()" class="blue-text text-darken-1 tooltipped" data-tooltip="Refresh"
+              data-position="top"><i class="small fas fa-sync-alt"></i></a>
+            <ul class="collection left-align" style="border-width: 0px;">
+              <li class="collection-item avatar black oui-bubble" onclick="location.href='country.html'">
+                <a href="#!"><i class="fas fa-globe circle blue darken-1"></i></a>
+                <p style="font-size: x-large;">Countries</p>
+                <p>Covid19 Affected Countries list with all their numbers, Courtesy: coronatracker.com</p>
+              </li>
+              <li class="collection-item avatar black oui-bubble" onclick="location.href='maha.html'">
+                <a href="#!"><i class="circle blue darken-1"><b>MH</b></i></a>
+                <p style="font-size: x-large;">Maharashtra</p>
+                <p>Covid19 Dashboard of Maharashtra State & it's Districts</p>
+              </li>
+              <li class="collection-item avatar black oui-bubble" onclick="location.href='mumreg.html'">
+                <a href="#!"><i class="circle blue darken-1"><b>MR</b></i></a>
+                <p style="font-size: x-large;">Mumbai Region</p>
+                <p>Mumbai Region Dashboard, Districts - Mumbai, Palghar, Raigad, Thane</p>
+              </li>
+              <li class="collection-item avatar black oui-bubble" onclick="location.href='thavac.html'">
+                <a href="#!"><i class="circle blue darken-1"><b>MRv</b></i></a>
+                <p style="font-size: x-large;">Mumbai Region Vaccination</p>
+                <p>Vaccine slot updates for Mumbai, Palghar, Raigad & Thane via Telegram channels</p>
+              </li>
+              <li class="collection-item avatar black oui-bubble" onclick="location.href='about.html'">
+                <a href="#!"><i class="fas fa-info circle blue darken-1"></i></a>
+                <p style="font-size: x-large;">About</p>
+                <p>About this Website</p>
+              </li>
+              <li class="collection-item black"></li>
+            </ul>
+          </div>
+        </div>
+        <h1 class="hide"></h1>
+        <h5>INDIA DASHBOARD</h5>
+        <h6 class="grey-text text-lighten-2">Source: ICMR/ MyGov<br>&#8595;&#8593; New cases from last 24 hours</h6>
+        <h6 class="grey-text text-lighten-2">As on January 26</h6>
+        <img src="images/I26.png" alt="IndDB" width="100%" class="responsive-img materialboxed">
+        <!-- <h5><b>NEW VARIANT - OMICRON UPDATE</b></h5>
+        <h6>As On January 24, Source: Twitter - PIB India</h6>
+        <h5><b>TOTAL</b>: 10050</h5> -->
+        <!-- <div class="row">
+          <div class="col s12 m6 l6">
+            <img src="images/O17i.png" alt="O1" width="100%" class="responsive-img materialboxed">
+          </div>
+          <div class="col s12 m6 l6">
+            <img src="images/O17ii.png" alt="O2" width="100%" class="responsive-img materialboxed">
+          </div>
+        </div> -->
+        <h6>Below Data (except **) as on January 27, 12:45 IST</h6>
+        <h6>** As on January 27, Source: Twitter - PIB India</h6>
+        <h6>#: Free Vaccine doses provided to States/UTs by Central Govt.</h6>
+        <div class="row">
+          <div class="col s12 m6 l4">
+            <div class="card-panel grey darken-4 white-text">
+              <h5><b>Vaccine Doses availability<sup>**</sup></b></h5>
+              <p><b>Supplied<sup>#</sup></b>: 163.71 Crores</p>
+              <p><b>Balance<sup>#</sup></b>: 13.60 Crores</p>
+            </div>
+          </div>
+          <div class="col s12 m6 l4">
+            <div class="card-panel grey darken-4 white-text">
+              <h5><b>Vaccine Doses administered</b></h5>
+              <p><b>Dose 1</b>: 93.52 Crores</p>
+              <p><b>Dose 2</b>: 69.44 Crores</p>
+              <p><b>Prec. Dose</b>: 94.07 Lakhs</p>
+              <p><b>Total</b>: 163.91 Crores</p>
+            </div>
+          </div>
+          <div class="col s12 m6 l4">
+            <div class="card-panel grey darken-4 white-text">
+              <h5><b>Registered for Vaccine</b></h5>
+              <p><b>Age 15 to 18</b>: 4.49 Crores</p>
+              <p><b>Age 18 to 44</b>: 61.36 Crores</p>
+              <p><b>Age 45+</b>: 35.87 Crores</p>
+              <p><b>Total</b>: 101.73 Crores</p>
+            </div>
+          </div>
+          <div class="col s12 m6 l4">
+            <div class="card-panel grey darken-4 white-text">
+              <h5><b>Vaccination by Gender</b></h5>
+              <p><b>Male</b>: 83.16 Crores</p>
+              <p><b>Female</b>: 79.34 Crores</p>
+              <p><b>Others</b>: 3.88 Lakhs</p>
+            </div>
+          </div>
+          <div class="col s12 m6 l4">
+            <div class="card-panel grey darken-4 white-text">
+              <h5><b>Vaccination by Vaccine Name</b></h5>
+              <p><b>CoviShield</b>: 140.53 Crores</p>
+              <p><b>Covaxin</b>: 22.83 Crores</p>
+              <p><b>Sputnik V</b>: 12.05 Lakhs</p>
+              <p><b>Zycov-D</b>: -</p>
+            </div>
+          </div>
+          <div class="col s12 m6 l4">
+            <div class="card-panel grey darken-4 white-text">
+              <h5><b>Vaccination by Age</b></h5>
+              <p><b>Age 15 to 17</b>: 4.37 Crores</p>
+              <p><b>Age 18 to 44</b>: 97.47 Crores</p>
+              <p><b>Age 45 to 60</b>: 38.18 Crores</p>
+              <p><b>Age 60+</b>: 23.45 Crores</p>
+            </div>
+          </div>
+        </div>
+        <h5>STATES DASHBOARD</h5>
+        <h6>As on January 26</h6>
+        <div class="row">
+          <div class="col s12 m12 l6">
+            <img src="images/S26.png" alt="StatDB" width="100%" class="responsive-img materialboxed">
+          </div>
+          <div class="col s12 m12 l6">
+            <img src="images/V26i.png" alt="VacDB" width="100%" class="responsive-img materialboxed">
+          </div>
+          <div class="col s12 m12 l6">
+            <img src="images/V26ii.png" alt="VacDB2" width="100%" class="responsive-img materialboxed">
+          </div>
+          <div class="col s12 m12 l6">
+            <img src="images/V26iii.png" alt="VacDB3" width="100%" class="responsive-img materialboxed">
+          </div>
+          <div class="col s12 m12 l6">
+            <img src="images/V26iv.png" alt="VacDB4" width="100%" class="responsive-img materialboxed">
+          </div>
+          <div class="col s12 m12 l6">
+            <img src="images/V26v.png" alt="VacDB5" width="100%" class="responsive-img materialboxed">
+          </div>
+        </div>
+        <h6><b>Abbreviations</b> - UT: Union Territory</h6>
+      </div>
+    </div>
+    <br>
+  </main>
+  <script>
+    if ('serviceWorker' in navigator) {
+      // Register service worker
+      navigator.serviceWorker.register('sw.js', {
+        scope: '.'
+      });
+    };
+  </script>
+</body>
+
+</html>
