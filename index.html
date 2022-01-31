@@ -111,7 +111,7 @@
                 <p style="font-size: x-large;">Countries</p>
                 <p>Covid19 Affected Countries list with all their numbers, Courtesy: worldometers.info</p>
               </li>
-              <li class="collection-item avatar black oui-bubble" onclick="location.href='maha.html'">
+              <!-- <li class="collection-item avatar black oui-bubble" onclick="location.href='maha.html'">
                 <a href="#!"><i class="circle blue darken-1"><b>MH</b></i></a>
                 <p style="font-size: x-large;">Maharashtra</p>
                 <p>Covid19 Dashboard of Maharashtra State & it's Districts</p>
@@ -125,7 +125,7 @@
                 <a href="#!"><i class="circle blue darken-1"><b>MRv</b></i></a>
                 <p style="font-size: x-large;">Mumbai Region Vaccination</p>
                 <p>Vaccine slot updates for Mumbai, Palghar, Raigad & Thane via Telegram channels</p>
-              </li>
+              </li> -->
               <li class="collection-item avatar black oui-bubble" onclick="location.href='about.html'">
                 <a href="#!"><i class="fas fa-info circle blue darken-1"></i></a>
                 <p style="font-size: x-large;">About</p>
@@ -136,89 +136,463 @@
           </div>
         </div>
         <h1 class="hide"></h1>
-        <h5>INDIA DASHBOARD</h5>
-        <h6 class="grey-text text-lighten-2">Source: ICMR/ MyGov<br>&#8595;&#8593; New cases from last 24 hours</h6>
-        <h6 class="grey-text text-lighten-2">As on January 30</h6>
-        <img src="images/I30.png" alt="IndDB" width="100%" class="responsive-img materialboxed">
-        <h6>Below Data (except **) as on January 31, 12:25 IST</h6>
-        <h6>** As on January 31, Source: Twitter - PIB India</h6>
-        <h6>#: Free Vaccine doses provided to States/UTs by Central Govt.</h6>
         <div class="row">
-          <div class="col s12 m6 l4">
-            <div class="card-panel grey darken-4 white-text">
-              <h5><b>Vaccine Doses availability<sup>**</sup></b></h5>
-              <p><b>Supplied<sup>#</sup></b>: 164.59 Crores</p>
-              <p><b>Balance<sup>#</sup></b>: 12.38 Crores</p>
-            </div>
+          <div class="col s12">
+            <ul class="tabs tabs-fixed-width">
+              <!-- <li class="tab"><a href="country.html" target="_blank" class="black white-text">
+                  <h6>WORLD</h6>
+                </a></li> -->
+              <li class="tab"><a href="#ind" class="active black white-text">
+                  <h6>INDIA<br>(AS ON JAN 30)</h6>
+                </a></li>
+              <li class="tab"><a href="#sta" class="black white-text">
+                  <h6>STATES<br>(AS ON JAN 30)</h6>
+                </a></li>
+              <li class="tab"><a href="#mah" class="black white-text">
+                  <h6>MAHARASHTRA<br>(AS ON JAN 29)</h6>
+                </a></li>
+              <li class="tab"><a href="#mum" class="black white-text">
+                  <h6>MUMBAI<br>REGION</h6>
+                </a></li>
+              <div class="indicator blue darken-1"></div>
+            </ul>
           </div>
-          <div class="col s12 m6 l4">
-            <div class="card-panel grey darken-4 white-text">
-              <h5><b>Vaccine Doses administered</b></h5>
-              <p><b>Dose 1</b>: 94.19 Crores</p>
-              <p><b>Dose 2</b>: 70.76 Crores</p>
-              <p><b>Prec. Dose</b>: 1.14 Crores</p>
-              <p><b>Total</b>: 166.10 Crores</p>
+        </div>
+        <div class="col s12" id="ind">
+          <h6 class="grey-text text-lighten-2">Source: ICMR/ MyGov<br>&#8595;&#8593; New cases from last 24 hours</h6>
+          <img src="images/I30.png" alt="IndDB" width="100%" class="responsive-img materialboxed">
+          <h6>Below Data as on January 31, 12:25 IST</h6>
+          <div class="row">
+            <div class="col s12 m6 l4">
+              <div class="card-panel grey darken-4 white-text">
+                <h5><b>Vaccine Doses availability</b></h5>
+                <p>As on January 31, Source: Twitter - PIB India</p>
+                <p><b>Supplied</b>: 164.59 Crores</p>
+                <p><b>Balance</b>: 12.38 Crores</p>
+              </div>
             </div>
-          </div>
-          <div class="col s12 m6 l4">
-            <div class="card-panel grey darken-4 white-text">
-              <h5><b>Registered for Vaccine</b></h5>
-              <p><b>Age 15 to 18</b>: 4.72 Crores</p>
-              <p><b>Age 18 to 44</b>: 61.69 Crores</p>
-              <p><b>Age 45+</b>: 36.00 Crores</p>
-              <p><b>Total</b>: 102.41 Crores</p>
+            <div class="col s12 m6 l4">
+              <div class="card-panel grey darken-4 white-text">
+                <h5><b>Vaccine Doses administered</b></h5>
+                <p><b>Dose 1</b>: 94.19 Crores</p>
+                <p><b>Dose 2</b>: 70.76 Crores</p>
+                <p><b>Prec. Dose</b>: 1.14 Crores</p>
+                <p><b>Total</b>: 166.10 Crores</p>
+              </div>
             </div>
-          </div>
-          <div class="col s12 m6 l4">
-            <div class="card-panel grey darken-4 white-text">
-              <h5><b>Vaccination by Gender</b></h5>
-              <p><b>Male</b>: 84.16 Crores</p>
-              <p><b>Female</b>: 80.33 Crores</p>
-              <p><b>Others</b>: 3.93 Lakhs</p>
+            <div class="col s12 m6 l4">
+              <div class="card-panel grey darken-4 white-text">
+                <h5><b>Registered for Vaccine</b></h5>
+                <p><b>Age 15 to 18</b>: 4.72 Crores</p>
+                <p><b>Age 18 to 44</b>: 61.69 Crores</p>
+                <p><b>Age 45+</b>: 36.00 Crores</p>
+                <p><b>Total</b>: 102.41 Crores</p>
+              </div>
             </div>
-          </div>
-          <div class="col s12 m6 l4">
-            <div class="card-panel grey darken-4 white-text">
-              <h5><b>Vaccination by Vaccine Name</b></h5>
-              <p><b>CoviShield</b>: 142.22 Crores</p>
-              <p><b>Covaxin</b>: 23.34 Crores</p>
-              <p><b>Sputnik V</b>: 12.07 Lakhs</p>
-              <p><b>Zycov-D</b>: -</p>
+            <div class="col s12 m6 l4">
+              <div class="card-panel grey darken-4 white-text">
+                <h5><b>Vaccination by Gender</b></h5>
+                <p><b>Male</b>: 84.16 Crores</p>
+                <p><b>Female</b>: 80.33 Crores</p>
+                <p><b>Others</b>: 3.93 Lakhs</p>
+              </div>
             </div>
-          </div>
-          <div class="col s12 m6 l4">
-            <div class="card-panel grey darken-4 white-text">
-              <h5><b>Vaccination by Age</b></h5>
-              <p><b>Age 15 to 17</b>: 4.61 Crores</p>
-              <p><b>Age 18 to 44</b>: 98.76 Crores</p>
-              <p><b>Age 45 to 60</b>: 38.54 Crores</p>
-              <p><b>Age 60+</b>: 23.77 Crores</p>
+            <div class="col s12 m6 l4">
+              <div class="card-panel grey darken-4 white-text">
+                <h5><b>Vaccination by Vaccine Name</b></h5>
+                <p><b>CoviShield</b>: 142.22 Crores</p>
+                <p><b>Covaxin</b>: 23.34 Crores</p>
+                <p><b>Sputnik V</b>: 12.07 Lakhs</p>
+                <p><b>Zycov-D</b>: -</p>
+              </div>
+            </div>
+            <div class="col s12 m6 l4">
+              <div class="card-panel grey darken-4 white-text">
+                <h5><b>Vaccination by Age</b></h5>
+                <p><b>Age 15 to 17</b>: 4.61 Crores</p>
+                <p><b>Age 18 to 44</b>: 98.76 Crores</p>
+                <p><b>Age 45 to 60</b>: 38.54 Crores</p>
+                <p><b>Age 60+</b>: 23.77 Crores</p>
+              </div>
             </div>
           </div>
         </div>
-        <h5>STATES DASHBOARD</h5>
-        <h6>As on January 30</h6>
-        <div class="row">
-          <div class="col s12 m12 l6">
-            <img src="images/S30.png" alt="StatDB" width="100%" class="responsive-img materialboxed">
+        <div class="col s12" id="sta">
+          <div class="row">
+            <div class="col s12 m12 l6">
+              <img src="images/S30.png" alt="StatDB" width="100%" class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 m12 l6">
+              <img src="images/V30i.png" alt="VacDB" width="100%" class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 m12 l6">
+              <img src="images/V30ii.png" alt="VacDB2" width="100%" class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 m12 l6">
+              <img src="images/V30iii.png" alt="VacDB3" width="100%" class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 m12 l6">
+              <img src="images/V30iv.png" alt="VacDB4" width="100%" class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 m12 l6">
+              <img src="images/V30v.png" alt="VacDB5" width="100%" class="responsive-img materialboxed">
+            </div>
           </div>
-          <div class="col s12 m12 l6">
-            <img src="images/V30i.png" alt="VacDB" width="100%" class="responsive-img materialboxed">
-          </div>
-          <div class="col s12 m12 l6">
-            <img src="images/V30ii.png" alt="VacDB2" width="100%" class="responsive-img materialboxed">
-          </div>
-          <div class="col s12 m12 l6">
-            <img src="images/V30iii.png" alt="VacDB3" width="100%" class="responsive-img materialboxed">
-          </div>
-          <div class="col s12 m12 l6">
-            <img src="images/V30iv.png" alt="VacDB4" width="100%" class="responsive-img materialboxed">
-          </div>
-          <div class="col s12 m12 l6">
-            <img src="images/V30v.png" alt="VacDB5" width="100%" class="responsive-img materialboxed">
-          </div>
+          <h6><b>Abbreviations</b> - UT: Union Territory</h6>
         </div>
-        <h6><b>Abbreviations</b> - UT: Union Territory</h6>
+        <div class="col s12" id="mah">
+          <h6>Source: Twitter - PIB Maharashtra <br><b>OMICRON - Total</b>: 3125, <b>Recovered</b>: 1674</h6>
+          <div class="row">
+            <div class="col s12 m12 l6">
+              <img src="https://pbs.twimg.com/media/FKSFhTxVcAEoohX?format=png&name=small" alt="O1" width="100%"
+                class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 m12 l6">
+              <img src="https://pbs.twimg.com/media/FKSFldxaQAQ6tRt?format=png&name=900x900" alt="O2" width="100%"
+                class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 m12 l6">
+              <img src="https://pbs.twimg.com/media/FKSFoJTVcAM0f20?format=png&name=small" alt="O3" width="100%"
+                class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 m12 l6">
+              <img src="https://pbs.twimg.com/media/FKSGFOLVUAUYzu7?format=png&name=small" alt="MH1" width="100%"
+                class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 m12 l6">
+              <img src="https://pbs.twimg.com/media/FKSGIBRVcAAacRG?format=png&name=small" alt="MH2" width="100%"
+                class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 m12 l6">
+              <img src="https://pbs.twimg.com/media/FKSGpelaMAMbMlP?format=png&name=small" alt="MH3" width="100%"
+                class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 m12 l6">
+              <img src="https://pbs.twimg.com/media/FKSGsfKUUAA66_1?format=png&name=900x900" alt="MH4" width="100%"
+                class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 m12 l6">
+              <img src="https://pbs.twimg.com/media/FKSGvvTUUAI9p0A?format=png&name=small" alt="MH5" width="100%"
+                class="responsive-img materialboxed">
+            </div>
+          </div>
+          <!-- <h6 class="grey-text text-lighten-2">Source: State Official Health (Aarogya) Website (As on November
+            24)</h6> -->
+          <!-- <object data="http://arogya.maharashtra.gov.in/pdf/ncovidmpressnotenovember24.pdf" type="application/pdf"
+            width="100%" height="1300px"></object> -->
+        </div>
+        <div class="col s12" id="mum">
+          <div class="oui-button blue darken-1"><a href="thavac.html" target="_blank" class="white-text">SLOT
+              TRACKERS</a></div>
+          <h6 class="grey-text text-lighten-2">As on January 29 (&#8593; - new cases)</h6>
+          <div class="row">
+            <div class="col s12 m6 l3">
+              <div class="card-panel grey darken-4 white-text">
+                <h5><b>MUMBAI</b> <i class="fas fa-arrow-circle-up"></i> 1411 </h5>
+                <p><b>OMICRON:</b> 1054 </p>
+                <p><b>Total:</b> 10,43,552 </p>
+                <p><b>Active:</b> 12,187 </p>
+                <p><b>Recovered:</b> 10,12,024 </p>
+                <p><b>Deceased:</b> 16,602 </p>
+                <p><b>Vaccinated:</b> 1,93,45,007 </p>
+                <p><b>Tested:</b> 1,52,43,823 </p>
+              </div>
+            </div>
+            <div class="col s12 m6 l3">
+              <div class="card-panel grey darken-4 white-text">
+                <h5><b>THANE</b> <i class="fas fa-arrow-circle-up"></i> 1246 </h5>
+                <p><b>OMICRON:</b> 138 </p>
+                <p><b>Total:</b> 7,57,905 </p>
+                <p><b>Active:</b> 18,855 </p>
+                <p><b>Recovered:</b> 7,27,291 </p>
+                <p><b>Deceased:</b> 11,724 </p>
+                <p><b>Vaccinated:</b> 1,21,74,742 </p>
+                <p><b>Tested:</b> -</p>
+              </div>
+            </div>
+            <div class="col s12 m6 l3">
+              <div class="card-panel grey darken-4 white-text">
+                <h5><b>PALGHAR</b> <i class="fas fa-arrow-circle-up"></i> 329 </h5>
+                <p><b>OMICRON:</b> 7</p>
+                <p><b>Total:</b> 1,61,881 </p>
+                <p><b>Active:</b> 2,380 </p>
+                <p><b>Recovered:</b> 1,56,114 </p>
+                <p><b>Deceased:</b> 3,372 </p>
+                <p><b>Vaccinated:</b> 42,45,952 </p>
+                <p><b>Tested:</b> 14,30,049+</p>
+              </div>
+            </div>
+            <div class="col s12 m6 l3">
+              <div class="card-panel grey darken-4 white-text">
+                <h5><b>RAIGAD</b> <i class="fas fa-arrow-circle-up"></i> 470 </h5>
+                <p><b>OMICRON:</b> 20 </p>
+                <p><b>Total:</b> 2,40,315 </p>
+                <p><b>Active:</b> 7,096 </p>
+                <p><b>Recovered:</b> 2,28,336 </p>
+                <p><b>Deceased:</b> 4,876 </p>
+                <p><b>Vaccinated:</b> 40,43,685 </p>
+                <p><b>Tested:</b> 22,96,890 </p>
+              </div>
+            </div>
+          </div>
+          <h5><b>MUMBAI DASHBOARD</b></h5>
+          <h6>Source: Official MCGM Website</h6>
+          <div class="black white-text">
+            <img src="images/M29.png" alt="Mum" width="100%" class="responsive-img materialboxed"
+              data-caption="Mumbai Wardwise (As on January 29)">
+          </div>
+          <h5><b>PALGHAR DASHBOARD</b></h5>
+          <h6>Source: Twitter - PIB Maharashtra<br>As on January 29</h6>
+          <div class="row">
+            <div class="col s12 m6 l6">
+              <div class="card-panel grey darken-4 white-text">
+                <h5><b>PALGHAR<br>RURAL</b> <i class="fas fa-arrow-circle-up"></i> 146 </h5>
+                <p><b>Total:</b> 63564 </p>
+                <p><b>Deaths Today:</b> 1</p>
+                <p><b>Deaths Total:</b> 1237</p>
+              </div>
+            </div>
+            <div class="col s12 m6 l6">
+              <div class="card-panel grey darken-4 white-text">
+                <h5><b>VASAI VIRAR<br>MUN CORP</b> <i class="fas fa-arrow-circle-up"></i> 183 </h5>
+                <p><b>Total:</b> 98317 </p>
+                <p><b>Deaths Today:</b> 2</p>
+                <p><b>Deaths Total:</b> 2135</p>
+              </div>
+            </div>
+          </div>
+          <!-- <h6><sup>*</sup>Subject to Reconciliation, Source: Twitter - Palghar Mitra</h6>
+          <table class="centered bordered">
+            <tbody>
+              <tr>
+                <td>As on Jan 15, 2022<sup>*</sup></td>
+                <td><b>Total &#8593;</b></td>
+                <td><b>Active</b></td>
+                <td><b>Recovered</b></td>
+                <td><b>Deceased</b></td>
+              </tr>
+              <tr>
+                <td><b>VASAI VIRAR</b></td>
+                <td>93198<br>&#8593; 787</td>
+                <td>7947</td>
+                <td>83219</td>
+                <td>2032</td>
+              </tr>
+              <tr>
+                <td><b>PALGHAR RURAL</b></td>
+                <td>57437<br>&#8593; 510</td>
+                <td>2957</td>
+                <td>53258</td>
+                <td>1222</td>
+              </tr>
+              <tr>
+                <td>&#8250; Dahanu</td>
+                <td>9000<br>&#8593; 108</td>
+                <td>678</td>
+                <td>8112</td>
+                <td>210</td>
+              </tr>
+              <tr>
+                <td>&#8250; Jawhar</td>
+                <td>4091<br>&#8593; 5</td>
+                <td>42</td>
+                <td>3982</td>
+                <td>67</td>
+              </tr>
+              <tr>
+                <td>&#8250; Mokhada</td>
+                <td>1167<br>&#8593; 6</td>
+                <td>35</td>
+                <td>1090</td>
+                <td>42</td>
+              </tr>
+              <tr>
+                <td>&#8250; Palghar</td>
+                <td>30991<br>&#8593; 293</td>
+                <td>1890</td>
+                <td>28542</td>
+                <td>559</td>
+              </tr>
+              <tr>
+                <td>&#8250; Talasari</td>
+                <td>1871<br>&#8593; 26</td>
+                <td>96</td>
+                <td>1725</td>
+                <td>50</td>
+              </tr>
+              <tr>
+                <td>&#8250; Vasai Rural</td>
+                <td>3997<br>&#8593; 2</td>
+                <td>26</td>
+                <td>3859</td>
+                <td>112</td>
+              </tr>
+              <tr>
+                <td>&#8250; Vikramgad</td>
+                <td>1701<br>&#8593; 37</td>
+                <td>102</td>
+                <td>1548</td>
+                <td>51</td>
+              </tr>
+              <tr>
+                <td>&#8250; Wada</td>
+                <td>4619<br>&#8593; 33</td>
+                <td>88</td>
+                <td>4400</td>
+                <td>131</td>
+              </tr>
+            </tbody>
+          </table> -->
+          <h5><b>RAIGAD DASHBOARD</b></h5>
+          <h6>Source: Twitter - DIO Raigad/ Raigad District</h6>
+          <div class="black white-text">
+            <img src="https://pbs.twimg.com/media/FKXImB7X0Aw_Ib5?format=jpg&name=medium" alt="Rai" width="100%"
+              class="responsive-img materialboxed" data-caption="Raigad District Report (As on January 30)">
+          </div>
+          <h5><b>THANE DASHBOARD</b></h5>
+          <h6>Source: Official Twitter handles/ Websites of Mun. Corp.s & DIO Thane report</h6>
+          <div class="row">
+            <div class="col s12 m6 l4">
+              <div class="card-panel grey darken-4 white-text">
+                <h5><b>THANE</b> <i class="fas fa-arrow-circle-up"></i> 248 </h5>
+                <p><b>As on </b>Jan 30</p>
+                <p><b>Total:</b> 181559 </p>
+                <p><b>Active:</b> 4126 </p>
+                <p><b>Recovered:</b> 175316 </p>
+                <p><b>Deceased:</b> 2117 </p>
+                <hr>
+                <p class="grey-text text-lighten-1">
+                  Majiwada Manpada: 130<br>
+                  Vartaknagar: 45<br>
+                  Lokmanyanagar Savarkarnagar: 8<br>
+                  Naupada-Kopari: 17<br>
+                  Uthalsar: 26<br>
+                  Wagale: 8<br>
+                  Kalwa: 11<br>
+                  Mumbra: 3<br>
+                  Diva: 10<br>
+                  Others: 0 [Jan 29]</p>
+              </div>
+            </div>
+            <div class="col s12 m6 l4">
+              <div class="card-panel grey darken-4 white-text">
+                <h5><b>KALYAN KDMC</b> <i class="fas fa-arrow-circle-up"></i> 83 </h5>
+                <p><b>As on </b>Jan 30</p>
+                <p><b>Total:</b> 165541 </p>
+                <p><b>Active:</b> 3769 </p>
+                <p><b>Recovered:</b> 158848 </p>
+                <p><b>Deceased:</b> 2924 </p>
+                <hr>
+                <p class="grey-text text-lighten-1">
+                  Kalyan East: 9<br>
+                  Kalyan West: 23<br>
+                  Dombivli East: 38<br>
+                  Dombivli West: 10<br>
+                  Manda-Titwala: 1<br>
+                  Mohana: 2<br>
+                  Pisavli: 0 [Jan 30]<br><br><br><br></p>
+              </div>
+            </div>
+            <div class="col s12 m6 l4">
+              <div class="card-panel grey darken-4 white-text">
+                <h5><b>NAVI MUMBAI</b> <i class="fas fa-arrow-circle-up"></i> 342 </h5>
+                <p><b>As on </b>Jan 30</p>
+                <p><b>Total:</b> 148908 </p>
+                <p><b>Active:</b> 5368 </p>
+                <p><b>Recovered:</b> 141187 </p>
+                <p><b>Deceased:</b> 2015 </p>
+                <hr>
+                <p class="grey-text text-lighten-1">
+                  Belapur: 246<br>
+                  Nerul: 262<br>
+                  Vashi: 147<br>
+                  Turbhe: 128<br>
+                  Koparkhairne: 187<br>
+                  Ghansoli: 193<br>
+                  Airoli: 142<br>
+                  Digha: 19 [Jan 5]<br><br><br></p>
+              </div>
+            </div>
+            <div class="col s12 m6 l4">
+              <div class="card-panel grey darken-4 white-text">
+                <h5><b>MIRA BHAYANDER</b> <i class="fas fa-arrow-circle-up"></i> 56 </h5>
+                <p><b>As on </b>Jan 30</p>
+                <p><b>Total:</b> 68703 </p>
+                <p><b>Active:</b> 532 </p>
+                <p><b>Recovered:</b> 66778 </p>
+                <p><b>Deceased:</b> 1393 </p>
+                <hr>
+                <p class="grey-text text-lighten-1">Bhayander East: 7<br>Bhayander West: 11<br>Mira Road: 38 [Jan 30]
+                  <br><br>
+                </p>
+              </div>
+            </div>
+            <div class="col s12 m6 l4">
+              <div class="card-panel grey darken-4 white-text">
+                <h5><b>THANE RURAL</b> <i class="fas fa-arrow-circle-up"></i> 55 </h5>
+                <p><b>As on </b>Jan 30</p>
+                <p><b>Total:</b> 48765 </p>
+                <p><b>Active:</b> 968 </p>
+                <p><b>Recovered:</b> 46549 </p>
+                <p><b>Deceased:</b> 1248 </p>
+                <hr><br><br><br><br><br><br>
+              </div>
+            </div>
+            <div class="col s12 m6 l4">
+              <div class="card-panel grey darken-4 white-text">
+                <h5><b>ULHASNAGAR</b> <i class="fas fa-arrow-circle-up"></i> 47 </h5>
+                <p><b>As on </b>Jan 30</p>
+                <p><b>Total:</b> 26135 </p>
+                <p><b>Active:</b> 484 </p>
+                <p><b>Recovered:</b> 24998 </p>
+                <p><b>Deceased:</b> 653 </p>
+                <hr>
+                <p class="grey-text text-lighten-1">Unr-1: 14<br>Unr-2: 4<br>Unr-3: 5<br>Unr-4: 12<br>Unr-5: 12 [Jan 30]
+                </p>
+              </div>
+            </div>
+            <div class="col s12 m6 l4">
+              <div class="card-panel grey darken-4 white-text">
+                <h5><b>BADLAPUR</b> <i class="fas fa-arrow-circle-up"></i> 6 </h5>
+                <p><b>As on </b>Jan 30</p>
+                <p><b>Total:</b> 25492 </p>
+                <p><b>Active:</b> 162 </p>
+                <p><b>Recovered:</b> 24949 </p>
+                <p><b>Deceased:</b> 381 </p>
+                <hr>
+                <p class="grey-text text-lighten-1">Badlapur East: 40<br>Badlapur West: 38 [Jan 5]<br><br></p>
+              </div>
+            </div>
+            <div class="col s12 m6 l4">
+              <div class="card-panel grey darken-4 white-text">
+                <h5><b>AMBERNATH</b> <i class="fas fa-arrow-circle-up"></i> 23 </h5>
+                <p><b>As on </b>Jan 30</p>
+                <p><b>Total:</b> 24294 </p>
+                <p><b>Active:</b> 262 </p>
+                <p><b>Recovered:</b> 23460 </p>
+                <p><b>Deceased:</b> 572 </p>
+                <hr>
+                <p class="grey-text text-lighten-1">Ambernath East: 23<br>Ambernath West: 31 [Jan 5]<br><br></p>
+              </div>
+            </div>
+            <div class="col s12 m6 l4">
+              <div class="card-panel grey darken-4 white-text">
+                <h5><b>BHIWANDI City</b> <i class="fas fa-arrow-circle-up"></i> 5 </h5>
+                <p><b>As on </b>Jan 30</p>
+                <p><b>Total:</b> 12545 </p>
+                <p><b>Active:</b> 106 </p>
+                <p><b>Recovered:</b> 11960 </p>
+                <p><b>Deceased:</b> 479 </p>
+                <hr>
+                <p class="grey-text text-lighten-1">Bhiwandi City: Same as above<br>Rural: No updates available<br><br>
+                </p>
+              </div>
+            </div>
+          </div>
+          <h6 class="center">NOTE - 3 Cases deducted from Ulhasnagar's Total have been added into Kalyan's Total, as per
+            Ulhasnagar Mun. Corp. update Total is less by 3 but DIO Thane report (consolidated) shows 3 more in
+            Ulhasnagar & 3 less in Kalyan which seems incorrect..</h6>
+        </div>
       </div>
     </div>
     <br>
