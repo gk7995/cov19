@@ -1,0 +1,83 @@
+
+          <!-- <h6><sup>*</sup>Subject to Reconciliation, Source: Twitter - Palghar Mitra</h6>
+          <table class="centered bordered">
+            <tbody>
+              <tr>
+                <td>As on Jan 15, 2022<sup>*</sup></td>
+                <td><b>Total &#8593;</b></td>
+                <td><b>Active</b></td>
+                <td><b>Recovered</b></td>
+                <td><b>Deceased</b></td>
+              </tr>
+              <tr>
+                <td><b>VASAI VIRAR</b></td>
+                <td>93198<br>&#8593; 787</td>
+                <td>7947</td>
+                <td>83219</td>
+                <td>2032</td>
+              </tr>
+              <tr>
+                <td><b>PALGHAR RURAL</b></td>
+                <td>57437<br>&#8593; 510</td>
+                <td>2957</td>
+                <td>53258</td>
+                <td>1222</td>
+              </tr>
+              <tr>
+                <td>&#8250; Dahanu</td>
+                <td>9000<br>&#8593; 108</td>
+                <td>678</td>
+                <td>8112</td>
+                <td>210</td>
+              </tr>
+              <tr>
+                <td>&#8250; Jawhar</td>
+                <td>4091<br>&#8593; 5</td>
+                <td>42</td>
+                <td>3982</td>
+                <td>67</td>
+              </tr>
+              <tr>
+                <td>&#8250; Mokhada</td>
+                <td>1167<br>&#8593; 6</td>
+                <td>35</td>
+                <td>1090</td>
+                <td>42</td>
+              </tr>
+              <tr>
+                <td>&#8250; Palghar</td>
+                <td>30991<br>&#8593; 293</td>
+                <td>1890</td>
+                <td>28542</td>
+                <td>559</td>
+              </tr>
+              <tr>
+                <td>&#8250; Talasari</td>
+                <td>1871<br>&#8593; 26</td>
+                <td>96</td>
+                <td>1725</td>
+                <td>50</td>
+              </tr>
+              <tr>
+                <td>&#8250; Vasai Rural</td>
+                <td>3997<br>&#8593; 2</td>
+                <td>26</td>
+                <td>3859</td>
+                <td>112</td>
+              </tr>
+              <tr>
+                <td>&#8250; Vikramgad</td>
+                <td>1701<br>&#8593; 37</td>
+                <td>102</td>
+                <td>1548</td>
+                <td>51</td>
+              </tr>
+              <tr>
+                <td>&#8250; Wada</td>
+                <td>4619<br>&#8593; 33</td>
+                <td>88</td>
+                <td>4400</td>
+                <td>131</td>
+              </tr>
+            </tbody>
+          </table> -->
