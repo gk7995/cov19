@@ -76,10 +76,13 @@
       $('.modal').modal();
       $('#modal2').modal();
     });
+    $(document).bind("contextmenu", function (e) {
+      return false;
+    });
   </script>
 </head>
 
-<body oncontextmenu="return false;" class="black white-text" onload="Materialize.fadeInImage('#image')">
+<body class="black white-text" onload="Materialize.fadeInImage('#image')">
   <main class="containr">
     <div class="oui-viewing center-align black white-text">
       <h4>COVID 19 DASHBOARDS</h4>
