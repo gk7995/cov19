@@ -13,6 +13,51 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="icon" href="images/COV.ico">
   <style>
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: black;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 80px;
+    }
+
+    .sidenav a {
+      padding: 8px 8px 8px 10px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #f1f1f1;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+      color: #818181;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 5px;
+      right: 50px;
+      font-size: 36px;
+      margin-left: 10px;
+    }
+
+    #main {
+      transition: margin-left .5s;
+      padding: 0px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav a {
+        font-size: 18px;
+      }
+    }
+
     @font-face {
       font-family: 'SamsungOne 400';
       src: local('SamsungOne 400'), url('SamsungOne-400.woff') format('woff');
@@ -84,151 +129,155 @@
 
 <body class="black white-text" onload="Materialize.fadeInImage('#image')">
   <main class="containr">
-    <div class="oui-viewing center-align black white-text">
-      <h4>COVID 19 DASHBOARDS</h4>
-      <h5 class="grey-text text-darken-1">Version 2022.2.3</h5>
+    <div id="mySidenav" class="sidenav"><br><br><br><br><br><br><br><br><br><br>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="index.html">Home</a>
     </div>
-    <div></div><br>
-        <div class="row">
-          <div class="col s1 m1 l1 left-align" style="font-size: x-large;">
-            <a href="#modal2" class="modal-trigger tooltipped white-text" data-position="top" data-delay="50"
-              data-tooltip="Menu">&#9776;</a></div>
-          <div class="col s11 m11 l11"></div>
-        </div>
-    <div class="oui-interaction center-align">
-      <!-- Interaction area -->
-      <div class="oui-bubble black white-text">
-        <!--Menu-->
-        <div id="modal2" class="modal bottom-sheet right-align black white-text">
-          <div class="modal-content">
-            <a href="#!" onclick="location.reload()" class="blue-text text-darken-1 tooltipped" data-tooltip="Refresh"
-              data-position="top"><i class="small fas fa-sync-alt"></i></a>
-            <ul class="collection left-align" style="border-width: 0px;">
-              <li class="collection-item black"></li>
-              <li class="collection-item avatar black oui-bubble" onclick="location.href='index.html'">
-                <a href="#!"><i class="fas fa-home circle blue darken-1"></i></a>
-                <p style="font-size: x-large;">Cov19 Home</p>
-                <p>Back to India's Dashboard (Home)</p>
-              </li>
-              <li class="collection-item black"></li>
-            </ul>
-          </div>
-        </div>
-        <h5>Website Developed by</h5>
-        <img src="images/GK Logo New 2020 blackbg.png" class="responsive-img" alt="GK" width="20%" height="20%"
-          id="image">
-        <h5>Gaurav Khatri</h5>
-        <div class="row">
-          <div class="col s1 m1"></div>
-          <div class="col s4 m4 oui-button grey darken-3 waves-effect"><a href="about.html#new"
-              class="white-text">What's New</a>
-          </div>
-          <div class="col s2 m2"></div>
-          <div class="col s4 m4 oui-button grey darken-3 waves-effect"><a href="about.html#term"
-              class="white-text">Feedback!!</a>
-          </div>
-          <div class="col s1 m1"></div>
-        </div><br><br><br><br><br>
-        <hr style="border: dashed 0.5px black;">
-        <table class="bordered">
-          <thead>
-            <tr id="new">
-              <th><b>Version</b></th>
-              <th><b>Release Notes</b></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>2022.2.3</td>
-              <td>Upper section (One UI Viewing) UI fixed for all pages except 'about' page</td>
-            </tr>
-            <tr>
-              <td>2022.2.2</td>
-              <td>Added 7-day data into all Dashboards/ Pages</td>
-            </tr>
-            <tr>
-              <td>2022.2.1</td>
-              <td>Multiple Dashboard pages now in one page into tabs, section headings added</td>
-            </tr>
-            <tr>
-              <td>2022.2</td>
-              <td>Added up more info in various sections & fixed up some bugs</td>
-            </tr>
-            <tr>
-              <td>2022.1.9</td>
-              <td>Updated with new look of each Dashboard</td>
-            </tr>
-            <tr>
-              <td>2021.1.8</td>
-              <td>Fixed up few UI tweaks & bugs</td>
-            </tr>
-            <tr>
-              <td>2021.1.7</td>
-              <td>Added One UI viewing, fixed up few bugs</td>
-            </tr>
-            <tr>
-              <td>2021.1.6</td>
-              <td>Added Hindi Language to all pages, UI Bug fixes</td>
-            </tr>
-            <tr>
-              <td>2021.1.5</td>
-              <td>New Menu UI updated & Fixed Icons loading bugs</td>
-            </tr>
-            <tr>
-              <td>2021.1.5 beta</td>
-              <td>Testing: New Menu UI & Icons loading bugs</td>
-            </tr>
-            <tr>
-              <td>2021.1.4</td>
-              <td>Added Notifications, Refresh & made few fixes to load pages faster</td>
-            </tr>
-            <tr>
-              <td>2021.1.3</td>
-              <td>Few Bugs in navigating pages/ viewing data fixed</td>
-            </tr>
-            <tr>
-              <td>2021.1.2</td>
-              <td>End of Wixsite's link, converted pages/ data in One UI with major changes</td>
-            </tr>
-            <tr>
-              <td>2021.1.1</td>
-              <td>PWA Enabled, Bugs fixed</td>
-            </tr>
-            <tr>
-              <td>2021.1</td>
-              <td>Initial Release</td>
-            </tr>
-          </tbody>
-        </table>
-        <h4 id="term" class="center">Feedback OR any suggestions to this website</h4>
-        <h6 class="center"><span class="red-text">Kindly fill the * required fields</span></h6>
-        <div class="row">
-          <form method="POST" autocomplete="off" name="google-sheet">
-            <div class="form">
-              <div class="input-field col s6">
-                <i class="fas fa-user-circle prefix"></i>
-                <input id="icon_prefix" name="Name" type="text" required>
-                <label for="icon_prefix">Name <span class="red-text">*</span></label>
-              </div>
-              <div class="input-field col s6">
-                <i class="fas fa-envelope prefix"></i>
-                <input id="icon_prefix" name="Email" type="email" required>
-                <label for="icon_prefix">Email <span class="red-text">*</span></label>
-              </div>
-              <div class="input-field col s12">
-                <i class="fas fa-comment prefix"></i>
-                <input id="icon_prefix" name="Message" type="text">
-                <label for="icon_prefix">Message</label>
-              </div>
-              <div class="input-field col s12">
-                <input id="msg" name="submit" type="submit" class="oui-button white-text grey darken-3">
-              </div>
-            </div>
-        </div>
-        </form>
+    <div id="main">
+      <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "90px";
+          document.getElementById("main").style.marginLeft = "90px";
+        }
+
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft = "0";
+        }
+      </script>
+      <div class="oui-viewing center-align black white-text">
+        <h4>COVID 19 DASHBOARDS</h4>
+        <h5 class="grey-text text-darken-1">Version 2022.2.4</h5>
       </div>
-      <p class="grey-text text-darken-1">&copy; 2021, All Rights reserved.</p>
-    </div><br>
+      <div></div><br>
+      <div class="row">
+        <div class="col s1 m1 l1 left-align" style="font-size: x-large;">
+          <a href="javascript:openNav()" class="tooltipped white-text" data-position="right" data-delay="50"
+            data-tooltip="Menu">&#9776;</a></div>
+        <div class="col s11 m11 l11"></div>
+      </div>
+      <div class="oui-interaction center-align">
+        <!-- Interaction area -->
+        <div class="oui-bubble black white-text">
+          <h5>Website Developed by</h5>
+          <img src="images/GK Logo New 2020 blackbg.png" class="responsive-img" alt="GK" width="20%" height="20%"
+            id="image">
+          <h5>Gaurav Khatri</h5>
+          <div class="row">
+            <div class="col s1 m1"></div>
+            <div class="col s4 m4 oui-button grey darken-3 waves-effect"><a href="about.html#new"
+                class="white-text">What's New</a>
+            </div>
+            <div class="col s2 m2"></div>
+            <div class="col s4 m4 oui-button grey darken-3 waves-effect"><a href="about.html#term"
+                class="white-text">Feedback!!</a>
+            </div>
+            <div class="col s1 m1"></div>
+          </div><br><br><br><br><br>
+          <hr style="border: dashed 0.5px black;">
+          <table class="bordered">
+            <thead>
+              <tr id="new">
+                <th><b>Version</b></th>
+                <th><b>Release Notes</b></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2022.2.4</td>
+                <td>Added New Menu on all pages, top left of every page</td>
+              </tr>
+              <tr>
+                <td>2022.2.3</td>
+                <td>Upper section (One UI Viewing) UI fixed for all pages except 'about' page</td>
+              </tr>
+              <tr>
+                <td>2022.2.2</td>
+                <td>Added 7-day data into all Dashboards/ Pages</td>
+              </tr>
+              <tr>
+                <td>2022.2.1</td>
+                <td>Multiple Dashboard pages now in one page into tabs, section headings added</td>
+              </tr>
+              <tr>
+                <td>2022.2</td>
+                <td>Added up more info in various sections & fixed up some bugs</td>
+              </tr>
+              <tr>
+                <td>2022.1.9</td>
+                <td>Updated with new look of each Dashboard</td>
+              </tr>
+              <tr>
+                <td>2021.1.8</td>
+                <td>Fixed up few UI tweaks & bugs</td>
+              </tr>
+              <tr>
+                <td>2021.1.7</td>
+                <td>Added One UI viewing, fixed up few bugs</td>
+              </tr>
+              <tr>
+                <td>2021.1.6</td>
+                <td>Added Hindi Language to all pages, UI Bug fixes</td>
+              </tr>
+              <tr>
+                <td>2021.1.5</td>
+                <td>New Menu UI updated & Fixed Icons loading bugs</td>
+              </tr>
+              <tr>
+                <td>2021.1.5 beta</td>
+                <td>Testing: New Menu UI & Icons loading bugs</td>
+              </tr>
+              <tr>
+                <td>2021.1.4</td>
+                <td>Added Notifications, Refresh & made few fixes to load pages faster</td>
+              </tr>
+              <tr>
+                <td>2021.1.3</td>
+                <td>Few Bugs in navigating pages/ viewing data fixed</td>
+              </tr>
+              <tr>
+                <td>2021.1.2</td>
+                <td>End of Wixsite's link, converted pages/ data in One UI with major changes</td>
+              </tr>
+              <tr>
+                <td>2021.1.1</td>
+                <td>PWA Enabled, Bugs fixed</td>
+              </tr>
+              <tr>
+                <td>2021.1</td>
+                <td>Initial Release</td>
+              </tr>
+            </tbody>
+          </table>
+          <h4 id="term" class="center">Feedback OR any suggestions to this website</h4>
+          <h6 class="center"><span class="red-text">Kindly fill the * required fields</span></h6>
+          <div class="row">
+            <form method="POST" autocomplete="off" name="google-sheet">
+              <div class="form">
+                <div class="input-field col s6">
+                  <i class="fas fa-user-circle prefix"></i>
+                  <input id="icon_prefix" name="Name" type="text" required>
+                  <label for="icon_prefix">Name <span class="red-text">*</span></label>
+                </div>
+                <div class="input-field col s6">
+                  <i class="fas fa-envelope prefix"></i>
+                  <input id="icon_prefix" name="Email" type="email" required>
+                  <label for="icon_prefix">Email <span class="red-text">*</span></label>
+                </div>
+                <div class="input-field col s12">
+                  <i class="fas fa-comment prefix"></i>
+                  <input id="icon_prefix" name="Message" type="text">
+                  <label for="icon_prefix">Message</label>
+                </div>
+                <div class="input-field col s12">
+                  <input id="msg" name="submit" type="submit" class="oui-button white-text grey darken-3">
+                </div>
+              </div>
+          </div>
+          </form>
+        </div>
+        <p class="grey-text text-darken-1">&copy; 2021, All Rights reserved.</p>
+      </div><br>
   </main>
   <script>
     const scriptURL =

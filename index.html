@@ -40,6 +40,51 @@
   <link rel="icon" type="image/png" sizes="512x512" href="images/picture1.png">
   <link rel="apple-touch-icon" type="image/png" sizes="512x512" href="images/picture1.png">
   <style>
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: black;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 80px;
+    }
+
+    .sidenav a {
+      padding: 8px 8px 8px 10px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #f1f1f1;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+      color: #818181;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 5px;
+      right: 50px;
+      font-size: 36px;
+      margin-left: 10px;
+    }
+
+    #main {
+      transition: margin-left .5s;
+      padding: 0px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav a {
+        font-size: 18px;
+      }
+    }
+
     @font-face {
       font-family: 'SamsungOne 400';
       src: local('SamsungOne 400'), url('SamsungOne-400.woff') format('woff');
@@ -81,10 +126,6 @@
         delay: 50
       });
     })
-    $(document).ready(function () {
-      $('.modal').modal();
-      $('#modal2').modal();
-    });
     $(document).bind("contextmenu", function (e) {
       return false;
     });
@@ -93,1070 +134,1072 @@
 
 <body class="black white-text" onload="location.href='#view'">
   <main class="containr">
-    <div class="oui-viewing center-align black white-text">
-      <h4>COVID 19 DASHBOARDS</h4>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="country.html">World</a>
+      <a href="about.html">About</a>
     </div>
-    <div id="view"></div><br>
-    <div class="row">
-      <div class="col s1 m1 l1 left-align" style="font-size: x-large;">
-        <a href="#modal2" class="modal-trigger tooltipped white-text" data-position="top" data-delay="50"
-          data-tooltip="Menu">&#9776;</a></div>
-      <div class="col s11 m11 l11"></div>
-    </div>
-    <div class="oui-interaction center-align">
-      <!--Interaction area-->
-      <div class="oui-bubble black white-text">
-        <!--Menu-->
-        <div id="modal2" class="modal bottom-sheet right-align black white-text">
-          <div class="modal-content">
-            <a href="#!" onclick="location.reload()" class="blue-text text-darken-1 tooltipped" data-tooltip="Refresh"
-              data-position="top"><i class="small fas fa-sync-alt"></i></a>
-            <ul class="collection left-align" style="border-width: 0px;">
-              <li class="collection-item avatar black oui-bubble" onclick="location.href='country.html'">
-                <a href="#!"><i class="fas fa-globe circle blue darken-1"></i></a>
-                <p style="font-size: x-large;">Covid 19 Dashboard World</p>
-                <p>Covid19 Affected Countries list with all their numbers, Courtesy: worldometers.info</p>
-              </li>
-              <li class="collection-item avatar black oui-bubble" onclick="location.href='about.html'">
-                <a href="#!"><i class="fas fa-info circle blue darken-1"></i></a>
-                <p style="font-size: x-large;">About</p>
-                <p>About this Website</p>
-              </li>
-              <li class="collection-item black"></li>
-            </ul>
-          </div>
-        </div>
-        <h1 class="hide"></h1>
-        <div class="row">
-          <div class="col s12">
-            <ul class="tabs tabs-fixed-width">
-              <li class="tab"><a href="#ind" class="black white-text">
-                  <h6>INDIA</h6>
-                </a></li>
-              <li class="tab"><a href="#sta" class="black white-text">
-                  <h6>STATES</h6>
-                </a></li>
-              <li class="tab"><a href="#mah" class="black white-text">
-                  <h6>MAHARASHTRA</h6>
-                </a></li>
-              <li class="tab"><a href="#mum" class="active black white-text">
-                  <h6>MUMBAI<br>REGION</h6>
-                </a></li>
-              <div class="indicator blue darken-1"></div>
-            </ul>
-          </div>
-        </div>
-        <div class="col s12" id="ind">
+    <div id="main">
+      <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "90px";
+          document.getElementById("main").style.marginLeft = "90px";
+        }
+
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft = "0";
+        }
+      </script>
+      <div class="oui-viewing center-align black white-text">
+        <h4>COVID 19 DASHBOARDS</h4>
+      </div>
+      <div id="view"></div><br>
+      <div class="row">
+        <div class="col s1 m1 l1 left-align" style="font-size: x-large;">
+          <a href="javascript:openNav()" class="tooltipped white-text" data-position="right" data-delay="50"
+            data-tooltip="Menu">&#9776;</a></div>
+        <div class="col s11 m11 l11"></div>
+      </div>
+      <div class="oui-interaction center-align">
+        <!--Interaction area-->
+        <div class="oui-bubble black white-text">
+          <h1 class="hide"></h1>
           <div class="row">
             <div class="col s12">
               <ul class="tabs tabs-fixed-width">
-                <li class="tab"><a href="#imo" class="black white-text tooltipped" data-position="bottom"
-                    data-tooltip="May 16, Monday">
-                    <h6>16<br>MO</h6>
+                <li class="tab"><a href="#ind" class="black white-text">
+                    <h6>INDIA</h6>
                   </a></li>
-                <li class="tab"><a href="#itu" class="active black white-text tooltipped" data-position="bottom"
-                    data-tooltip="May 17, Tuesday">
-                    <h6>17<br>TU</h6>
+                <li class="tab"><a href="#sta" class="black white-text">
+                    <h6>STATES</h6>
                   </a></li>
-                <li class="tab"><a href="#iwe" class="black white-text tooltipped" data-position="bottom"
-                    data-tooltip="May 11, Wednesday">
-                    <h6>11<br>WE</h6>
+                <li class="tab"><a href="#mah" class="black white-text">
+                    <h6>MAHARASHTRA</h6>
                   </a></li>
-                <li class="tab"><a href="#ith" class="black white-text tooltipped" data-position="bottom"
-                    data-tooltip="May 12, Thursday">
-                    <h6>12<br>TH</h6>
-                  </a></li>
-                <li class="tab"><a href="#ifr" class="black white-text tooltipped" data-position="bottom"
-                    data-tooltip="May 13, Friday">
-                    <h6>13<br>FR</h6>
-                  </a></li>
-                <li class="tab"><a href="#isa" class="black white-text tooltipped" data-position="bottom"
-                    data-tooltip="May 14, Saturday">
-                    <h6>14<br>SA</h6>
-                  </a></li>
-                <li class="tab"><a href="#isu" class="black white-text tooltipped" data-position="bottom"
-                    data-tooltip="May 15, Sunday">
-                    <h6>15<br>SU</h6>
+                <li class="tab"><a href="#mum" class="active black white-text">
+                    <h6>MUMBAI<br>REGION</h6>
                   </a></li>
                 <div class="indicator blue darken-1"></div>
               </ul>
             </div>
           </div>
-          <div class="col s12" id="imo">
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
-              <i class="fas fa-virus"></i> Covid 19</blockquote>
-            <h6 class="white-text">Source: ICMR/ MyGov<br>&#8595;&#8593; Changes from last 24 hours</h6>
-            <div class="col s12 m12 l4 offset-l4">
-              <img src="images/IMOi.jpg" alt="IndDB1" class="responsive-img materialboxed">
-            </div>
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
-              <i class="fas fa-syringe"></i> Vaccination</blockquote>
-            <div class="col s12 m12 l4 offset-l4">
-              <img src="images/IMOii.jpg" alt="VacDB1" class="responsive-img materialboxed">
-            </div>
-          </div>
-          <div class="col s12" id="itu">
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
-              <i class="fas fa-virus"></i> Covid 19</blockquote>
-            <h6 class="white-text">Source: ICMR/ MyGov<br>&#8595;&#8593; Changes from last 24 hours</h6>
-            <div class="col s12 m12 l4 offset-l4">
-              <img src="images/ITUi.jpg" alt="IndDB2" class="responsive-img materialboxed">
-            </div>
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
-              <i class="fas fa-syringe"></i> Vaccination</blockquote>
-            <div class="col s12 m12 l4 offset-l4">
-              <img src="images/ITUii.jpg" alt="VacDB2" class="responsive-img materialboxed">
-            </div>
-          </div>
-          <div class="col s12" id="iwe">
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
-              <i class="fas fa-virus"></i> Covid 19</blockquote>
-            <h6 class="white-text">Source: ICMR/ MyGov<br>&#8595;&#8593; Changes from last 24 hours</h6>
-            <div class="col s12 m12 l4 offset-l4">
-              <img src="images/IWEi.jpg" alt="IndDB3" class="responsive-img materialboxed">
-            </div>
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
-              <i class="fas fa-syringe"></i> Vaccination</blockquote>
-            <div class="col s12 m12 l4 offset-l4">
-              <img src="images/IWEii.jpg" alt="VacDB3" class="responsive-img materialboxed">
-            </div>
-          </div>
-          <div class="col s12" id="ith">
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
-              <i class="fas fa-virus"></i> Covid 19</blockquote>
-            <h6 class="white-text">Source: ICMR/ MyGov<br>&#8595;&#8593; Changes from last 24 hours</h6>
-            <div class="col s12 m12 l4 offset-l4">
-              <img src="images/ITHi.jpg" alt="IndDB4" class="responsive-img materialboxed">
-            </div>
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
-              <i class="fas fa-syringe"></i> Vaccination</blockquote>
-            <div class="col s12 m12 l4 offset-l4">
-              <img src="images/ITHii.jpg" alt="VacDB4" class="responsive-img materialboxed">
-            </div>
-          </div>
-          <div class="col s12" id="ifr">
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
-              <i class="fas fa-virus"></i> Covid 19</blockquote>
-            <h6 class="white-text">Source: ICMR/ MyGov<br>&#8595;&#8593; Changes from last 24 hours</h6>
-            <div class="col s12 m12 l4 offset-l4">
-              <img src="images/IFRi.jpg" alt="IndDB5" class="responsive-img materialboxed">
-            </div>
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
-              <i class="fas fa-syringe"></i> Vaccination</blockquote>
-            <div class="col s12 m12 l4 offset-l4">
-              <img src="images/IFRii.jpg" alt="VacDB5" class="responsive-img materialboxed">
-            </div>
-          </div>
-          <div class="col s12" id="isa">
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
-              <i class="fas fa-virus"></i> Covid 19</blockquote>
-            <h6 class="white-text">Source: ICMR/ MyGov<br>&#8595;&#8593; Changes from last 24 hours</h6>
-            <div class="col s12 m12 l4 offset-l4">
-              <img src="images/ISAi.jpg" alt="IndDB6" class="responsive-img materialboxed">
-            </div>
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
-              <i class="fas fa-syringe"></i> Vaccination</blockquote>
-            <div class="col s12 m12 l4 offset-l4">
-              <img src="images/ISAii.jpg" alt="VacDB6" class="responsive-img materialboxed">
-            </div>
-          </div>
-          <div class="col s12" id="isu">
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
-              <i class="fas fa-virus"></i> Covid 19</blockquote>
-            <h6 class="white-text">Source: ICMR/ MyGov<br>&#8595;&#8593; Changes from last 24 hours</h6>
-            <div class="col s12 m12 l4 offset-l4">
-              <img src="images/ISUi.jpg" alt="IndDB7" class="responsive-img materialboxed">
-            </div>
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
-              <i class="fas fa-syringe"></i> Vaccination</blockquote>
-            <div class="col s12 m12 l4 offset-l4">
-              <img src="images/ISUii.jpg" alt="VacDB7" class="responsive-img materialboxed">
-            </div>
-          </div>
-          <h6>Below Data as on May 18, 12:25 IST</h6>
-          <div class="row">
-            <div class="col s12 m6 l4">
-              <div class="card-panel grey darken-4 white-text">
-                <h5><b>Vaccine Doses availability</b></h5>
-                <p>As on May 18, Source: PIB India</p>
-                <b>Supplied</b>: 193.53 Crores <br>
-                <b>Balance</b>: 17.00 Crores
-              </div>
-            </div>
-            <div class="col s12 m6 l4">
-              <div class="card-panel grey darken-4 white-text">
-                <h5><b>Vaccine Doses administered</b></h5>
-                <b>Dose 1</b>: 100.84 Crores <br>
-                <b>Dose 2</b>: 87.71 Crores <br>
-                <b>Prec. Dose</b>: 3.01 Crores <br>
-                <b>Total</b>: 191.57 Crores
-              </div>
-            </div>
-            <div class="col s12 m6 l4">
-              <div class="card-panel grey darken-4 white-text">
-                <h5><b>Registered for Vaccine</b></h5>
-                <b>Age 12 to 14</b>: 3.28 Crores <br>
-                <b>Age 15 to 17</b>: 6.00 Crores <br>
-                <b>Age 18 to 44</b>: 63.10 Crores <br>
-                <b>Age 45+</b>: 36.62 Crores <br>
-                <b>Total</b>: 109.02 Crores
-              </div>
-            </div>
-            <div class="col s12 m6 l4">
-              <div class="card-panel grey darken-4 white-text">
-                <h5><b>Vaccination by Gender</b></h5>
-                <b>Male</b>: 95.91 Crores <br>
-                <b>Female</b>: 92.19 Crores <br>
-                <b>Others</b>: 4.54 Lakhs
-              </div>
-            </div>
-            <div class="col s12 m6 l4">
-              <div class="card-panel grey darken-4 white-text">
-                <h5><b>Vaccination by Vaccine Name</b></h5>
-                <b>CoviShield</b>: 154.49 Crores <br>
-                <b>Covaxin</b>: 32.05 Crores <br>
-                <b>Corbevax</b>: 4.49 Crores <br>
-                <b>Sputnik V</b>: 12.24 Lakhs <br>
-                <b>Covovax</b>: 312
-                <b>Novavax</b>: -
-                <b>Zycov-D</b>: -
-              </div>
-            </div>
-            <div class="col s12 m6 l4">
-              <div class="card-panel grey darken-4 white-text">
-                <h5><b>Vaccination by Age</b></h5>
-                <b>Age 12 to 14</b>: 4.48 Crores <br>
-                <b>Age 15 to 17</b>: 10.33 Crores <br>
-                <b>Age 18 to 44</b>: 108.88 Crores <br>
-                <b>Age 45 to 60</b>: 40.91 Crores <br>
-                <b>Age 60+</b>: 26.38 Crores
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col s12" id="sta">
-          <div class="row">
-            <div class="col s12">
-              <ul class="tabs tabs-fixed-width">
-                <li class="tab"><a href="#smo" class="black white-text tooltipped" data-position="bottom"
-                    data-tooltip="May 16, Monday">
-                    <h6>16<br>MO</h6>
-                  </a></li>
-                <li class="tab"><a href="#stu" class="active black white-text tooltipped" data-position="bottom"
-                    data-tooltip="May 17, Tuesday">
-                    <h6>17<br>TU</h6>
-                  </a></li>
-                <li class="tab"><a href="#swe" class="black white-text tooltipped" data-position="bottom"
-                    data-tooltip="May 11, Wednesday">
-                    <h6>11<br>WE</h6>
-                  </a></li>
-                <li class="tab"><a href="#sth" class="black white-text tooltipped" data-position="bottom"
-                    data-tooltip="May 12, Thursday">
-                    <h6>12<br>TH</h6>
-                  </a></li>
-                <li class="tab"><a href="#sfr" class="black white-text tooltipped" data-position="bottom"
-                    data-tooltip="May 13, Friday">
-                    <h6>13<br>FR</h6>
-                  </a></li>
-                <li class="tab"><a href="#ssa" class="black white-text tooltipped" data-position="bottom"
-                    data-tooltip="May 14, Saturday">
-                    <h6>14<br>SA</h6>
-                  </a></li>
-                <li class="tab"><a href="#ssu" class="black white-text tooltipped" data-position="bottom"
-                    data-tooltip="May 15, Sunday">
-                    <h6>15<br>SU</h6>
-                  </a></li>
-                <div class="indicator blue darken-1"></div>
-              </ul>
-            </div>
-          </div>
-          <div class="col s12" id="smo">
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
-              <i class="fas fa-virus"></i> Covid 19</blockquote>
-            <h6 class="white-text">Source: ICMR/ MyGov<br>&#8595;&#8593; Changes from last 24 hours</h6>
+          <div class="col s12" id="ind">
             <div class="row">
-              <div class="col s12 m12 l3">
-                <img src="images/SMOi.jpg" alt="StatDB1" class="responsive-img materialboxed">
-              </div>
-              <div class="col s12 m12 l3">
-                <img src="images/SMOii.jpg" alt="StatDB2" class="responsive-img materialboxed">
-              </div>
-              <div class="col s12 m12 l3">
-                <img src="images/SMOiii.jpg" alt="StatDB3" class="responsive-img materialboxed">
-              </div>
-              <div class="col s12 m12 l3">
-                <img src="images/SMOiv.jpg" alt="StatDB4" class="responsive-img materialboxed">
+              <div class="col s12">
+                <ul class="tabs tabs-fixed-width">
+                  <li class="tab"><a href="#imo" class="black white-text tooltipped" data-position="bottom"
+                      data-tooltip="May 16, Monday">
+                      <h6>16<br>MO</h6>
+                    </a></li>
+                  <li class="tab"><a href="#itu" class="active black white-text tooltipped" data-position="bottom"
+                      data-tooltip="May 17, Tuesday">
+                      <h6>17<br>TU</h6>
+                    </a></li>
+                  <li class="tab"><a href="#iwe" class="black white-text tooltipped" data-position="bottom"
+                      data-tooltip="May 11, Wednesday">
+                      <h6>11<br>WE</h6>
+                    </a></li>
+                  <li class="tab"><a href="#ith" class="black white-text tooltipped" data-position="bottom"
+                      data-tooltip="May 12, Thursday">
+                      <h6>12<br>TH</h6>
+                    </a></li>
+                  <li class="tab"><a href="#ifr" class="black white-text tooltipped" data-position="bottom"
+                      data-tooltip="May 13, Friday">
+                      <h6>13<br>FR</h6>
+                    </a></li>
+                  <li class="tab"><a href="#isa" class="black white-text tooltipped" data-position="bottom"
+                      data-tooltip="May 14, Saturday">
+                      <h6>14<br>SA</h6>
+                    </a></li>
+                  <li class="tab"><a href="#isu" class="black white-text tooltipped" data-position="bottom"
+                      data-tooltip="May 15, Sunday">
+                      <h6>15<br>SU</h6>
+                    </a></li>
+                  <div class="indicator blue darken-1"></div>
+                </ul>
               </div>
             </div>
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
-              <i class="fas fa-syringe"></i> Vaccination</blockquote>
+            <div class="col s12" id="imo">
+              <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
+                <i class="fas fa-virus"></i> Covid 19</blockquote>
+              <h6 class="white-text">Source: ICMR/ MyGov<br>&#8595;&#8593; Changes from last 24 hours</h6>
+              <div class="col s12 m12 l4 offset-l4">
+                <img src="images/IMOi.jpg" alt="IndDB1" class="responsive-img materialboxed">
+              </div>
+              <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
+                <i class="fas fa-syringe"></i> Vaccination</blockquote>
+              <div class="col s12 m12 l4 offset-l4">
+                <img src="images/IMOii.jpg" alt="VacDB1" class="responsive-img materialboxed">
+              </div>
+            </div>
+            <div class="col s12" id="itu">
+              <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
+                <i class="fas fa-virus"></i> Covid 19</blockquote>
+              <h6 class="white-text">Source: ICMR/ MyGov<br>&#8595;&#8593; Changes from last 24 hours</h6>
+              <div class="col s12 m12 l4 offset-l4">
+                <img src="images/ITUi.jpg" alt="IndDB2" class="responsive-img materialboxed">
+              </div>
+              <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
+                <i class="fas fa-syringe"></i> Vaccination</blockquote>
+              <div class="col s12 m12 l4 offset-l4">
+                <img src="images/ITUii.jpg" alt="VacDB2" class="responsive-img materialboxed">
+              </div>
+            </div>
+            <div class="col s12" id="iwe">
+              <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
+                <i class="fas fa-virus"></i> Covid 19</blockquote>
+              <h6 class="white-text">Source: ICMR/ MyGov<br>&#8595;&#8593; Changes from last 24 hours</h6>
+              <div class="col s12 m12 l4 offset-l4">
+                <img src="images/IWEi.jpg" alt="IndDB3" class="responsive-img materialboxed">
+              </div>
+              <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
+                <i class="fas fa-syringe"></i> Vaccination</blockquote>
+              <div class="col s12 m12 l4 offset-l4">
+                <img src="images/IWEii.jpg" alt="VacDB3" class="responsive-img materialboxed">
+              </div>
+            </div>
+            <div class="col s12" id="ith">
+              <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
+                <i class="fas fa-virus"></i> Covid 19</blockquote>
+              <h6 class="white-text">Source: ICMR/ MyGov<br>&#8595;&#8593; Changes from last 24 hours</h6>
+              <div class="col s12 m12 l4 offset-l4">
+                <img src="images/ITHi.jpg" alt="IndDB4" class="responsive-img materialboxed">
+              </div>
+              <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
+                <i class="fas fa-syringe"></i> Vaccination</blockquote>
+              <div class="col s12 m12 l4 offset-l4">
+                <img src="images/ITHii.jpg" alt="VacDB4" class="responsive-img materialboxed">
+              </div>
+            </div>
+            <div class="col s12" id="ifr">
+              <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
+                <i class="fas fa-virus"></i> Covid 19</blockquote>
+              <h6 class="white-text">Source: ICMR/ MyGov<br>&#8595;&#8593; Changes from last 24 hours</h6>
+              <div class="col s12 m12 l4 offset-l4">
+                <img src="images/IFRi.jpg" alt="IndDB5" class="responsive-img materialboxed">
+              </div>
+              <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
+                <i class="fas fa-syringe"></i> Vaccination</blockquote>
+              <div class="col s12 m12 l4 offset-l4">
+                <img src="images/IFRii.jpg" alt="VacDB5" class="responsive-img materialboxed">
+              </div>
+            </div>
+            <div class="col s12" id="isa">
+              <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
+                <i class="fas fa-virus"></i> Covid 19</blockquote>
+              <h6 class="white-text">Source: ICMR/ MyGov<br>&#8595;&#8593; Changes from last 24 hours</h6>
+              <div class="col s12 m12 l4 offset-l4">
+                <img src="images/ISAi.jpg" alt="IndDB6" class="responsive-img materialboxed">
+              </div>
+              <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
+                <i class="fas fa-syringe"></i> Vaccination</blockquote>
+              <div class="col s12 m12 l4 offset-l4">
+                <img src="images/ISAii.jpg" alt="VacDB6" class="responsive-img materialboxed">
+              </div>
+            </div>
+            <div class="col s12" id="isu">
+              <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
+                <i class="fas fa-virus"></i> Covid 19</blockquote>
+              <h6 class="white-text">Source: ICMR/ MyGov<br>&#8595;&#8593; Changes from last 24 hours</h6>
+              <div class="col s12 m12 l4 offset-l4">
+                <img src="images/ISUi.jpg" alt="IndDB7" class="responsive-img materialboxed">
+              </div>
+              <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
+                <i class="fas fa-syringe"></i> Vaccination</blockquote>
+              <div class="col s12 m12 l4 offset-l4">
+                <img src="images/ISUii.jpg" alt="VacDB7" class="responsive-img materialboxed">
+              </div>
+            </div>
+            <h6>Below Data as on May 18, 12:25 IST</h6>
             <div class="row">
-              <div class="col offset-l2"></div>
-              <div class="col s12 m12 l4">
-                <img src="images/VMOi.jpg" alt="VacDB" class="responsive-img materialboxed">
+              <div class="col s12 m6 l4">
+                <div class="card-panel grey darken-4 white-text">
+                  <h5><b>Vaccine Doses availability</b></h5>
+                  <p>As on May 18, Source: PIB India</p>
+                  <b>Supplied</b>: 193.53 Crores <br>
+                  <b>Balance</b>: 17.00 Crores
+                </div>
               </div>
-              <div class="col s12 m12 l4">
-                <img src="images/VMOii.jpg" alt="VacDB" class="responsive-img materialboxed">
+              <div class="col s12 m6 l4">
+                <div class="card-panel grey darken-4 white-text">
+                  <h5><b>Vaccine Doses administered</b></h5>
+                  <b>Dose 1</b>: 100.84 Crores <br>
+                  <b>Dose 2</b>: 87.71 Crores <br>
+                  <b>Prec. Dose</b>: 3.01 Crores <br>
+                  <b>Total</b>: 191.57 Crores
+                </div>
               </div>
-            </div>
-            <h6><b>Abbreviations</b> - UT: Union Territory</h6>
-          </div>
-          <div class="col s12" id="stu">
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
-              <i class="fas fa-virus"></i> Covid 19</blockquote>
-            <h6 class="white-text">Source: ICMR/ MyGov<br>&#8595;&#8593; Changes from last 24 hours</h6>
-            <div class="row">
-              <div class="col s12 m12 l3">
-                <img src="images/STUi.jpg" alt="StatDB1" class="responsive-img materialboxed">
+              <div class="col s12 m6 l4">
+                <div class="card-panel grey darken-4 white-text">
+                  <h5><b>Registered for Vaccine</b></h5>
+                  <b>Age 12 to 14</b>: 3.28 Crores <br>
+                  <b>Age 15 to 17</b>: 6.00 Crores <br>
+                  <b>Age 18 to 44</b>: 63.10 Crores <br>
+                  <b>Age 45+</b>: 36.62 Crores <br>
+                  <b>Total</b>: 109.02 Crores
+                </div>
               </div>
-              <div class="col s12 m12 l3">
-                <img src="images/STUii.jpg" alt="StatDB2" class="responsive-img materialboxed">
+              <div class="col s12 m6 l4">
+                <div class="card-panel grey darken-4 white-text">
+                  <h5><b>Vaccination by Gender</b></h5>
+                  <b>Male</b>: 95.91 Crores <br>
+                  <b>Female</b>: 92.19 Crores <br>
+                  <b>Others</b>: 4.54 Lakhs
+                </div>
               </div>
-              <div class="col s12 m12 l3">
-                <img src="images/STUiii.jpg" alt="StatDB3" class="responsive-img materialboxed">
+              <div class="col s12 m6 l4">
+                <div class="card-panel grey darken-4 white-text">
+                  <h5><b>Vaccination by Vaccine Name</b></h5>
+                  <b>CoviShield</b>: 154.49 Crores <br>
+                  <b>Covaxin</b>: 32.05 Crores <br>
+                  <b>Corbevax</b>: 4.49 Crores <br>
+                  <b>Sputnik V</b>: 12.24 Lakhs <br>
+                  <b>Covovax</b>: 312
+                  <b>Novavax</b>: -
+                  <b>Zycov-D</b>: -
+                </div>
               </div>
-              <div class="col s12 m12 l3">
-                <img src="images/STUiv.jpg" alt="StatDB4" class="responsive-img materialboxed">
+              <div class="col s12 m6 l4">
+                <div class="card-panel grey darken-4 white-text">
+                  <h5><b>Vaccination by Age</b></h5>
+                  <b>Age 12 to 14</b>: 4.48 Crores <br>
+                  <b>Age 15 to 17</b>: 10.33 Crores <br>
+                  <b>Age 18 to 44</b>: 108.88 Crores <br>
+                  <b>Age 45 to 60</b>: 40.91 Crores <br>
+                  <b>Age 60+</b>: 26.38 Crores
+                </div>
               </div>
-            </div>
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
-              <i class="fas fa-syringe"></i> Vaccination</blockquote>
-            <div class="row">
-              <div class="col offset-l2"></div>
-              <div class="col s12 m12 l4">
-                <img src="images/VTUi.jpg" alt="VacDB" class="responsive-img materialboxed">
-              </div>
-              <div class="col s12 m12 l4">
-                <img src="images/VTUii.jpg" alt="VacDB" class="responsive-img materialboxed">
-              </div>
-            </div>
-            <h6><b>Abbreviations</b> - UT: Union Territory</h6>
-          </div>
-          <div class="col s12" id="swe">
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
-              <i class="fas fa-virus"></i> Covid 19</blockquote>
-            <h6 class="white-text">Source: ICMR/ MyGov<br>&#8595;&#8593; Changes from last 24 hours</h6>
-            <div class="row">
-              <div class="col s12 m12 l3">
-                <img src="images/SWEi.jpg" alt="StatDB1" class="responsive-img materialboxed">
-              </div>
-              <div class="col s12 m12 l3">
-                <img src="images/SWEii.jpg" alt="StatDB2" class="responsive-img materialboxed">
-              </div>
-              <div class="col s12 m12 l3">
-                <img src="images/SWEiii.jpg" alt="StatDB3" class="responsive-img materialboxed">
-              </div>
-              <div class="col s12 m12 l3">
-                <img src="images/SWEiv.jpg" alt="StatDB4" class="responsive-img materialboxed">
-              </div>
-            </div>
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
-              <i class="fas fa-syringe"></i> Vaccination</blockquote>
-            <div class="row">
-              <div class="col offset-l2"></div>
-              <div class="col s12 m12 l4">
-                <img src="images/VWEi.jpg" alt="VacDB" class="responsive-img materialboxed">
-              </div>
-              <div class="col s12 m12 l4">
-                <img src="images/VWEii.jpg" alt="VacDB" class="responsive-img materialboxed">
-              </div>
-            </div>
-            <h6><b>Abbreviations</b> - UT: Union Territory</h6>
-          </div>
-          <div class="col s12" id="sth">
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
-              <i class="fas fa-virus"></i> Covid 19</blockquote>
-            <h6 class="white-text">Source: ICMR/ MyGov<br>&#8595;&#8593; Changes from last 24 hours</h6>
-            <div class="row">
-              <div class="col s12 m12 l3">
-                <img src="images/STHi.jpg" alt="StatDB1" class="responsive-img materialboxed">
-              </div>
-              <div class="col s12 m12 l3">
-                <img src="images/STHii.jpg" alt="StatDB2" class="responsive-img materialboxed">
-              </div>
-              <div class="col s12 m12 l3">
-                <img src="images/STHiii.jpg" alt="StatDB3" class="responsive-img materialboxed">
-              </div>
-              <div class="col s12 m12 l3">
-                <img src="images/STHiv.jpg" alt="StatDB4" class="responsive-img materialboxed">
-              </div>
-            </div>
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
-              <i class="fas fa-syringe"></i> Vaccination</blockquote>
-            <div class="row">
-              <div class="col offset-l2"></div>
-              <div class="col s12 m12 l4">
-                <img src="images/VTHi.jpg" alt="VacDB" class="responsive-img materialboxed">
-              </div>
-              <div class="col s12 m12 l4">
-                <img src="images/VTHii.jpg" alt="VacDB" class="responsive-img materialboxed">
-              </div>
-            </div>
-            <h6><b>Abbreviations</b> - UT: Union Territory</h6>
-          </div>
-          <div class="col s12" id="sfr">
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
-              <i class="fas fa-virus"></i> Covid 19</blockquote>
-            <h6 class="white-text">Source: ICMR/ MyGov<br>&#8595;&#8593; Changes from last 24 hours</h6>
-            <div class="row">
-              <div class="col s12 m12 l3">
-                <img src="images/SFRi.jpg" alt="StatDB1" class="responsive-img materialboxed">
-              </div>
-              <div class="col s12 m12 l3">
-                <img src="images/SFRii.jpg" alt="StatDB2" class="responsive-img materialboxed">
-              </div>
-              <div class="col s12 m12 l3">
-                <img src="images/SFRiii.jpg" alt="StatDB3" class="responsive-img materialboxed">
-              </div>
-              <div class="col s12 m12 l3">
-                <img src="images/SFRiv.jpg" alt="StatDB4" class="responsive-img materialboxed">
-              </div>
-            </div>
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
-              <i class="fas fa-syringe"></i> Vaccination</blockquote>
-            <div class="row">
-              <div class="col offset-l2"></div>
-              <div class="col s12 m12 l4">
-                <img src="images/VFRi.jpg" alt="VacDB" class="responsive-img materialboxed">
-              </div>
-              <div class="col s12 m12 l4">
-                <img src="images/VFRii.jpg" alt="VacDB" class="responsive-img materialboxed">
-              </div>
-            </div>
-            <h6><b>Abbreviations</b> - UT: Union Territory</h6>
-          </div>
-          <div class="col s12" id="ssa">
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
-              <i class="fas fa-virus"></i> Covid 19</blockquote>
-            <h6 class="white-text">Source: ICMR/ MyGov<br>&#8595;&#8593; Changes from last 24 hours</h6>
-            <div class="row">
-              <div class="col s12 m12 l3">
-                <img src="images/SSAi.jpg" alt="StatDB1" class="responsive-img materialboxed">
-              </div>
-              <div class="col s12 m12 l3">
-                <img src="images/SSAii.jpg" alt="StatDB2" class="responsive-img materialboxed">
-              </div>
-              <div class="col s12 m12 l3">
-                <img src="images/SSAiii.jpg" alt="StatDB3" class="responsive-img materialboxed">
-              </div>
-              <div class="col s12 m12 l3">
-                <img src="images/SSAiv.jpg" alt="StatDB4" class="responsive-img materialboxed">
-              </div>
-            </div>
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
-              <i class="fas fa-syringe"></i> Vaccination</blockquote>
-            <div class="row">
-              <div class="col offset-l2"></div>
-              <div class="col s12 m12 l4">
-                <img src="images/VSAi.jpg" alt="VacDB" class="responsive-img materialboxed">
-              </div>
-              <div class="col s12 m12 l4">
-                <img src="images/VSAii.jpg" alt="VacDB" class="responsive-img materialboxed">
-              </div>
-            </div>
-            <h6><b>Abbreviations</b> - UT: Union Territory</h6>
-          </div>
-          <div class="col s12" id="ssu">
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
-              <i class="fas fa-virus"></i> Covid 19</blockquote>
-            <h6 class="white-text">Source: ICMR/ MyGov<br>&#8595;&#8593; Changes from last 24 hours</h6>
-            <div class="row">
-              <div class="col s12 m12 l3">
-                <img src="images/SSUi.jpg" alt="StatDB1" class="responsive-img materialboxed">
-              </div>
-              <div class="col s12 m12 l3">
-                <img src="images/SSUii.jpg" alt="StatDB2" class="responsive-img materialboxed">
-              </div>
-              <div class="col s12 m12 l3">
-                <img src="images/SSUiii.jpg" alt="StatDB3" class="responsive-img materialboxed">
-              </div>
-              <div class="col s12 m12 l3">
-                <img src="images/SSUiv.jpg" alt="StatDB4" class="responsive-img materialboxed">
-              </div>
-            </div>
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
-              <i class="fas fa-syringe"></i> Vaccination</blockquote>
-            <div class="row">
-              <div class="col offset-l2"></div>
-              <div class="col s12 m12 l4">
-                <img src="images/VSUi.jpg" alt="VacDB" class="responsive-img materialboxed">
-              </div>
-              <div class="col s12 m12 l4">
-                <img src="images/VSUii.jpg" alt="VacDB" class="responsive-img materialboxed">
-              </div>
-            </div>
-            <h6><b>Abbreviations</b> - UT: Union Territory</h6>
-          </div>
-        </div>
-        <div class="col s12" id="mah">
-          <div class="row">
-            <div class="col s12">
-              <ul class="tabs tabs-fixed-width">
-                <li class="tab"><a href="#mmo" class="black white-text tooltipped" data-position="bottom"
-                    data-tooltip="May 16, Monday">
-                    <h6>16<br>MO</h6>
-                  </a></li>
-                <li class="tab"><a href="#mtu" class="active black white-text tooltipped" data-position="bottom"
-                    data-tooltip="May 17, Tuesday">
-                    <h6>17<br>TU</h6>
-                  </a></li>
-                <li class="tab"><a href="#mwe" class="black white-text tooltipped" data-position="bottom"
-                    data-tooltip="May 11, Wednesday">
-                    <h6>11<br>WE</h6>
-                  </a></li>
-                <li class="tab"><a href="#mth" class="black white-text tooltipped" data-position="bottom"
-                    data-tooltip="May 12, Thursday">
-                    <h6>12<br>TH</h6>
-                  </a></li>
-                <li class="tab"><a href="#mfr" class="black white-text tooltipped" data-position="bottom"
-                    data-tooltip="May 13, Friday">
-                    <h6>13<br>FR</h6>
-                  </a></li>
-                <li class="tab"><a href="#msa" class="black white-text tooltipped" data-position="bottom"
-                    data-tooltip="May 14, Saturday">
-                    <h6>14<br>SA</h6>
-                  </a></li>
-                <li class="tab"><a href="#msu" class="black white-text tooltipped" data-position="bottom"
-                    data-tooltip="May 15, Sunday">
-                    <h6>15<br>SU</h6>
-                  </a></li>
-                <div class="indicator blue darken-1"></div>
-              </ul>
             </div>
           </div>
-          <div class="col s12" id="mmo">
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
-              <i class="fas fa-virus"></i> Covid 19</blockquote>
-            <h6>Source: Twitter - PIB Maharashtra</h6>
-            <a href="https://drive.google.com/file/d/1Ueb2uLu-yi8IAv_-l9vKyC8aAd6bzjE_/view?usp=sharing" target="_blank"
+          <div class="col s12" id="sta">
+            <div class="row">
+              <div class="col s12">
+                <ul class="tabs tabs-fixed-width">
+                  <li class="tab"><a href="#smo" class="black white-text tooltipped" data-position="bottom"
+                      data-tooltip="May 16, Monday">
+                      <h6>16<br>MO</h6>
+                    </a></li>
+                  <li class="tab"><a href="#stu" class="active black white-text tooltipped" data-position="bottom"
+                      data-tooltip="May 17, Tuesday">
+                      <h6>17<br>TU</h6>
+                    </a></li>
+                  <li class="tab"><a href="#swe" class="black white-text tooltipped" data-position="bottom"
+                      data-tooltip="May 11, Wednesday">
+                      <h6>11<br>WE</h6>
+                    </a></li>
+                  <li class="tab"><a href="#sth" class="black white-text tooltipped" data-position="bottom"
+                      data-tooltip="May 12, Thursday">
+                      <h6>12<br>TH</h6>
+                    </a></li>
+                  <li class="tab"><a href="#sfr" class="black white-text tooltipped" data-position="bottom"
+                      data-tooltip="May 13, Friday">
+                      <h6>13<br>FR</h6>
+                    </a></li>
+                  <li class="tab"><a href="#ssa" class="black white-text tooltipped" data-position="bottom"
+                      data-tooltip="May 14, Saturday">
+                      <h6>14<br>SA</h6>
+                    </a></li>
+                  <li class="tab"><a href="#ssu" class="black white-text tooltipped" data-position="bottom"
+                      data-tooltip="May 15, Sunday">
+                      <h6>15<br>SU</h6>
+                    </a></li>
+                  <div class="indicator blue darken-1"></div>
+                </ul>
+              </div>
+            </div>
+            <div class="col s12" id="smo">
+              <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
+                <i class="fas fa-virus"></i> Covid 19</blockquote>
+              <h6 class="white-text">Source: ICMR/ MyGov<br>&#8595;&#8593; Changes from last 24 hours</h6>
+              <div class="row">
+                <div class="col s12 m12 l3">
+                  <img src="images/SMOi.jpg" alt="StatDB1" class="responsive-img materialboxed">
+                </div>
+                <div class="col s12 m12 l3">
+                  <img src="images/SMOii.jpg" alt="StatDB2" class="responsive-img materialboxed">
+                </div>
+                <div class="col s12 m12 l3">
+                  <img src="images/SMOiii.jpg" alt="StatDB3" class="responsive-img materialboxed">
+                </div>
+                <div class="col s12 m12 l3">
+                  <img src="images/SMOiv.jpg" alt="StatDB4" class="responsive-img materialboxed">
+                </div>
+              </div>
+              <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
+                <i class="fas fa-syringe"></i> Vaccination</blockquote>
+              <div class="row">
+                <div class="col offset-l2"></div>
+                <div class="col s12 m12 l4">
+                  <img src="images/VMOi.jpg" alt="VacDB" class="responsive-img materialboxed">
+                </div>
+                <div class="col s12 m12 l4">
+                  <img src="images/VMOii.jpg" alt="VacDB" class="responsive-img materialboxed">
+                </div>
+              </div>
+              <h6><b>Abbreviations</b> - UT: Union Territory</h6>
+            </div>
+            <div class="col s12" id="stu">
+              <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
+                <i class="fas fa-virus"></i> Covid 19</blockquote>
+              <h6 class="white-text">Source: ICMR/ MyGov<br>&#8595;&#8593; Changes from last 24 hours</h6>
+              <div class="row">
+                <div class="col s12 m12 l3">
+                  <img src="images/STUi.jpg" alt="StatDB1" class="responsive-img materialboxed">
+                </div>
+                <div class="col s12 m12 l3">
+                  <img src="images/STUii.jpg" alt="StatDB2" class="responsive-img materialboxed">
+                </div>
+                <div class="col s12 m12 l3">
+                  <img src="images/STUiii.jpg" alt="StatDB3" class="responsive-img materialboxed">
+                </div>
+                <div class="col s12 m12 l3">
+                  <img src="images/STUiv.jpg" alt="StatDB4" class="responsive-img materialboxed">
+                </div>
+              </div>
+              <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
+                <i class="fas fa-syringe"></i> Vaccination</blockquote>
+              <div class="row">
+                <div class="col offset-l2"></div>
+                <div class="col s12 m12 l4">
+                  <img src="images/VTUi.jpg" alt="VacDB" class="responsive-img materialboxed">
+                </div>
+                <div class="col s12 m12 l4">
+                  <img src="images/VTUii.jpg" alt="VacDB" class="responsive-img materialboxed">
+                </div>
+              </div>
+              <h6><b>Abbreviations</b> - UT: Union Territory</h6>
+            </div>
+            <div class="col s12" id="swe">
+              <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
+                <i class="fas fa-virus"></i> Covid 19</blockquote>
+              <h6 class="white-text">Source: ICMR/ MyGov<br>&#8595;&#8593; Changes from last 24 hours</h6>
+              <div class="row">
+                <div class="col s12 m12 l3">
+                  <img src="images/SWEi.jpg" alt="StatDB1" class="responsive-img materialboxed">
+                </div>
+                <div class="col s12 m12 l3">
+                  <img src="images/SWEii.jpg" alt="StatDB2" class="responsive-img materialboxed">
+                </div>
+                <div class="col s12 m12 l3">
+                  <img src="images/SWEiii.jpg" alt="StatDB3" class="responsive-img materialboxed">
+                </div>
+                <div class="col s12 m12 l3">
+                  <img src="images/SWEiv.jpg" alt="StatDB4" class="responsive-img materialboxed">
+                </div>
+              </div>
+              <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
+                <i class="fas fa-syringe"></i> Vaccination</blockquote>
+              <div class="row">
+                <div class="col offset-l2"></div>
+                <div class="col s12 m12 l4">
+                  <img src="images/VWEi.jpg" alt="VacDB" class="responsive-img materialboxed">
+                </div>
+                <div class="col s12 m12 l4">
+                  <img src="images/VWEii.jpg" alt="VacDB" class="responsive-img materialboxed">
+                </div>
+              </div>
+              <h6><b>Abbreviations</b> - UT: Union Territory</h6>
+            </div>
+            <div class="col s12" id="sth">
+              <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
+                <i class="fas fa-virus"></i> Covid 19</blockquote>
+              <h6 class="white-text">Source: ICMR/ MyGov<br>&#8595;&#8593; Changes from last 24 hours</h6>
+              <div class="row">
+                <div class="col s12 m12 l3">
+                  <img src="images/STHi.jpg" alt="StatDB1" class="responsive-img materialboxed">
+                </div>
+                <div class="col s12 m12 l3">
+                  <img src="images/STHii.jpg" alt="StatDB2" class="responsive-img materialboxed">
+                </div>
+                <div class="col s12 m12 l3">
+                  <img src="images/STHiii.jpg" alt="StatDB3" class="responsive-img materialboxed">
+                </div>
+                <div class="col s12 m12 l3">
+                  <img src="images/STHiv.jpg" alt="StatDB4" class="responsive-img materialboxed">
+                </div>
+              </div>
+              <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
+                <i class="fas fa-syringe"></i> Vaccination</blockquote>
+              <div class="row">
+                <div class="col offset-l2"></div>
+                <div class="col s12 m12 l4">
+                  <img src="images/VTHi.jpg" alt="VacDB" class="responsive-img materialboxed">
+                </div>
+                <div class="col s12 m12 l4">
+                  <img src="images/VTHii.jpg" alt="VacDB" class="responsive-img materialboxed">
+                </div>
+              </div>
+              <h6><b>Abbreviations</b> - UT: Union Territory</h6>
+            </div>
+            <div class="col s12" id="sfr">
+              <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
+                <i class="fas fa-virus"></i> Covid 19</blockquote>
+              <h6 class="white-text">Source: ICMR/ MyGov<br>&#8595;&#8593; Changes from last 24 hours</h6>
+              <div class="row">
+                <div class="col s12 m12 l3">
+                  <img src="images/SFRi.jpg" alt="StatDB1" class="responsive-img materialboxed">
+                </div>
+                <div class="col s12 m12 l3">
+                  <img src="images/SFRii.jpg" alt="StatDB2" class="responsive-img materialboxed">
+                </div>
+                <div class="col s12 m12 l3">
+                  <img src="images/SFRiii.jpg" alt="StatDB3" class="responsive-img materialboxed">
+                </div>
+                <div class="col s12 m12 l3">
+                  <img src="images/SFRiv.jpg" alt="StatDB4" class="responsive-img materialboxed">
+                </div>
+              </div>
+              <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
+                <i class="fas fa-syringe"></i> Vaccination</blockquote>
+              <div class="row">
+                <div class="col offset-l2"></div>
+                <div class="col s12 m12 l4">
+                  <img src="images/VFRi.jpg" alt="VacDB" class="responsive-img materialboxed">
+                </div>
+                <div class="col s12 m12 l4">
+                  <img src="images/VFRii.jpg" alt="VacDB" class="responsive-img materialboxed">
+                </div>
+              </div>
+              <h6><b>Abbreviations</b> - UT: Union Territory</h6>
+            </div>
+            <div class="col s12" id="ssa">
+              <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
+                <i class="fas fa-virus"></i> Covid 19</blockquote>
+              <h6 class="white-text">Source: ICMR/ MyGov<br>&#8595;&#8593; Changes from last 24 hours</h6>
+              <div class="row">
+                <div class="col s12 m12 l3">
+                  <img src="images/SSAi.jpg" alt="StatDB1" class="responsive-img materialboxed">
+                </div>
+                <div class="col s12 m12 l3">
+                  <img src="images/SSAii.jpg" alt="StatDB2" class="responsive-img materialboxed">
+                </div>
+                <div class="col s12 m12 l3">
+                  <img src="images/SSAiii.jpg" alt="StatDB3" class="responsive-img materialboxed">
+                </div>
+                <div class="col s12 m12 l3">
+                  <img src="images/SSAiv.jpg" alt="StatDB4" class="responsive-img materialboxed">
+                </div>
+              </div>
+              <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
+                <i class="fas fa-syringe"></i> Vaccination</blockquote>
+              <div class="row">
+                <div class="col offset-l2"></div>
+                <div class="col s12 m12 l4">
+                  <img src="images/VSAi.jpg" alt="VacDB" class="responsive-img materialboxed">
+                </div>
+                <div class="col s12 m12 l4">
+                  <img src="images/VSAii.jpg" alt="VacDB" class="responsive-img materialboxed">
+                </div>
+              </div>
+              <h6><b>Abbreviations</b> - UT: Union Territory</h6>
+            </div>
+            <div class="col s12" id="ssu">
+              <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
+                <i class="fas fa-virus"></i> Covid 19</blockquote>
+              <h6 class="white-text">Source: ICMR/ MyGov<br>&#8595;&#8593; Changes from last 24 hours</h6>
+              <div class="row">
+                <div class="col s12 m12 l3">
+                  <img src="images/SSUi.jpg" alt="StatDB1" class="responsive-img materialboxed">
+                </div>
+                <div class="col s12 m12 l3">
+                  <img src="images/SSUii.jpg" alt="StatDB2" class="responsive-img materialboxed">
+                </div>
+                <div class="col s12 m12 l3">
+                  <img src="images/SSUiii.jpg" alt="StatDB3" class="responsive-img materialboxed">
+                </div>
+                <div class="col s12 m12 l3">
+                  <img src="images/SSUiv.jpg" alt="StatDB4" class="responsive-img materialboxed">
+                </div>
+              </div>
+              <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
+                <i class="fas fa-syringe"></i> Vaccination</blockquote>
+              <div class="row">
+                <div class="col offset-l2"></div>
+                <div class="col s12 m12 l4">
+                  <img src="images/VSUi.jpg" alt="VacDB" class="responsive-img materialboxed">
+                </div>
+                <div class="col s12 m12 l4">
+                  <img src="images/VSUii.jpg" alt="VacDB" class="responsive-img materialboxed">
+                </div>
+              </div>
+              <h6><b>Abbreviations</b> - UT: Union Territory</h6>
+            </div>
+          </div>
+          <div class="col s12" id="mah">
+            <div class="row">
+              <div class="col s12">
+                <ul class="tabs tabs-fixed-width">
+                  <li class="tab"><a href="#mmo" class="black white-text tooltipped" data-position="bottom"
+                      data-tooltip="May 16, Monday">
+                      <h6>16<br>MO</h6>
+                    </a></li>
+                  <li class="tab"><a href="#mtu" class="active black white-text tooltipped" data-position="bottom"
+                      data-tooltip="May 17, Tuesday">
+                      <h6>17<br>TU</h6>
+                    </a></li>
+                  <li class="tab"><a href="#mwe" class="black white-text tooltipped" data-position="bottom"
+                      data-tooltip="May 11, Wednesday">
+                      <h6>11<br>WE</h6>
+                    </a></li>
+                  <li class="tab"><a href="#mth" class="black white-text tooltipped" data-position="bottom"
+                      data-tooltip="May 12, Thursday">
+                      <h6>12<br>TH</h6>
+                    </a></li>
+                  <li class="tab"><a href="#mfr" class="black white-text tooltipped" data-position="bottom"
+                      data-tooltip="May 13, Friday">
+                      <h6>13<br>FR</h6>
+                    </a></li>
+                  <li class="tab"><a href="#msa" class="black white-text tooltipped" data-position="bottom"
+                      data-tooltip="May 14, Saturday">
+                      <h6>14<br>SA</h6>
+                    </a></li>
+                  <li class="tab"><a href="#msu" class="black white-text tooltipped" data-position="bottom"
+                      data-tooltip="May 15, Sunday">
+                      <h6>15<br>SU</h6>
+                    </a></li>
+                  <div class="indicator blue darken-1"></div>
+                </ul>
+              </div>
+            </div>
+            <div class="col s12" id="mmo">
+              <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
+                <i class="fas fa-virus"></i> Covid 19</blockquote>
+              <h6>Source: Twitter - PIB Maharashtra</h6>
+              <a href="https://drive.google.com/file/d/1Ueb2uLu-yi8IAv_-l9vKyC8aAd6bzjE_/view?usp=sharing"
+                target="_blank" class="oui-button blue darken-1 white-text">FOR SMARTPHONE USERS</a>
+              <embed src="mh16may.pdf" type="application/pdf" width="100%" height="1300px" class="hide-on-med-and-down">
+            </div>
+            <div class="col s12" id="mtu">
+              <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
+                <i class="fas fa-virus"></i> Covid 19</blockquote>
+              <h6>Source: Twitter - PIB Maharashtra</h6>
+              <!-- <a href="https://drive.google.com/file/d/1X5xr-tcUA5ZxoRBUeFcj-iV5N4Ik97Zd/view?usp=sharing" target="_blank"
               class="oui-button blue darken-1 white-text">FOR SMARTPHONE USERS</a>
-            <embed src="mh16may.pdf" type="application/pdf" width="100%" height="1300px" class="hide-on-med-and-down">
-          </div>
-          <div class="col s12" id="mtu">
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
-              <i class="fas fa-virus"></i> Covid 19</blockquote>
-            <h6>Source: Twitter - PIB Maharashtra</h6>
-            <a href="https://drive.google.com/file/d/1X5xr-tcUA5ZxoRBUeFcj-iV5N4Ik97Zd/view?usp=sharing" target="_blank"
+            <embed src="mh10may.pdf" type="application/pdf" width="100%" height="1300px" class="hide-on-med-and-down"> -->
+              <img src="mh17may.jpg" class="responsive-img materialboxed">
+            </div>
+            <div class="col s12" id="mwe">
+              <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
+                <i class="fas fa-virus"></i> Covid 19</blockquote>
+              <h6>Source: Twitter - PIB Maharashtra</h6>
+              <a href="https://drive.google.com/file/d/1IsO0Q8vlLahXfnR5tUG2PSQRpJ16NPdF/view?usp=sharing"
+                target="_blank" class="oui-button blue darken-1 white-text">FOR SMARTPHONE USERS</a>
+              <embed src="mh11may.pdf" type="application/pdf" width="100%" height="1300px" class="hide-on-med-and-down">
+            </div>
+            <div class="col s12" id="mth">
+              <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
+                <i class="fas fa-virus"></i> Covid 19</blockquote>
+              <h6>Source: Twitter - PIB Maharashtra</h6>
+              <a href="https://drive.google.com/file/d/1ZWP6mOmiZAerefazqM8xIuROPJKobPKE/view?usp=sharing"
+                target="_blank" class="oui-button blue darken-1 white-text">FOR SMARTPHONE USERS</a>
+              <embed src="mh12may.pdf" type="application/pdf" width="100%" height="1300px" class="hide-on-med-and-down">
+            </div>
+            <div class="col s12" id="mfr">
+              <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
+                <i class="fas fa-virus"></i> Covid 19</blockquote>
+              <h6>Source: Twitter - PIB Maharashtra</h6>
+              <a href="https://drive.google.com/file/d/1KCOSJ-e9kQUxYZgxhwf7hElCbM6nz8kN/view?usp=sharing"
+                target="_blank" class="oui-button blue darken-1 white-text">FOR SMARTPHONE USERS</a>
+              <embed src="mh13may.pdf" type="application/pdf" width="100%" height="1300px" class="hide-on-med-and-down">
+            </div>
+            <div class="col s12" id="msa">
+              <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
+                <i class="fas fa-virus"></i> Covid 19</blockquote>
+              <h6>Source: Twitter - PIB Maharashtra</h6>
+              <!-- <a href="https://drive.google.com/file/d/1KCOSJ-e9kQUxYZgxhwf7hElCbM6nz8kN/view?usp=sharing" target="_blank"
               class="oui-button blue darken-1 white-text">FOR SMARTPHONE USERS</a>
-            <embed src="mh10may.pdf" type="application/pdf" width="100%" height="1300px" class="hide-on-med-and-down">
-          </div>
-          <div class="col s12" id="mwe">
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
-              <i class="fas fa-virus"></i> Covid 19</blockquote>
-            <h6>Source: Twitter - PIB Maharashtra</h6>
-            <a href="https://drive.google.com/file/d/1IsO0Q8vlLahXfnR5tUG2PSQRpJ16NPdF/view?usp=sharing" target="_blank"
-              class="oui-button blue darken-1 white-text">FOR SMARTPHONE USERS</a>
-            <embed src="mh11may.pdf" type="application/pdf" width="100%" height="1300px" class="hide-on-med-and-down">
-          </div>
-          <div class="col s12" id="mth">
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
-              <i class="fas fa-virus"></i> Covid 19</blockquote>
-            <h6>Source: Twitter - PIB Maharashtra</h6>
-            <a href="https://drive.google.com/file/d/1ZWP6mOmiZAerefazqM8xIuROPJKobPKE/view?usp=sharing" target="_blank"
-              class="oui-button blue darken-1 white-text">FOR SMARTPHONE USERS</a>
-            <embed src="mh12may.pdf" type="application/pdf" width="100%" height="1300px" class="hide-on-med-and-down">
-          </div>
-          <div class="col s12" id="mfr">
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
-              <i class="fas fa-virus"></i> Covid 19</blockquote>
-            <h6>Source: Twitter - PIB Maharashtra</h6>
-            <a href="https://drive.google.com/file/d/1KCOSJ-e9kQUxYZgxhwf7hElCbM6nz8kN/view?usp=sharing" target="_blank"
-              class="oui-button blue darken-1 white-text">FOR SMARTPHONE USERS</a>
-            <embed src="mh13may.pdf" type="application/pdf" width="100%" height="1300px" class="hide-on-med-and-down">
-          </div>
-          <div class="col s12" id="msa">
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
-              <i class="fas fa-virus"></i> Covid 19</blockquote>
-            <h6>Source: Twitter - PIB Maharashtra</h6>
-            <img src="mh14may.jpg" class="responsive-img materialboxed">
-          </div>
-          <div class="col s12" id="msu">
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
-              <i class="fas fa-virus"></i> Covid 19</blockquote>
-            <h6>Source: Twitter - PIB Maharashtra</h6>
-            <a href="https://drive.google.com/file/d/1BjeDBAtD-lvYGikJXstbw-N7d5zk3UlG/view?usp=sharing" target="_blank"
-              class="oui-button blue darken-1 white-text">FOR SMARTPHONE USERS</a>
-            <embed src="mh15may.pdf" type="application/pdf" width="100%" height="1300px" class="hide-on-med-and-down">
-          </div>
-        </div>
-        <div class="col s12" id="mum">
-          <a href="thavac.html" target="_blank" class="oui-button blue darken-1 white-text">VACCINE SLOT
-            TRACKERS</a>
-          <h6 class="white-text">As on May 16 (*As on May 18, **As on May 17)</h6>
-          <div class="row">
-            <div class="col s12 m6 l3">
-              <div class="card-panel grey darken-4 white-text">
-                <h5><b>MUMBAI</b></h5>
-                <table class="centered">
-                  <caption>Week Trend of New Cases (<i class="fas fa-arrow-circle-up"></i>)</caption>
-                  <tbody>
-                    <tr>
-                      <td>May 16 <br><i class="fas fa-arrow-circle-up"></i><br>74</td>
-                      <td>May 15 <br><i class="fas fa-arrow-circle-up"></i><br>151</td>
-                      <td>May 14 <br><i class="fas fa-arrow-circle-up"></i><br>131</td>
-                      <td>May 13 <br><i class="fas fa-arrow-circle-up"></i><br>155</td>
-                    </tr>
-                    <tr>
-                      <td>May 12 <br><i class="fas fa-arrow-circle-up"></i><br>139</td>
-                      <td>May 11 <br><i class="fas fa-arrow-circle-up"></i><br>124</td>
-                      <td>May 10 <br><i class="fas fa-arrow-circle-up"></i><br>122</td>
-                    </tr>
-                    <tr>
-                      <td colspan="4">
-                        <b>Total:</b> 10,60,766** <br>
-                        <b>Active:</b> 896** <br>
-                        <b>Recovered:</b> 10,40,304** <br>
-                        <b>Deceased:</b> 19,566** <br>
-                        <b>Vaccinated:</b>2,09,97,002* <br>
-                        <b>Tested:</b> 1,70,16,218**
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+            <embed src="mh13may.pdf" type="application/pdf" width="100%" height="1300px" class="hide-on-med-and-down"> -->
+              <img src="mh14may.jpg" class="responsive-img materialboxed">
             </div>
-            <div class="col s12 m6 l3">
-              <div class="card-panel grey darken-4 white-text">
-                <h5><b>THANE</b></h5>
-                <table class="centered">
-                  <caption>Week Trend of New Cases (<i class="fas fa-arrow-circle-up"></i>)</caption>
-                  <tbody>
-                    <tr>
-                      <td>May 16 <br><i class="fas fa-arrow-circle-up"></i><br>15</td>
-                      <td>May 15 <br><i class="fas fa-arrow-circle-up"></i><br>30</td>
-                      <td>May 14 <br><i class="fas fa-arrow-circle-up"></i><br>28</td>
-                      <td>May 13 <br><i class="fas fa-arrow-circle-up"></i><br>27</td>
-                    </tr>
-                    <tr>
-                      <td>May 12 <br><i class="fas fa-arrow-circle-up"></i><br>25</td>
-                      <td>May 11 <br><i class="fas fa-arrow-circle-up"></i><br>18</td>
-                      <td>May 10 <br><i class="fas fa-arrow-circle-up"></i><br>28</td>
-                    </tr>
-                    <tr>
-                      <td colspan="4">
-                        <b>Total:</b> 7,67,317 <br>
-                        <b>Active:</b> 166 <br>
-                        <b>Recovered:</b> 7,55,233 <br>
-                        <b>Deceased:</b> 11,918 <br>
-                        <b>Vaccinated:</b> 1,34,73,879* <br>
-                        <b>Tested:</b> -
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <div class="col s12 m6 l3">
-              <div class="card-panel grey darken-4 white-text">
-                <h5><b>PALGHAR</b></h5>
-                <table class="centered">
-                  <caption>Week Trend of New Cases (<i class="fas fa-arrow-circle-up"></i>)</caption>
-                  <tbody>
-                    <tr>
-                      <td>May 16 <br><i class="fas fa-arrow-circle-up"></i><br>2</td>
-                      <td>May 15 <br><i class="fas fa-arrow-circle-up"></i><br>5</td>
-                      <td>May 14 <br><i class="fas fa-arrow-circle-up"></i><br>1</td>
-                      <td>May 13 <br><i class="fas fa-arrow-circle-up"></i><br>2</td>
-                    </tr>
-                    <tr>
-                      <td>May 12 <br><i class="fas fa-arrow-circle-up"></i><br>1</td>
-                      <td>May 11 <br><i class="fas fa-arrow-circle-up"></i><br>5</td>
-                      <td>May 10 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                    </tr>
-                    <tr>
-                      <td colspan="4">
-                        <b>Total:</b> 1,63,638 <br>
-                        <b>Active:</b> 12 <br>
-                        <b>Recovered:</b> 1,60,219 <br>
-                        <b>Deceased:</b> 3,407 <br>
-                        <b>Vaccinated:</b> 47,19,769* <br>
-                        <b>Tested:</b> 14,30,049+
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <div class="col s12 m6 l3">
-              <div class="card-panel grey darken-4 white-text">
-                <h5><b>RAIGAD</b></h5>
-                <table class="centered">
-                  <caption>Week Trend of New Cases (<i class="fas fa-arrow-circle-up"></i>)</caption>
-                  <tbody>
-                    <tr>
-                      <td>May 16 <br><i class="fas fa-arrow-circle-up"></i><br>10</td>
-                      <td>May 15 <br><i class="fas fa-arrow-circle-up"></i><br>5</td>
-                      <td>May 14 <br><i class="fas fa-arrow-circle-up"></i><br>10</td>
-                      <td>May 13 <br><i class="fas fa-arrow-circle-up"></i><br>15</td>
-                    </tr>
-                    <tr>
-                      <td>May 12 <br><i class="fas fa-arrow-circle-up"></i><br>5</td>
-                      <td>May 11 <br><i class="fas fa-arrow-circle-up"></i><br>5</td>
-                      <td>May 10 <br><i class="fas fa-arrow-circle-up"></i><br>8</td>
-                    </tr>
-                    <tr>
-                      <td colspan="4">
-                        <b>Total:</b> 2,44,446 <br>
-                        <b>Active:</b> 45 <br>
-                        <b>Recovered:</b> 2,39,456 <br>
-                        <b>Deceased:</b> 4,945 <br>
-                        <b>Vaccinated:</b> 44,87,562* <br>
-                        <b>Tested:</b> 25,39,037
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+            <div class="col s12" id="msu">
+              <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
+                <i class="fas fa-virus"></i> Covid 19</blockquote>
+              <h6>Source: Twitter - PIB Maharashtra</h6>
+              <a href="https://drive.google.com/file/d/1BjeDBAtD-lvYGikJXstbw-N7d5zk3UlG/view?usp=sharing"
+                target="_blank" class="oui-button blue darken-1 white-text">FOR SMARTPHONE USERS</a>
+              <embed src="mh15may.pdf" type="application/pdf" width="100%" height="1300px" class="hide-on-med-and-down">
             </div>
           </div>
-          <blockquote style="font-size: x-large; border-left-color: #1e88e5;">Mumbai Dashboard</blockquote>
-          <h6>Source: Official MCGM Website<br>As on May 16 (May 15)</h6>
-          <div class="row">
-            <div class="col s12 m12 l6">
-              <img src="images/M16.jpg" alt="Mum" width="100%" class="responsive-img materialboxed">
+          <div class="col s12" id="mum">
+            <a href="thavac.html" target="_blank" class="oui-button blue darken-1 white-text">VACCINE SLOT
+              TRACKERS</a>
+            <h6 class="white-text">As on May 16 (*As on May 18, **As on May 17)</h6>
+            <div class="row">
+              <div class="col s12 m6 l3">
+                <div class="card-panel grey darken-4 white-text">
+                  <h5><b>MUMBAI</b></h5>
+                  <table class="centered">
+                    <caption>Week Trend of New Cases (<i class="fas fa-arrow-circle-up"></i>)</caption>
+                    <tbody>
+                      <tr>
+                        <td>May 17 <br><i class="fas fa-arrow-circle-up"></i><br>158</td>
+                        <td>May 16 <br><i class="fas fa-arrow-circle-up"></i><br>74</td>
+                        <td>May 15 <br><i class="fas fa-arrow-circle-up"></i><br>151</td>
+                        <td>May 14 <br><i class="fas fa-arrow-circle-up"></i><br>131</td>
+                      </tr>
+                      <tr>
+                        <td>May 13 <br><i class="fas fa-arrow-circle-up"></i><br>155</td>
+                        <td>May 12 <br><i class="fas fa-arrow-circle-up"></i><br>139</td>
+                        <td>May 11 <br><i class="fas fa-arrow-circle-up"></i><br>124</td>
+                      </tr>
+                      <tr>
+                        <td colspan="4">
+                          <b>Total:</b> 10,60,924** <br>
+                          <b>Active:</b> 932** <br>
+                          <b>Recovered:</b> 10,40,426** <br>
+                          <b>Deceased:</b> 19,566 <br>
+                          <b>Vaccinated:</b>2,09,97,002* <br>
+                          <b>Tested:</b> 1,70,24,941**
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="col s12 m6 l3">
+                <div class="card-panel grey darken-4 white-text">
+                  <h5><b>THANE</b></h5>
+                  <table class="centered">
+                    <caption>Week Trend of New Cases (<i class="fas fa-arrow-circle-up"></i>)</caption>
+                    <tbody>
+                      <tr>
+                        <td>May 16 <br><i class="fas fa-arrow-circle-up"></i><br>15</td>
+                        <td>May 15 <br><i class="fas fa-arrow-circle-up"></i><br>30</td>
+                        <td>May 14 <br><i class="fas fa-arrow-circle-up"></i><br>28</td>
+                        <td>May 13 <br><i class="fas fa-arrow-circle-up"></i><br>27</td>
+                      </tr>
+                      <tr>
+                        <td>May 12 <br><i class="fas fa-arrow-circle-up"></i><br>25</td>
+                        <td>May 11 <br><i class="fas fa-arrow-circle-up"></i><br>18</td>
+                        <td>May 10 <br><i class="fas fa-arrow-circle-up"></i><br>28</td>
+                      </tr>
+                      <tr>
+                        <td colspan="4">
+                          <b>Total:</b> 7,67,317 <br>
+                          <b>Active:</b> 166 <br>
+                          <b>Recovered:</b> 7,55,233 <br>
+                          <b>Deceased:</b> 11,918 <br>
+                          <b>Vaccinated:</b> 1,34,73,879* <br>
+                          <b>Tested:</b> -
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="col s12 m6 l3">
+                <div class="card-panel grey darken-4 white-text">
+                  <h5><b>PALGHAR</b></h5>
+                  <table class="centered">
+                    <caption>Week Trend of New Cases (<i class="fas fa-arrow-circle-up"></i>)</caption>
+                    <tbody>
+                      <tr>
+                        <td>May 16 <br><i class="fas fa-arrow-circle-up"></i><br>2</td>
+                        <td>May 15 <br><i class="fas fa-arrow-circle-up"></i><br>5</td>
+                        <td>May 14 <br><i class="fas fa-arrow-circle-up"></i><br>1</td>
+                        <td>May 13 <br><i class="fas fa-arrow-circle-up"></i><br>2</td>
+                      </tr>
+                      <tr>
+                        <td>May 12 <br><i class="fas fa-arrow-circle-up"></i><br>1</td>
+                        <td>May 11 <br><i class="fas fa-arrow-circle-up"></i><br>5</td>
+                        <td>May 10 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
+                      </tr>
+                      <tr>
+                        <td colspan="4">
+                          <b>Total:</b> 1,63,638 <br>
+                          <b>Active:</b> 12 <br>
+                          <b>Recovered:</b> 1,60,219 <br>
+                          <b>Deceased:</b> 3,407 <br>
+                          <b>Vaccinated:</b> 47,19,769* <br>
+                          <b>Tested:</b> 14,30,049+
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="col s12 m6 l3">
+                <div class="card-panel grey darken-4 white-text">
+                  <h5><b>RAIGAD</b></h5>
+                  <table class="centered">
+                    <caption>Week Trend of New Cases (<i class="fas fa-arrow-circle-up"></i>)</caption>
+                    <tbody>
+                      <tr>
+                        <td>May 16 <br><i class="fas fa-arrow-circle-up"></i><br>10</td>
+                        <td>May 15 <br><i class="fas fa-arrow-circle-up"></i><br>5</td>
+                        <td>May 14 <br><i class="fas fa-arrow-circle-up"></i><br>10</td>
+                        <td>May 13 <br><i class="fas fa-arrow-circle-up"></i><br>15</td>
+                      </tr>
+                      <tr>
+                        <td>May 12 <br><i class="fas fa-arrow-circle-up"></i><br>5</td>
+                        <td>May 11 <br><i class="fas fa-arrow-circle-up"></i><br>5</td>
+                        <td>May 10 <br><i class="fas fa-arrow-circle-up"></i><br>8</td>
+                      </tr>
+                      <tr>
+                        <td colspan="4">
+                          <b>Total:</b> 2,44,446 <br>
+                          <b>Active:</b> 45 <br>
+                          <b>Recovered:</b> 2,39,456 <br>
+                          <b>Deceased:</b> 4,945 <br>
+                          <b>Vaccinated:</b> 44,87,562* <br>
+                          <b>Tested:</b> 25,39,037
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
-            <div class="col s12 m12 l6">
-              <img src="images/M15.jpg" alt="Mum" width="100%" class="responsive-img materialboxed">
+            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">Mumbai Dashboard</blockquote>
+            <h6>Source: Official MCGM Website<br>As on May 17 (May 16)</h6>
+            <div class="row">
+              <div class="col s12 m12 l6">
+                <img src="images/M17.jpg" alt="Mum" width="100%" class="responsive-img materialboxed">
+              </div>
+              <div class="col s12 m12 l6">
+                <img src="images/M16.jpg" alt="Mum" width="100%" class="responsive-img materialboxed">
+              </div>
             </div>
+            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">Palghar Dashboard</blockquote>
+            <h6>Source: Twitter - Palghar Mitra<br>As on May 6</h6>
+            <div class="row">
+              <div class="col s12 m12 l6">
+                <img src="https://pbs.twimg.com/media/FSK5XZtaIAEV5Il?format=jpg&name=large" alt="Pal" width="100%"
+                  class="responsive-img materialboxed">
+              </div>
+            </div>
+            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">Raigad Dashboard</blockquote>
+            <h6>Source: Twitter - Raigad District<br>As on May 16 (May 14)</h6>
+            <div class="row">
+              <div class="col s12 m12 l6">
+                <img src="https://pbs.twimg.com/media/FS5AwJFX0AIsXBI?format=jpg&name=medium" alt="Rai" width="100%"
+                  class="responsive-img materialboxed">
+              </div>
+              <div class="col s12 m12 l6">
+                <img src="https://pbs.twimg.com/media/FSufQpGWQAMz7zr?format=jpg&name=medium" alt="Rai" width="100%"
+                  class="responsive-img materialboxed">
+              </div>
+            </div>
+            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">THANE DASHBOARD</blockquote>
+            <h6>Source: Official Twitter handles/ Websites of Mun. Corp.s & DIO Thane report</h6>
+            <div class="row">
+              <div class="col s12 m6 l4">
+                <div class="card-panel grey darken-4 white-text">
+                  <h5><b>THANE TMC</b></h5>
+                  <table class="centered">
+                    <caption>Week Trend of New Cases (<i class="fas fa-arrow-circle-up"></i>)</caption>
+                    <tbody>
+                      <tr>
+                        <td>May 18 <br><i class="fas fa-arrow-circle-up"></i><br>_</td>
+                        <td>May 17 <br><i class="fas fa-arrow-circle-up"></i><br>11</td>
+                        <td>May 16 <br><i class="fas fa-arrow-circle-up"></i><br>8</td>
+                        <td>May 15 <br><i class="fas fa-arrow-circle-up"></i><br>13</td>
+                      </tr>
+                      <tr>
+                        <td>May 14 <br><i class="fas fa-arrow-circle-up"></i><br>16</td>
+                        <td>May 13 <br><i class="fas fa-arrow-circle-up"></i><br>9</td>
+                        <td>May 12 <br><i class="fas fa-arrow-circle-up"></i><br>15</td>
+                      </tr>
+                      <tr>
+                        <td colspan="4">
+                          <b>Total:</b> 183957 <br>
+                          <b>Active:</b> 89 <br>
+                          <b>Recovered:</b> 181738 <br>
+                          <b>Deceased:</b> 2130
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <hr>
+                  <p class="grey-text text-lighten-1">
+                    Majiwada Manpada: 12<br>
+                    Vartaknagar: 0<br>
+                    Lokmanyanagar Savarkarnagar: 0<br>
+                    Naupada-Kopari: 0<br>
+                    Uthalsar: 4<br>
+                    Wagale: 0<br>
+                    Kalwa: 0<br>
+                    Mumbra: 0<br>
+                    Diva: 0<br>
+                    Others: 0 [May 14]</p>
+                </div>
+              </div>
+              <div class="col s12 m6 l4">
+                <div class="card-panel grey darken-4 white-text">
+                  <h5><b>KALYAN KDMC</b></h5>
+                  <table class="centered">
+                    <caption>Week Trend of New Cases (<i class="fas fa-arrow-circle-up"></i>)</caption>
+                    <tbody>
+                      <tr>
+                        <td>May 18 <br><i class="fas fa-arrow-circle-up"></i><br>_</td>
+                        <td>May 17 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
+                        <td>May 16 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
+                        <td>May 15 <br><i class="fas fa-arrow-circle-up"></i><br>3</td>
+                      </tr>
+                      <tr>
+                        <td>May 14 <br><i class="fas fa-arrow-circle-up"></i><br>1</td>
+                        <td>May 13 <br><i class="fas fa-arrow-circle-up"></i><br>3</td>
+                        <td>May 12 <br><i class="fas fa-arrow-circle-up"></i><br>3</td>
+                      </tr>
+                      <tr>
+                        <td colspan="4">
+                          <b>Total:</b> 166535 <br>
+                          <b>Active:</b> 7 <br>
+                          <b>Recovered:</b> 163571 <br>
+                          <b>Deceased:</b> 2957
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <hr>
+                  <p class="grey-text text-lighten-1">
+                    Kalyan East: 0<br>
+                    Kalyan West: 0<br>
+                    Dombivli East: 0<br>
+                    Dombivli West: 0<br>
+                    Manda-Titwala: 0<br>
+                    Mohana: 0<br>
+                    Pisavli: 0 [May 16]<br><br><br><br></p>
+                </div>
+              </div>
+              <div class="col s12 m6 l4">
+                <div class="card-panel grey darken-4 white-text">
+                  <h5><b>NAVI MUMBAI NMMC</b></h5>
+                  <table class="centered">
+                    <caption>Week Trend of New Cases (<i class="fas fa-arrow-circle-up"></i>)</caption>
+                    <tbody>
+                      <tr>
+                        <td>May 18 <br><i class="fas fa-arrow-circle-up"></i><br>_</td>
+                        <td>May 17 <br><i class="fas fa-arrow-circle-up"></i><br>15</td>
+                        <td>May 16 <br><i class="fas fa-arrow-circle-up"></i><br>4</td>
+                        <td>May 15 <br><i class="fas fa-arrow-circle-up"></i><br>14</td>
+                      </tr>
+                      <tr>
+                        <td>May 14 <br><i class="fas fa-arrow-circle-up"></i><br>8</td>
+                        <td>May 13 <br><i class="fas fa-arrow-circle-up"></i><br>6</td>
+                        <td>May 12 <br><i class="fas fa-arrow-circle-up"></i><br>6</td>
+                      </tr>
+                      <tr>
+                        <td colspan="4">
+                          <b>Total:</b> 151463 <br>
+                          <b>Active:</b> 54 <br>
+                          <b>Recovered:</b> 149360 <br>
+                          <b>Deceased:</b> 2049
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <hr>
+                  <p class="grey-text text-lighten-1">
+                    <!-- <p class="transparent-text"> -->
+                    Belapur: 0<br>
+                    Nerul: 0<br>
+                    Vashi: 0<br>
+                    Turbhe: 0<br>
+                    Koparkhairne: 0<br>
+                    Ghansoli: 0<br>
+                    Airoli: 0<br>
+                    Digha: 0 [May 9]<br><br><br></p>
+                </div>
+              </div>
+              <div class="col s12 m6 l4">
+                <div class="card-panel grey darken-4 white-text">
+                  <h5><b>MIRA BHAYANDER MBMC</b></h5>
+                  <table class="centered">
+                    <caption>Week Trend of New Cases (<i class="fas fa-arrow-circle-up"></i>)</caption>
+                    <tbody>
+                      <tr>
+                        <td>May 18 <br><i class="fas fa-arrow-circle-up"></i><br>_</td>
+                        <td>May 17 <br><i class="fas fa-arrow-circle-up"></i><br>2</td>
+                        <td>May 16 <br><i class="fas fa-arrow-circle-up"></i><br>_</td>
+                        <td>May 15 <br><i class="fas fa-arrow-circle-up"></i><br>_</td>
+                      </tr>
+                      <tr>
+                        <td>May 14 <br><i class="fas fa-arrow-circle-up"></i><br>_</td>
+                        <td>May 13 <br><i class="fas fa-arrow-circle-up"></i><br>_</td>
+                        <td>May 12 <br><i class="fas fa-arrow-circle-up"></i><br>1</td>
+                      </tr>
+                      <tr>
+                        <td colspan="4">
+                          <b>Total:</b> 69138 <br>
+                          <b>Active:</b> 11 <br>
+                          <b>Recovered:</b> 67731 <br>
+                          <b>Deceased:</b> 1397
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <hr>
+                  <p class="grey-text text-lighten-1">Bhayander East: 0<br>Bhayander West: 0<br>Mira Road: 0 [May 4]
+                    <br><br>
+                  </p>
+                </div>
+              </div>
+              <div class="col s12 m6 l4">
+                <div class="card-panel grey darken-4 white-text">
+                  <h5><b>THANE RURAL</b></h5>
+                  <table class="centered">
+                    <caption>Week Trend of New Cases (<i class="fas fa-arrow-circle-up"></i>)</caption>
+                    <tbody>
+                      <tr>
+                        <td>May 18 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
+                        <td>May 17 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
+                        <td>May 16 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
+                        <td>May 15 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
+                      </tr>
+                      <tr>
+                        <td>May 14 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
+                        <td>May 13 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
+                        <td>May 12 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
+                      </tr>
+                      <tr>
+                        <td colspan="4">
+                          <b>Total:</b> 49208 <br>
+                          <b>Active:</b> 0 <br>
+                          <b>Recovered:</b> 47954 <br>
+                          <b>Deceased:</b> 1254
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <hr><br><br><br><br><br><br>
+                </div>
+              </div>
+              <div class="col s12 m6 l4">
+                <div class="card-panel grey darken-4 white-text">
+                  <h5><b>ULHASNAGAR UMC</b></h5>
+                  <table class="centered">
+                    <caption>Week Trend of New Cases (<i class="fas fa-arrow-circle-up"></i>)</caption>
+                    <tbody>
+                      <tr>
+                        <td>May 18 <br><i class="fas fa-arrow-circle-up"></i><br>_</td>
+                        <td>May 17 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
+                        <td>May 16 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
+                        <td>May 15 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
+                      </tr>
+                      <tr>
+                        <td>May 14 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
+                        <td>May 13 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
+                        <td>May 12 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
+                      </tr>
+                      <tr>
+                        <td colspan="4">
+                          <b>Total:</b> 26416 <br>
+                          <b>Active:</b> 0 <br>
+                          <b>Recovered:</b> 25761 <br>
+                          <b>Deceased:</b> 655
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <hr>
+                  <p class="grey-text text-lighten-1">Unr-1: 0<br>Unr-2: 0<br>Unr-3: 0<br>Unr-4: 0<br>Unr-5: 0 [May 17]
+                  </p>
+                </div>
+              </div>
+              <div class="col s12 m6 l4">
+                <div class="card-panel grey darken-4 white-text">
+                  <h5><b>BADLAPUR KBMC</b></h5>
+                  <table class="centered">
+                    <caption>Week Trend of New Cases (<i class="fas fa-arrow-circle-up"></i>)</caption>
+                    <tbody>
+                      <tr>
+                        <td>May 18 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
+                        <td>May 17 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
+                        <td>May 16 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
+                        <td>May 15 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
+                      </tr>
+                      <tr>
+                        <td>May 14 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
+                        <td>May 13 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
+                        <td>May 12 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
+                      </tr>
+                      <tr>
+                        <td colspan="4">
+                          <b>Total:</b> 25593 <br>
+                          <b>Active:</b> 0 <br>
+                          <b>Recovered:</b> 25204 <br>
+                          <b>Deceased:</b> 388
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <hr>
+                  <p class="grey-text text-lighten-1">Badlapur East: 0<br>Badlapur West: 0 [May 18]<br><br></p>
+                </div>
+              </div>
+              <div class="col s12 m6 l4">
+                <div class="card-panel grey darken-4 white-text">
+                  <h5><b>AMBERNATH MUN. COU.</b></h5>
+                  <table class="centered">
+                    <caption>Week Trend of New Cases (<i class="fas fa-arrow-circle-up"></i>)</caption>
+                    <tbody>
+                      <tr>
+                        <td>May 18 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
+                        <td>May 17 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
+                        <td>May 16 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
+                        <td>May 15 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
+                      </tr>
+                      <tr>
+                        <td>May 14 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
+                        <td>May 13 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
+                        <td>May 12 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
+                      </tr>
+                      <tr>
+                        <td colspan="4">
+                          <b>Total:</b> 24438 <br>
+                          <b>Active:</b> 0 <br>
+                          <b>Recovered:</b> 23858 <br>
+                          <b>Deceased:</b> 580
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <hr>
+                  <p class="grey-text text-lighten-1">Ambernath East: 0<br>Ambernath West: 0 [May 18]<br><br></p>
+                </div>
+              </div>
+              <div class="col s12 m6 l4">
+                <div class="card-panel grey darken-4 white-text">
+                  <h5><b>BHIWANDI City</b></h5>
+                  <table class="centered">
+                    <caption>Week Trend of New Cases (<i class="fas fa-arrow-circle-up"></i>)</caption>
+                    <tbody>
+                      <tr>
+                        <td>May 18 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
+                        <td>May 17 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
+                        <td>May 16 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
+                        <td>May 15 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
+                      </tr>
+                      <tr>
+                        <td>May 14 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
+                        <td>May 13 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
+                        <td>May 12 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
+                      </tr>
+                      <tr>
+                        <td colspan="4">
+                          <b>Total:</b> 12634 <br>
+                          <b>Active:</b> 0 <br>
+                          <b>Recovered:</b> 12155 <br>
+                          <b>Deceased:</b> 479
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <hr>
+                  <p class="grey-text text-lighten-1">Bhiwandi City: Same as above<br>Rural: No updates
+                    available<br><br>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <h6 class="center">NOTE - 3 Cases have been added into Kalyan's Total & Deceased, as per DIO Thane report
+              (consolidated) shows 3 less in Kalyan which seems incorrect..</h6>
           </div>
-          <blockquote style="font-size: x-large; border-left-color: #1e88e5;">Palghar Dashboard</blockquote>
-          <h6>Source: Twitter - Palghar Mitra<br>As on May 6</h6>
-          <div class="row">
-            <div class="col s12 m12 l6">
-              <img src="https://pbs.twimg.com/media/FSK5XZtaIAEV5Il?format=jpg&name=large" alt="Pal" width="100%"
-                class="responsive-img materialboxed">
-            </div>
-          </div>
-          <blockquote style="font-size: x-large; border-left-color: #1e88e5;">Raigad Dashboard</blockquote>
-          <h6>Source: Twitter - Raigad District<br>As on May 16 (May 14)</h6>
-          <div class="row">
-            <div class="col s12 m12 l6">
-              <img src="https://pbs.twimg.com/media/FS5AwJFX0AIsXBI?format=jpg&name=medium" alt="Rai" width="100%"
-                class="responsive-img materialboxed">
-            </div>
-            <div class="col s12 m12 l6">
-              <img src="https://pbs.twimg.com/media/FSufQpGWQAMz7zr?format=jpg&name=medium" alt="Rai" width="100%"
-                class="responsive-img materialboxed">
-            </div>
-          </div>
-          <blockquote style="font-size: x-large; border-left-color: #1e88e5;">THANE DASHBOARD</blockquote>
-          <h6>Source: Official Twitter handles/ Websites of Mun. Corp.s & DIO Thane report</h6>
-          <div class="row">
-            <div class="col s12 m6 l4">
-              <div class="card-panel grey darken-4 white-text">
-                <h5><b>THANE TMC</b></h5>
-                <table class="centered">
-                  <caption>Week Trend of New Cases (<i class="fas fa-arrow-circle-up"></i>)</caption>
-                  <tbody>
-                    <tr>
-                      <td>May 14 <br><i class="fas fa-arrow-circle-up"></i><br>_</td>
-                      <td>May 13 <br><i class="fas fa-arrow-circle-up"></i><br>9</td>
-                      <td>May 12 <br><i class="fas fa-arrow-circle-up"></i><br>15</td>
-                      <td>May 11 <br><i class="fas fa-arrow-circle-up"></i><br>11</td>
-                    </tr>
-                    <tr>
-                      <td>May 10 <br><i class="fas fa-arrow-circle-up"></i><br>20</td>
-                      <td>May 9 <br><i class="fas fa-arrow-circle-up"></i><br>10</td>
-                      <td>May 8 <br><i class="fas fa-arrow-circle-up"></i><br>8</td>
-                    </tr>
-                    <tr>
-                      <td colspan="4">
-                        <b>Total:</b> 183909 <br>
-                        <b>Active:</b> 88 <br>
-                        <b>Recovered:</b> 181691 <br>
-                        <b>Deceased:</b> 2130
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <hr>
-                <p class="grey-text text-lighten-1">
-                  Majiwada Manpada: 7<br>
-                  Vartaknagar: 3<br>
-                  Lokmanyanagar Savarkarnagar: 0<br>
-                  Naupada-Kopari: 0<br>
-                  Uthalsar: 1<br>
-                  Wagale: 0<br>
-                  Kalwa: 0<br>
-                  Mumbra: 0<br>
-                  Diva: 0<br>
-                  Others: 0 [May 11]</p>
-              </div>
-            </div>
-            <div class="col s12 m6 l4">
-              <div class="card-panel grey darken-4 white-text">
-                <h5><b>KALYAN KDMC</b></h5>
-                <table class="centered">
-                  <caption>Week Trend of New Cases (<i class="fas fa-arrow-circle-up"></i>)</caption>
-                  <tbody>
-                    <tr>
-                      <td>May 14 <br><i class="fas fa-arrow-circle-up"></i><br>_</td>
-                      <td>May 13 <br><i class="fas fa-arrow-circle-up"></i><br>3</td>
-                      <td>May 12 <br><i class="fas fa-arrow-circle-up"></i><br>3</td>
-                      <td>May 11 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                    </tr>
-                    <tr>
-                      <td>May 10 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                      <td>May 9 <br><i class="fas fa-arrow-circle-up"></i><br>1</td>
-                      <td>May 8 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                    </tr>
-                    <tr>
-                      <td colspan="4">
-                        <b>Total:</b> 166531 <br>
-                        <b>Active:</b> 8 <br>
-                        <b>Recovered:</b> 163566 <br>
-                        <b>Deceased:</b> 2957
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <hr>
-                <p class="grey-text text-lighten-1">
-                  Kalyan East: 0<br>
-                  Kalyan West: 2<br>
-                  Dombivli East: 0<br>
-                  Dombivli West: 1<br>
-                  Manda-Titwala: 0<br>
-                  Mohana: 0<br>
-                  Pisavli: 0 [May 12]<br><br><br><br></p>
-              </div>
-            </div>
-            <div class="col s12 m6 l4">
-              <div class="card-panel grey darken-4 white-text">
-                <h5><b>NAVI MUMBAI NMMC</b></h5>
-                <table class="centered">
-                  <caption>Week Trend of New Cases (<i class="fas fa-arrow-circle-up"></i>)</caption>
-                  <tbody>
-                    <tr>
-                      <td>May 14 <br><i class="fas fa-arrow-circle-up"></i><br>_</td>
-                      <td>May 13 <br><i class="fas fa-arrow-circle-up"></i><br>6</td>
-                      <td>May 12 <br><i class="fas fa-arrow-circle-up"></i><br>6</td>
-                      <td>May 11 <br><i class="fas fa-arrow-circle-up"></i><br>5</td>
-                    </tr>
-                    <tr>
-                      <td>May 10 <br><i class="fas fa-arrow-circle-up"></i><br>4</td>
-                      <td>May 9 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                      <td>May 8 <br><i class="fas fa-arrow-circle-up"></i><br>20</td>
-                    </tr>
-                    <tr>
-                      <td colspan="4">
-                        <b>Total:</b> 151422 <br>
-                        <b>Active:</b> 44 <br>
-                        <b>Recovered:</b> 149329 <br>
-                        <b>Deceased:</b> 2049
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <hr>
-                <p class="grey-text text-lighten-1">
-                  <!-- <p class="transparent-text"> -->
-                  Belapur: 0<br>
-                  Nerul: 0<br>
-                  Vashi: 0<br>
-                  Turbhe: 0<br>
-                  Koparkhairne: 0<br>
-                  Ghansoli: 0<br>
-                  Airoli: 0<br>
-                  Digha: 0 [May 9]<br><br><br></p>
-              </div>
-            </div>
-            <div class="col s12 m6 l4">
-              <div class="card-panel grey darken-4 white-text">
-                <h5><b>MIRA BHAYANDER MBMC</b></h5>
-                <table class="centered">
-                  <caption>Week Trend of New Cases (<i class="fas fa-arrow-circle-up"></i>)</caption>
-                  <tbody>
-                    <tr>
-                      <td>May 14 <br><i class="fas fa-arrow-circle-up"></i><br>_</td>
-                      <td>May 13 <br><i class="fas fa-arrow-circle-up"></i><br>_</td>
-                      <td>May 12 <br><i class="fas fa-arrow-circle-up"></i><br>1</td>
-                      <td>May 11 <br><i class="fas fa-arrow-circle-up"></i><br>2</td>
-                    </tr>
-                    <tr>
-                      <td>May 10 <br><i class="fas fa-arrow-circle-up"></i><br>1</td>
-                      <td>May 9 <br><i class="fas fa-arrow-circle-up"></i><br>_</td>
-                      <td>May 8 <br><i class="fas fa-arrow-circle-up"></i><br>_</td>
-                    </tr>
-                    <tr>
-                      <td colspan="4">
-                        <b>Total:</b> 69132 <br>
-                        <b>Active:</b> 12 <br>
-                        <b>Recovered:</b> 67722 <br>
-                        <b>Deceased:</b> 1397
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <hr>
-                <p class="grey-text text-lighten-1">Bhayander East: 0<br>Bhayander West: 0<br>Mira Road: 0 [May 4]
-                  <br><br>
-                </p>
-              </div>
-            </div>
-            <div class="col s12 m6 l4">
-              <div class="card-panel grey darken-4 white-text">
-                <h5><b>THANE RURAL</b></h5>
-                <table class="centered">
-                  <caption>Week Trend of New Cases (<i class="fas fa-arrow-circle-up"></i>)</caption>
-                  <tbody>
-                    <tr>
-                      <td>May 14 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                      <td>May 13 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                      <td>May 12 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                      <td>May 11 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                    </tr>
-                    <tr>
-                      <td>May 10 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                      <td>May 9 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                      <td>May 8 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                    </tr>
-                    <tr>
-                      <td colspan="4">
-                        <b>Total:</b> 49208 <br>
-                        <b>Active:</b> 0 <br>
-                        <b>Recovered:</b> 47954 <br>
-                        <b>Deceased:</b> 1254
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <hr><br><br><br><br><br><br>
-              </div>
-            </div>
-            <div class="col s12 m6 l4">
-              <div class="card-panel grey darken-4 white-text">
-                <h5><b>ULHASNAGAR UMC</b></h5>
-                <table class="centered">
-                  <caption>Week Trend of New Cases (<i class="fas fa-arrow-circle-up"></i>)</caption>
-                  <tbody>
-                    <tr>
-                      <td>May 14 <br><i class="fas fa-arrow-circle-up"></i><br>_</td>
-                      <td>May 13 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                      <td>May 12 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                      <td>May 11 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                    </tr>
-                    <tr>
-                      <td>May 10 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                      <td>May 9 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                      <td>May 8 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                    </tr>
-                    <tr>
-                      <td colspan="4">
-                        <b>Total:</b> 26416 <br>
-                        <b>Active:</b> 0 <br>
-                        <b>Recovered:</b> 25761 <br>
-                        <b>Deceased:</b> 655
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <hr>
-                <p class="grey-text text-lighten-1">Unr-1: 0<br>Unr-2: 0<br>Unr-3: 0<br>Unr-4: 0<br>Unr-5: 0 [May 13]
-                </p>
-              </div>
-            </div>
-            <div class="col s12 m6 l4">
-              <div class="card-panel grey darken-4 white-text">
-                <h5><b>BADLAPUR KBMC</b></h5>
-                <table class="centered">
-                  <caption>Week Trend of New Cases (<i class="fas fa-arrow-circle-up"></i>)</caption>
-                  <tbody>
-                    <tr>
-                      <td>May 14 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                      <td>May 13 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                      <td>May 12 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                      <td>May 11 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                    </tr>
-                    <tr>
-                      <td>May 10 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                      <td>May 9 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                      <td>May 8 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                    </tr>
-                    <tr>
-                      <td colspan="4">
-                        <b>Total:</b> 25593 <br>
-                        <b>Active:</b> 0 <br>
-                        <b>Recovered:</b> 25204 <br>
-                        <b>Deceased:</b> 388
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <hr>
-                <p class="grey-text text-lighten-1">Badlapur East: 0<br>Badlapur West: 0 [May 14]<br><br></p>
-              </div>
-            </div>
-            <div class="col s12 m6 l4">
-              <div class="card-panel grey darken-4 white-text">
-                <h5><b>AMBERNATH MUN. COU.</b></h5>
-                <table class="centered">
-                  <caption>Week Trend of New Cases (<i class="fas fa-arrow-circle-up"></i>)</caption>
-                  <tbody>
-                    <tr>
-                      <td>May 14 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                      <td>May 13 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                      <td>May 12 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                      <td>May 11 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                    </tr>
-                    <tr>
-                      <td>May 10 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                      <td>May 9 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                      <td>May 8 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                    </tr>
-                    <tr>
-                      <td colspan="4">
-                        <b>Total:</b> 24438 <br>
-                        <b>Active:</b> 0 <br>
-                        <b>Recovered:</b> 23858 <br>
-                        <b>Deceased:</b> 580
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <hr>
-                <p class="grey-text text-lighten-1">Ambernath East: 0<br>Ambernath West: 0 [May 14]<br><br></p>
-              </div>
-            </div>
-            <div class="col s12 m6 l4">
-              <div class="card-panel grey darken-4 white-text">
-                <h5><b>BHIWANDI City</b></h5>
-                <table class="centered">
-                  <caption>Week Trend of New Cases (<i class="fas fa-arrow-circle-up"></i>)</caption>
-                  <tbody>
-                    <tr>
-                      <td>May 14 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                      <td>May 13 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                      <td>May 12 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                      <td>May 11 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                    </tr>
-                    <tr>
-                      <td>May 10 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                      <td>May 9 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                      <td>May 8 <br><i class="fas fa-arrow-circle-up"></i><br>0</td>
-                    </tr>
-                    <tr>
-                      <td colspan="4">
-                        <b>Total:</b> 12634 <br>
-                        <b>Active:</b> 0 <br>
-                        <b>Recovered:</b> 12155 <br>
-                        <b>Deceased:</b> 479
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <hr>
-                <p class="grey-text text-lighten-1">Bhiwandi City: Same as above<br>Rural: No updates available<br><br>
-                </p>
-              </div>
-            </div>
-          </div>
-          <h6 class="center">NOTE - 3 Cases have been added into Kalyan's Total & Deceased, as per DIO Thane report
-            (consolidated) shows 3 less in Kalyan which seems incorrect..</h6>
         </div>
       </div>
-    </div>
-    <br>
+      <br>
   </main>
   <script>
     if ('serviceWorker' in navigator) {

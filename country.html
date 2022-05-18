@@ -12,6 +12,51 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/solid.min.css">
   <link rel="icon" href="images/COV.ico">
   <style>
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: black;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 80px;
+    }
+
+    .sidenav a {
+      padding: 8px 8px 8px 10px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #f1f1f1;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+      color: #818181;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 5px;
+      right: 50px;
+      font-size: 36px;
+      margin-left: 10px;
+    }
+
+    #main {
+      transition: margin-left .5s;
+      padding: 0px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav a {
+        font-size: 18px;
+      }
+    }
+
     @font-face {
       font-family: 'SamsungOne 400';
       src: local('SamsungOne 400'), url('SamsungOne-400.woff') format('woff');
@@ -38,10 +83,6 @@
         delay: 50
       });
     })
-    $(document).ready(function () {
-      $('.modal').modal();
-      $('#modal2').modal();
-    });
     $(document).bind("contextmenu", function (e) {
       return false;
     });
@@ -50,45 +91,42 @@
 
 <body class="black white-text" onload="location.href='#view'">
   <main class="containr">
-    <div class="oui-viewing center-align black white-text">
-      <h4>COVID 19 DASHBOARDS</h4>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
     </div>
-    <div id="view"></div><br>
-    <div class="row">
-      <div class="col s1 m1 l1 left-align" style="font-size: x-large;">
-        <a href="#modal2" class="modal-trigger tooltipped white-text" data-position="top" data-delay="50"
-          data-tooltip="Menu">&#9776;</a></div>
-      <div class="col s11 m11 l11"></div>
-    </div>
-    <div class="oui-interaction center-align">
-      <!--Interaction area-->
-      <div class="oui-bubble black white-text">
-        <!--Menu-->
-        <div id="modal2" class="modal bottom-sheet right-align black white-text">
-          <div class="modal-content">
-            <a href="#!" onclick="location.reload()" class="blue-text text-darken-1 tooltipped" data-tooltip="Refresh"
-              data-position="top"><i class="small fas fa-sync-alt"></i></a>
-            <ul class="collection left-align" style="border-width: 0px;">
-              <li class="collection-item avatar black oui-bubble" onclick="location.href='index.html'">
-                <a href="#!"><i class="fas fa-home circle blue darken-1"></i></a>
-                <p style="font-size: x-large;">Cov19 Home</p>
-                <p>Back to India's Dashboard (Home)</p>
-              </li>
-              <li class="collection-item avatar black oui-bubble" onclick="location.href='about.html'">
-                <a href="#!"><i class="fas fa-info circle blue darken-1"></i></a>
-                <p style="font-size: x-large;">About</p>
-                <p>About this Website</p>
-              </li>
-              <li class="collection-item black"></li>
-            </ul>
-          </div>
-        </div>
-        <h5>WORLD DASHBOARD</h5>
-        <h6 class="grey-text text-lighten-2">Website Courtesy: ncov2019.live/</h6>
-        <iframe src="https://ncov2019.live/" width="100%" height="1400px" style="border-radius: 15px;"></iframe>
+    <div id="main">
+      <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "90px";
+          document.getElementById("main").style.marginLeft = "90px";
+        }
+
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft = "0";
+        }
+      </script>
+      <div class="oui-viewing center-align black white-text">
+        <h4>COVID 19 DASHBOARDS</h4>
       </div>
-    </div>
-    <br>
+      <div id="view"></div><br>
+      <div class="row">
+        <div class="col s1 m1 l1 left-align" style="font-size: x-large;">
+          <a href="javascript:openNav()" class="tooltipped white-text" data-position="right" data-delay="50"
+            data-tooltip="Menu">&#9776;</a></div>
+        <div class="col s11 m11 l11"></div>
+      </div>
+      <div class="oui-interaction center-align">
+        <!--Interaction area-->
+        <div class="oui-bubble black white-text">
+          <h5>WORLD DASHBOARD</h5>
+          <h6 class="grey-text text-lighten-2">Website Courtesy: ncov2019.live/</h6>
+          <iframe src="https://ncov2019.live/" width="100%" height="1400px" style="border-radius: 15px;"></iframe>
+        </div>
+      </div>
+      <br>
   </main>
 </body>
 
