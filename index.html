@@ -69,14 +69,9 @@
     .sidenav .closebtn {
       position: absolute;
       top: 5px;
-      right: 50px;
+      right: 25px;
       font-size: 36px;
       margin-left: 10px;
-    }
-
-    #main {
-      transition: margin-left .5s;
-      padding: 0px;
     }
 
     @media screen and (max-height: 450px) {
@@ -136,19 +131,30 @@
   <main class="containr">
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="country.html">World</a>
-      <a href="about.html">About</a>
+      <ul class="collection left-align container" style="border-width: 0px;">
+        <li class="collection-item avatar grey darken-3 oui-bubble z-depth-1" style="cursor: pointer;"
+          onclick="location.href='index.html'">
+          <a href="#!"><i class="fas fa-globe circle blue darken-1"></i></a>
+          <span style="font-size: x-large;">Cov19 Dashboards - World</span><br>
+          <span>Covid 19 updates all over globe</span>
+        </li><br>
+        <li class="collection-item avatar grey darken-3 oui-bubble z-depth-1" style="cursor: pointer;"
+          onclick="location.href='about.html'">
+          <a href="#!"><i class="fas fa-info circle blue darken-1"></i></a>
+          <span style="font-size: x-large;">About</span><br>
+          <span>About this Website</span>
+        </li>
+        <li class="collection-item transparent"></li>
+      </ul>
     </div>
     <div id="main">
       <script>
         function openNav() {
-          document.getElementById("mySidenav").style.width = "90px";
-          document.getElementById("main").style.marginLeft = "90px";
+          document.getElementById("mySidenav").style.width = "100%";
         }
 
         function closeNav() {
           document.getElementById("mySidenav").style.width = "0";
-          document.getElementById("main").style.marginLeft = "0";
         }
       </script>
       <div class="oui-viewing center-align black white-text">
@@ -852,13 +858,13 @@
               </div>
             </div>
             <blockquote style="font-size: x-large; border-left-color: #1e88e5;">Mumbai Dashboard</blockquote>
-            <h6>Source: Official MCGM Website<br>As on May 18 (May 17)</h6>
+            <h6>Source: Official MCGM Website<br>As on May 19 (May 18)</h6>
             <div class="row">
               <div class="col s12 m12 l6">
-                <img src="images/M18.jpg" alt="Mum" width="100%" class="responsive-img materialboxed">
+                <img src="images/M19.jpg" alt="Mum" width="100%" class="responsive-img materialboxed">
               </div>
               <div class="col s12 m12 l6">
-                <img src="images/M17.jpg" alt="Mum" width="100%" class="responsive-img materialboxed">
+                <img src="images/M18.jpg" alt="Mum" width="100%" class="responsive-img materialboxed">
               </div>
             </div>
             <blockquote style="font-size: x-large; border-left-color: #1e88e5;">Palghar Dashboard</blockquote>
