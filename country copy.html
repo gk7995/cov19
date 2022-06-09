@@ -1,0 +1,168 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+  <title>Cov19 Countries</title>
+  <link rel="stylesheet" href="OneUI/oui.min.css">
+  <link rel="stylesheet" href="materialize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/brands.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/solid.min.css">
+  <link rel="icon" href="images/COV.ico">
+  <style>
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: black;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 80px;
+    }
+
+    .sidenav a {
+      padding: 8px 8px 8px 10px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #f1f1f1;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+      color: #818181;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 5px;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 10px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav a {
+        font-size: 18px;
+      }
+    }
+
+    @font-face {
+      font-family: 'SamsungOne 400';
+      src: local('SamsungOne 400'), url('SamsungOne-400.woff') format('woff');
+    }
+
+    * {
+      font-family: 'SamsungOne 400';
+      font-size: larger;
+    }
+
+    .oui-button {
+      font-family: 'SamsungOne 400';
+    }
+  </style>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="materialize.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.fixed-action-btn').openFAB();
+      $('.fixed-action-btn').closeFAB();
+      $('.fixed-action-btn.toolbar').openToolbar();
+      $('.fixed-action-btn.toolbar').closeToolbar();
+      $('.tooltipped').tooltip({
+        delay: 50
+      });
+    })
+    // $(document).bind("contextmenu", function (e) {
+    //   return false;
+    // });
+  </script>
+</head>
+
+<body class="black white-text" onload="loadXMLDoc()">
+  <main class="containr">
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <ul class="collection left-align container" style="border-width: 0px;">
+        <li class="collection-item avatar grey darken-3 oui-bubble z-depth-1" style="cursor: pointer;"
+          onclick="location.href='index.html'">
+          <a href="#!"><i class="fas fa-home circle blue darken-1"></i></a>
+          <span style="font-size: x-large;">Cov19 Dashboards - Home</span><br>
+          <span>Back to Home page</span>
+        </li><br>
+        <li class="collection-item avatar grey darken-3 oui-bubble z-depth-1" style="cursor: pointer;"
+          onclick="location.href='about.html'">
+          <a href="#!"><i class="fas fa-info circle blue darken-1"></i></a>
+          <span style="font-size: x-large;">About</span><br>
+          <span>About this Website</span>
+        </li>
+        <li class="collection-item transparent"></li>
+      </ul>
+    </div>
+    <div id="main">
+      <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "100%";
+        }
+
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+      </script>
+      <div class="oui-viewing center-align black white-text">
+        <h4>COVID 19 DASHBOARDS</h4>
+      </div>
+      <div id="view"></div><br>
+      <div class="row">
+        <div class="col s1 m1 l1 left-align" style="font-size: x-large;">
+          <a href="javascript:openNav()" class="tooltipped white-text" data-position="right" data-delay="50"
+            data-tooltip="Menu">&#9776;</a></div>
+        <div class="col s11 m11 l11"></div>
+      </div>
+      <div class="oui-interaction center-align">
+        <!--Interaction area-->
+        <!-- <div class="oui-bubble black white-text">
+          <h5>WORLD DASHBOARD</h5>
+          <h6 class="grey-text text-lighten-2">Website Courtesy: ncov2019.live/</h6>
+          <iframe src="https://ncov2019.live/" width="100%" height="1400px" style="border-radius: 15px;"></iframe>
+        </div> -->
+        <table id="id"></table>
+      </div>
+      <br>
+  </main>
+  <script>
+    function loadXMLDoc() {
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          myFunction(this);
+        }
+      };
+      xmlhttp.open("GET", "cd_catalog.xml", true);
+      xmlhttp.send();
+    }
+    function myFunction(xml) {
+      var i;
+      var xmlDoc = xml.responseXML;
+      var table="<tr><th>Artist</th><th>Company</th><th>Title</th></tr>";
+      var x = xmlDoc.getElementsByTagName("CD");
+      for (i = 0; i <x.length; i++) { 
+        table += "<tr><td>" +
+        x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
+        "</td><td>" +
+        x[i].getElementsByTagName("COMPANY")[0].childNodes[0].nodeValue +
+        "</td><td>" +
+        x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+        "</td></tr>";
+      }
+      document.getElementById("demo").innerHTML = table;
+    }
+    </script>
+</body>
+
+</html>
