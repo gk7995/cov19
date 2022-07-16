@@ -124,6 +124,17 @@
     $(document).bind("contextmenu", function (e) {
       return false;
     });
+
+    function lng() {
+      var element1 = document.getElementById("hi");
+      var element2 = document.getElementById("hi1");
+      var element3 = document.getElementById("en");
+      var element4 = document.getElementById("en1");
+      element1.classList.toggle("hide");
+      element2.classList.toggle("hide");
+      element3.classList.toggle("hide");
+      element4.classList.toggle("hide");
+    }
   </script>
 </head>
 
@@ -165,7 +176,10 @@
         <div class="col s1 m1 l1 left-align" style="font-size: x-large;">
           <a href="javascript:openNav()" class="tooltipped white-text" data-position="right" data-delay="50"
             data-tooltip="Menu">&#9776;</a></div>
-        <div class="col s11 m11 l11"></div>
+        <div class="col s10 m10 l10"></div>
+        <div class="col s1 m1 l1 right-align" style="font-size: x-large;">
+          <a href="javascript:lng()" class="tooltipped white-text" data-position="left" data-delay="50"
+            data-tooltip="Language"><i class="fas fa-language"></i></a></div>
       </div>
       <div class="oui-interaction center-align">
         <!--Interaction area-->
@@ -174,7 +188,7 @@
           <div class="row">
             <div class="col s12">
               <ul class="tabs tabs-fixed-width">
-                <li class="tab"><a href="#ind" class="black white-text">
+                <li class="tab"><a href="#ind" class="active black white-text">
                     <h6>INDIA</h6>
                   </a></li>
                 <li class="tab"><a href="#sta" class="black white-text">
@@ -183,7 +197,7 @@
                 <li class="tab"><a href="#mah" class="black white-text">
                     <h6>MAHARASHTRA</h6>
                   </a></li>
-                <li class="tab"><a href="#mum" class="active black white-text">
+                <li class="tab"><a href="#mum" class="black white-text">
                     <h6>MUMBAI<br>REGION</h6>
                   </a></li>
                 <div class="indicator blue darken-1"></div>
@@ -191,17 +205,20 @@
             </div>
           </div>
           <div class="col s12" id="ind">
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
-              <i class="fas fa-virus"></i> COVID 19 (As on July 14)</blockquote>
-            <span>Source: ICMR/ MyGov; &#8595;&#8593; Changes from last 24 hours</span>
+            <blockquote style="font-size: x-large; border-left-color: #1e88e5;" id="en">
+              <i class="fas fa-virus"></i> COVID 19 (As on July 15)</blockquote>
+            <blockquote style="font-size: x-large; border-left-color: #1e88e5;" id="hi" class="hide">
+              <i class="fas fa-virus"></i> कोविड 19 (जुलाई 15 के अनुसार)</blockquote>
+            <span id="en1">Source: ICMR/ MyGov; &#8595;&#8593; Changes from last 24 hours</span>
+            <span id="hi1" class="hide">स्रोत: आईसीएमआर/ मायजीओवी; &#8595;&#8593; पिछले 24 घंटे के बदलाव</span>
             <table class="centered flow-text">
               <tr>
                 <td><b>TOTAL CASES</b><br>
-                  <span class="red-text">&#8593; 20,038 </span>
-                  &nbsp;&nbsp;<b> 4,37,10,027 </b></td>
+                  <span class="red-text">&#8593; 20,044 </span>
+                  &nbsp;&nbsp;<b> 4,37,30,071 </b></td>
                 <td><b>VACCINATION DOSES</b><br>
-                  <span class="blue-text">&#8593; 18,92,969 </span>
-                  &nbsp;&nbsp;<b> 1,99,47,34,994 </b></td>
+                  <span class="blue-text">&#8593; 22,93,627 </span>
+                  &nbsp;&nbsp;<b> 1,99,71,61,438 </b></td>
               </tr>
             </table>
             <div class="row">
@@ -210,8 +227,8 @@
                   <table class="centered">
                     <tr>
                       <td><b>ACTIVE</b><br>
-                        <span class="red-text text-accent-2">&#8593; 2,997 </span><br>
-                        <b> 1,39,073 </b></td>
+                        <span class="red-text text-accent-2">&#8593; 1,687 </span><br>
+                        <b> 1,40,760 </b></td>
                     </tr>
                   </table>
                 </div>
@@ -221,8 +238,8 @@
                   <table class="centered">
                     <tr>
                       <td><b>RECOVERED</b><br>
-                        <span class="green-text">&#8593; 16,994 </span><br>
-                        <b> 4,30,45,350 </b></td>
+                        <span class="green-text">&#8593; 18,301 </span><br>
+                        <b> 4,30,63,651 </b></td>
                     </tr>
                   </table>
                 </div>
@@ -232,8 +249,8 @@
                   <table class="centered">
                     <tr>
                       <td><b>DECEASED</b><br>
-                        <span class="grey-text text-lighten-1">&#8593; 47 </span><br>
-                        <b> 5,25,604 </b></td>
+                        <span class="grey-text text-lighten-1">&#8593; 56 </span><br>
+                        <b> 5,25,660 </b></td>
                     </tr>
                   </table>
                 </div>
@@ -243,58 +260,58 @@
                   <table class="centered">
                     <tr>
                       <td><b>TESTED</b><br>
-                        <span class="purple-text text-accent-4">&#8593; 4,50,820 </span><br>
-                        <b> 86,86,15,168 </b></td>
+                        <span class="purple-text text-accent-4">&#8593; 4,17,895 </span><br>
+                        <b> 86,90,33,063 </b></td>
                     </tr>
                   </table>
                 </div>
               </div>
             </div>
-            <h6>Below Data as on July 15, 20:15 IST</h6>
+            <h6>Below Data as on July 16, 15:45 IST</h6>
             <div class="row">
               <div class="col s12 m6 l4">
                 <div class="card-panel grey darken-4 white-text">
                   <h5><b>Vaccine Doses availability</b></h5>
-                  <p>As on July 15, Source: PIB India</p>
+                  <p>As on July 16, Source: PIB India</p>
                   <b>Supplied</b>: 193.53 Crores <br>
-                  <b>Balance</b>: 9.70 Crores
+                  <b>Balance</b>: 9.50 Crores
                 </div>
               </div>
               <div class="col s12 m6 l4">
                 <div class="card-panel grey darken-4 white-text">
                   <h5><b>Vaccine Doses administered</b></h5>
-                  <b>Dose 1</b>: 101.89 Crores <br>
-                  <b>Dose 2</b>: 92.53 Crores <br>
-                  <b>Prec. Dose</b>: 5.28 Crores <br>
-                  <b>Total</b>: 199.71 Crores
+                  <b>Dose 1</b>: 101.90 Crores <br>
+                  <b>Dose 2</b>: 92.57 Crores <br>
+                  <b>Prec. Dose</b>: 5.45 Crores <br>
+                  <b>Total</b>: 199.93 Crores
                 </div>
               </div>
               <div class="col s12 m6 l4">
                 <div class="card-panel grey darken-4 white-text">
                   <h5><b>Registered for Vaccine</b></h5>
                   <b>Age 12 to 14</b>: 3.86 Crores <br>
-                  <b>Age 15 to 17</b>: 6.17 Crores <br>
+                  <b>Age 15 to 17</b>: 6.18 Crores <br>
                   <b>Age 18 to 44</b>: 63.27 Crores <br>
-                  <b>Age 45+</b>: 36.72 Crores <br>
-                  <b>Total</b>: 110.05 Crores
+                  <b>Age 45+</b>: 36.73 Crores <br>
+                  <b>Total</b>: 110.06 Crores
                 </div>
               </div>
               <div class="col s12 m6 l4">
                 <div class="card-panel grey darken-4 white-text">
                   <h5><b>Vaccination by Gender</b></h5>
-                  <b>Male</b>: 98.81 Crores <br>
-                  <b>Female</b>: 95.04 Crores <br>
+                  <b>Male</b>: 98.83 Crores <br>
+                  <b>Female</b>: 95.06 Crores <br>
                   <b>Others</b>: 4.70 Lakhs
                 </div>
               </div>
               <div class="col s12 m6 l4">
                 <div class="card-panel grey darken-4 white-text">
                   <h5><b>Vaccination by Vaccine Name</b></h5>
-                  <b>CoviShield</b>: 159.22 Crores <br>
-                  <b>Covaxin</b>: 33.44 Crores <br>
-                  <b>Corbevax</b>: 6.39 Crores <br>
+                  <b>CoviShield</b>: 159.39 Crores <br>
+                  <b>Covaxin</b>: 33.47 Crores <br>
+                  <b>Corbevax</b>: 6.41 Crores <br>
                   <b>Sputnik V</b>: 12.28 Lakhs <br>
-                  <b>Covovax</b>: 16608
+                  <b>Covovax</b>: 17451
                   <b>Novavax</b>: -
                   <b>Zycov-D</b>: -
                 </div>
@@ -302,11 +319,11 @@
               <div class="col s12 m6 l4">
                 <div class="card-panel grey darken-4 white-text">
                   <h5><b>Vaccination by Age</b></h5>
-                  <b>Age 12 to 14</b>: 6.39 Crores <br>
-                  <b>Age 15 to 17</b>: 11.08 Crores <br>
-                  <b>Age 18 to 44</b>: 111.36 Crores <br>
-                  <b>Age 45 to 60</b>: 41.56 Crores <br>
-                  <b>Age 60+</b>: 27.87 Crores
+                  <b>Age 12 to 14</b>: 6.41 Crores <br>
+                  <b>Age 15 to 17</b>: 11.09 Crores <br>
+                  <b>Age 18 to 44</b>: 111.38 Crores <br>
+                  <b>Age 45 to 60</b>: 41.57 Crores <br>
+                  <b>Age 60+</b>: 27.90 Crores
                 </div>
               </div>
             </div>
@@ -315,11 +332,11 @@
             <div class="row">
               <div class="col s12 m6 l6">
                 <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
-                  <i class="fas fa-virus"></i> Covid 19 (July 13)</blockquote>
+                  <i class="fas fa-virus"></i> Covid 19 (July 15)</blockquote>
               </div>
               <div class="col s12 m6 l6">
-                <a href="vac15jul.pdf" target="_blank" class="oui-button blue darken-1 white-text">
-                  <i class="fas fa-syringe"></i> VACCINATION (July 15)</a>
+                <a href="vac16jul.pdf" target="_blank" class="oui-button blue darken-1 white-text">
+                  <i class="fas fa-syringe"></i> VACCINATION (July 16)</a>
               </div>
             </div>
             <h6 class="white-text">Source: ICMR/ MyGov</h6>
@@ -333,240 +350,240 @@
               </tr>
               <tr>
                 <td>Maharashtra</td>
-                <td>8010223</td>
-                <td>16922</td>
-                <td>7845300</td>
-                <td>148001</td>
+                <td>8014823</td>
+                <td>16000</td>
+                <td>7850808</td>
+                <td>148015</td>
               </tr>
               <tr>
                 <td>Kerala</td>
-                <td>6681317</td>
-                <td>25577</td>
-                <td>6584680</td>
-                <td>70186</td>
+                <td>6687533</td>
+                <td>24079</td>
+                <td>6592347</td>
+                <td>70233</td>
               </tr>
               <tr>
                 <td>Karnataka</td>
-                <td>3981816</td>
-                <td>6603</td>
-                <td>3935088</td>
-                <td>40083</td>
+                <td>3984002</td>
+                <td>6702</td>
+                <td>3937173</td>
+                <td>40085</td>
               </tr>
               <tr>
                 <td>Tamil Nadu</td>
-                <td>3508526</td>
-                <td>18282</td>
-                <td>3452216</td>
-                <td>38028</td>
+                <td>3513121</td>
+                <td>17487</td>
+                <td>3457605</td>
+                <td>38029</td>
               </tr>
               <tr>
                 <td>Andhra Pradesh</td>
-                <td>2325103</td>
-                <td>2121</td>
-                <td>2308249</td>
+                <td>2325944</td>
+                <td>2241</td>
+                <td>2308970</td>
                 <td>14733</td>
               </tr>
               <tr>
                 <td>Uttar Pradesh</td>
-                <td>2095021</td>
-                <td>2363</td>
-                <td>2069109</td>
-                <td>23549</td>
+                <td>2095759</td>
+                <td>2382</td>
+                <td>2069826</td>
+                <td>23551</td>
               </tr>
               <tr>
                 <td>West Bengal</td>
-                <td>2059264</td>
-                <td>27496</td>
-                <td>2010513</td>
-                <td>21255</td>
+                <td>2065360</td>
+                <td>30043</td>
+                <td>2014052</td>
+                <td>21265</td>
               </tr>
               <tr>
                 <td>Delhi</td>
-                <td>1941905</td>
-                <td>1966</td>
-                <td>1913651</td>
-                <td>26288</td>
+                <td>1943026</td>
+                <td>2010</td>
+                <td>1914727</td>
+                <td>26289</td>
               </tr>
               <tr>
                 <td>Odisha</td>
-                <td>1295328</td>
-                <td>3458</td>
-                <td>1282690</td>
-                <td>9180</td>
+                <td>1297175</td>
+                <td>4311</td>
+                <td>1283683</td>
+                <td>9181</td>
               </tr>
               <tr>
                 <td>Rajasthan</td>
-                <td>1290153</td>
-                <td>1265</td>
-                <td>1279316</td>
+                <td>1290525</td>
+                <td>1120</td>
+                <td>1279833</td>
                 <td>9572</td>
               </tr>
               <tr>
                 <td>Gujarat</td>
-                <td>1239751</td>
-                <td>4225</td>
-                <td>1224576</td>
-                <td>10950</td>
+                <td>1241310</td>
+                <td>4482</td>
+                <td>1225875</td>
+                <td>10953</td>
               </tr>
               <tr>
                 <td>Chhattisgarh</td>
-                <td>1157290</td>
-                <td>2068</td>
-                <td>1141177</td>
+                <td>1158153</td>
+                <td>2389</td>
+                <td>1141719</td>
                 <td>14045</td>
               </tr>
               <tr>
                 <td>Madhya Pradesh</td>
-                <td>1045950</td>
-                <td>901</td>
-                <td>1034303</td>
+                <td>1046302</td>
+                <td>1004</td>
+                <td>1034552</td>
                 <td>10746</td>
               </tr>
               <tr>
                 <td>Haryana</td>
-                <td>1020684</td>
-                <td>1601</td>
-                <td>1008453</td>
-                <td>10630</td>
+                <td>1021598</td>
+                <td>1892</td>
+                <td>1009074</td>
+                <td>10632</td>
               </tr>
               <tr>
                 <td>Bihar</td>
-                <td>837138</td>
-                <td>2510</td>
-                <td>822361</td>
-                <td>12266</td>
+                <td>838095</td>
+                <td>2640</td>
+                <td>823185</td>
+                <td>12269</td>
               </tr>
               <tr>
                 <td>Telangana</td>
-                <td>807661</td>
-                <td>5082</td>
-                <td>798468</td>
+                <td>808729</td>
+                <td>4955</td>
+                <td>799663</td>
                 <td>4111</td>
               </tr>
               <tr>
                 <td>Punjab</td>
-                <td>765273</td>
-                <td>1260</td>
-                <td>746227</td>
-                <td>17786</td>
+                <td>765822</td>
+                <td>1403</td>
+                <td>746629</td>
+                <td>17790</td>
               </tr>
               <tr>
                 <td>Assam</td>
-                <td>727909</td>
-                <td>2584</td>
-                <td>717333</td>
-                <td>6645</td>
+                <td>729322</td>
+                <td>3434</td>
+                <td>717893</td>
+                <td>6648</td>
               </tr>
               <tr>
                 <td>Jammu and Kashmir</td>
-                <td>456291</td>
-                <td>769</td>
-                <td>450764</td>
+                <td>456605</td>
+                <td>856</td>
+                <td>450991</td>
                 <td>4758</td>
               </tr>
               <tr>
                 <td>Uttarakhand</td>
-                <td>439101</td>
-                <td>383</td>
-                <td>421449</td>
-                <td>7699</td>
+                <td>439315</td>
+                <td>515</td>
+                <td>421525</td>
+                <td>7701</td>
               </tr>
               <tr>
                 <td>Jharkhand</td>
-                <td>437191</td>
-                <td>888</td>
-                <td>430980</td>
+                <td>437547</td>
+                <td>1040</td>
+                <td>431184</td>
                 <td>5323</td>
               </tr>
               <tr>
                 <td>Himachal Pradesh</td>
-                <td>288493</td>
-                <td>1580</td>
-                <td>282769</td>
-                <td>4125</td>
+                <td>289353</td>
+                <td>2043</td>
+                <td>283163</td>
+                <td>4128</td>
               </tr>
               <tr>
                 <td>Goa</td>
-                <td>250265</td>
-                <td>813</td>
-                <td>245608</td>
-                <td>3844</td>
+                <td>250524</td>
+                <td>786</td>
+                <td>245893</td>
+                <td>3845</td>
               </tr>
               <tr>
                 <td>Mizoram</td>
-                <td>230229</td>
-                <td>948</td>
-                <td>228575</td>
+                <td>230348</td>
+                <td>1036</td>
+                <td>228606</td>
                 <td>706</td>
               </tr>
               <tr>
                 <td>Puducherry</td>
-                <td>168053</td>
-                <td>915</td>
-                <td>165176</td>
+                <td>168487</td>
+                <td>1048</td>
+                <td>165477</td>
                 <td>1962</td>
               </tr>
               <tr>
                 <td>Manipur</td>
-                <td>137613</td>
-                <td>268</td>
-                <td>135225</td>
+                <td>137779</td>
+                <td>385</td>
+                <td>135274</td>
                 <td>2120</td>
               </tr>
               <tr>
                 <td>Tripura</td>
-                <td>101541</td>
-                <td>584</td>
-                <td>99972</td>
+                <td>102032</td>
+                <td>1030</td>
+                <td>100016</td>
                 <td>920</td>
               </tr>
               <tr>
                 <td>Chandigarh</td>
-                <td>94589</td>
-                <td>408</td>
-                <td>93016</td>
+                <td>94760</td>
+                <td>461</td>
+                <td>93134</td>
                 <td>1165</td>
               </tr>
               <tr>
                 <td>Meghalaya</td>
-                <td>94167</td>
-                <td>131</td>
-                <td>92441</td>
+                <td>94232</td>
+                <td>158</td>
+                <td>92479</td>
                 <td>1595</td>
               </tr>
               <tr>
                 <td>Arunachal Pradesh</td>
-                <td>64792</td>
-                <td>205</td>
-                <td>64291</td>
+                <td>64835</td>
+                <td>222</td>
+                <td>64317</td>
                 <td>296</td>
               </tr>
               <tr>
                 <td>Sikkim</td>
-                <td>39605</td>
-                <td>310</td>
-                <td>38071</td>
-                <td>458</td>
+                <td>39762</td>
+                <td>414</td>
+                <td>38120</td>
+                <td>460</td>
               </tr>
               <tr>
                 <td>Nagaland</td>
-                <td>35566</td>
-                <td>42</td>
-                <td>33266</td>
-                <td>762</td>
+                <td>35592</td>
+                <td>61</td>
+                <td>33271</td>
+                <td>763</td>
               </tr>
               <tr>
                 <td>Ladakh</td>
-                <td>28584</td>
-                <td>51</td>
-                <td>28305</td>
+                <td>28615</td>
+                <td>61</td>
+                <td>28326</td>
                 <td>228</td>
               </tr>
               <tr>
                 <td>DNHDD</td>
-                <td>11505</td>
-                <td>9</td>
-                <td>11460</td>
+                <td>11509</td>
+                <td>12</td>
+                <td>11461</td>
                 <td>4</td>
               </tr>
               <tr>
@@ -578,9 +595,9 @@
               </tr>
               <tr>
                 <td>Andaman and Nicobar Islands</td>
-                <td>10270</td>
-                <td>46</td>
-                <td>10095</td>
+                <td>10294</td>
+                <td>48</td>
+                <td>10117</td>
                 <td>129</td>
               </tr>
             </table>
@@ -588,7 +605,7 @@
           </div>
           <div class="col s12" id="mah">
             <blockquote style="font-size: x-large; border-left-color: #1e88e5;">
-              <i class="fas fa-virus"></i> Covid 19 (July 13)</blockquote>
+              <i class="fas fa-virus"></i> Covid 19 (July 15)</blockquote>
             <table class="centered">
               <tr>
                 <td><b>District</b></td>
@@ -599,247 +616,247 @@
               </tr>
               <tr>
                 <td>Pune</td>
-                <td>1476039</td>
-                <td>6222</td>
-                <td>1449263</td>
-                <td>20554</td>
+                <td>1477577</td>
+                <td>5876</td>
+                <td>1451144</td>
+                <td>20557</td>
               </tr>
               <tr>
                 <td>Mumbai</td>
-                <td>1118911</td>
-                <td>3006</td>
-                <td>1096280</td>
-                <td>19625</td>
+                <td>1119615</td>
+                <td>2640</td>
+                <td>1097346</td>
+                <td>19629</td>
               </tr>
               <tr>
                 <td>Thane</td>
-                <td>791537</td>
-                <td>1700</td>
-                <td>777902</td>
-                <td>11935</td>
+                <td>791910</td>
+                <td>1445</td>
+                <td>778528</td>
+                <td>11937</td>
               </tr>
               <tr>
                 <td>Nagpur</td>
-                <td>579185</td>
-                <td>922</td>
-                <td>569048</td>
+                <td>579525</td>
+                <td>1006</td>
+                <td>569304</td>
                 <td>9215</td>
               </tr>
               <tr>
                 <td>Nashik</td>
-                <td>474703</td>
-                <td>557</td>
-                <td>465232</td>
-                <td>8914</td>
+                <td>474860</td>
+                <td>649</td>
+                <td>465296</td>
+                <td>8915</td>
               </tr>
               <tr>
                 <td>Ahmednagar</td>
-                <td>378453</td>
-                <td>301</td>
-                <td>370907</td>
+                <td>378583</td>
+                <td>358</td>
+                <td>370980</td>
                 <td>7245</td>
               </tr>
               <tr>
                 <td>Satara</td>
-                <td>278948</td>
-                <td>277</td>
-                <td>271951</td>
-                <td>6720</td>
+                <td>279035</td>
+                <td>227</td>
+                <td>272086</td>
+                <td>6722</td>
               </tr>
               <tr>
                 <td>Raigad</td>
-                <td>251519</td>
-                <td>594</td>
-                <td>245970</td>
+                <td>251686</td>
+                <td>458</td>
+                <td>246273</td>
                 <td>4955</td>
               </tr>
               <tr>
                 <td>Solapur</td>
-                <td>227808</td>
-                <td>283</td>
-                <td>221640</td>
-                <td>5885</td>
+                <td>227906</td>
+                <td>317</td>
+                <td>221702</td>
+                <td>5887</td>
               </tr>
               <tr>
                 <td>Sangli</td>
-                <td>227507</td>
-                <td>114</td>
-                <td>221727</td>
+                <td>227573</td>
+                <td>133</td>
+                <td>221774</td>
                 <td>5666</td>
               </tr>
               <tr>
                 <td>Kolhapur</td>
-                <td>220781</td>
-                <td>97</td>
-                <td>214777</td>
+                <td>220828</td>
+                <td>100</td>
+                <td>214821</td>
                 <td>5907</td>
               </tr>
               <tr>
                 <td>Aurangabad</td>
-                <td>177515</td>
-                <td>406</td>
-                <td>172821</td>
+                <td>177600</td>
+                <td>374</td>
+                <td>172938</td>
                 <td>4288</td>
               </tr>
               <tr>
                 <td>Palghar</td>
-                <td>166642</td>
-                <td>294</td>
-                <td>162931</td>
+                <td>166696</td>
+                <td>260</td>
+                <td>163019</td>
                 <td>3417</td>
               </tr>
               <tr>
                 <td>Jalgaon</td>
-                <td>149871</td>
-                <td>73</td>
-                <td>147036</td>
+                <td>149899</td>
+                <td>69</td>
+                <td>147068</td>
                 <td>2762</td>
               </tr>
               <tr>
                 <td>Beed</td>
-                <td>109338</td>
-                <td>25</td>
-                <td>106428</td>
+                <td>109356</td>
+                <td>30</td>
+                <td>106441</td>
                 <td>2885</td>
               </tr>
               <tr>
                 <td>Amravati</td>
-                <td>106238</td>
-                <td>115</td>
-                <td>104498</td>
+                <td>106287</td>
+                <td>125</td>
+                <td>104537</td>
                 <td>1625</td>
               </tr>
               <tr>
                 <td>Latur</td>
-                <td>105327</td>
-                <td>147</td>
-                <td>102691</td>
+                <td>105359</td>
+                <td>126</td>
+                <td>102744</td>
                 <td>2489</td>
               </tr>
               <tr>
                 <td>Nanded</td>
-                <td>102839</td>
-                <td>29</td>
-                <td>100106</td>
+                <td>102849</td>
+                <td>31</td>
+                <td>100114</td>
                 <td>2704</td>
               </tr>
               <tr>
                 <td>Chandrapur</td>
-                <td>99123</td>
-                <td>75</td>
-                <td>97456</td>
+                <td>99159</td>
+                <td>85</td>
+                <td>97482</td>
                 <td>1592</td>
               </tr>
               <tr>
                 <td>Buldhana</td>
-                <td>92345</td>
-                <td>169</td>
-                <td>91340</td>
+                <td>92398</td>
+                <td>187</td>
+                <td>91375</td>
                 <td>836</td>
               </tr>
               <tr>
                 <td>Ratnagiri</td>
-                <td>84959</td>
-                <td>84</td>
-                <td>82326</td>
+                <td>84985</td>
+                <td>79</td>
+                <td>82357</td>
                 <td>2549</td>
               </tr>
               <tr>
                 <td>Yavatmal</td>
-                <td>82216</td>
-                <td>72</td>
-                <td>80324</td>
+                <td>82235</td>
+                <td>69</td>
+                <td>80346</td>
                 <td>1820</td>
               </tr>
               <tr>
                 <td>Osmanabad</td>
-                <td>75516</td>
-                <td>142</td>
-                <td>73235</td>
+                <td>75567</td>
+                <td>121</td>
+                <td>73307</td>
                 <td>2139</td>
               </tr>
               <tr>
                 <td>Bhandara</td>
-                <td>68296</td>
-                <td>116</td>
-                <td>67038</td>
+                <td>68340</td>
+                <td>129</td>
+                <td>67069</td>
                 <td>1142</td>
               </tr>
               <tr>
                 <td>Jalna</td>
-                <td>66891</td>
-                <td>358</td>
-                <td>65309</td>
+                <td>66961</td>
+                <td>346</td>
+                <td>65391</td>
                 <td>1224</td>
               </tr>
               <tr>
                 <td>Akola</td>
-                <td>66551</td>
-                <td>129</td>
-                <td>64951</td>
+                <td>66589</td>
+                <td>124</td>
+                <td>64994</td>
                 <td>1471</td>
               </tr>
               <tr>
                 <td>Wardha</td>
-                <td>65854</td>
-                <td>48</td>
-                <td>64398</td>
+                <td>65877</td>
+                <td>54</td>
+                <td>64415</td>
                 <td>1408</td>
               </tr>
               <tr>
                 <td>Parbhani</td>
-                <td>58634</td>
-                <td>16</td>
-                <td>57339</td>
+                <td>58639</td>
+                <td>15</td>
+                <td>57345</td>
                 <td>1279</td>
               </tr>
               <tr>
                 <td>Sindhudurg</td>
-                <td>57495</td>
-                <td>55</td>
-                <td>55906</td>
+                <td>57530</td>
+                <td>56</td>
+                <td>55940</td>
                 <td>1534</td>
               </tr>
               <tr>
                 <td>Dhule</td>
-                <td>50978</td>
-                <td>85</td>
-                <td>50223</td>
+                <td>51010</td>
+                <td>83</td>
+                <td>50257</td>
                 <td>670</td>
               </tr>
               <tr>
                 <td>Nandurbar</td>
-                <td>46688</td>
-                <td>26</td>
-                <td>45699</td>
+                <td>46702</td>
+                <td>23</td>
+                <td>45716</td>
                 <td>963</td>
               </tr>
               <tr>
                 <td>Washim</td>
-                <td>46469</td>
+                <td>46602</td>
                 <td>304</td>
-                <td>45524</td>
+                <td>45657</td>
                 <td>641</td>
               </tr>
               <tr>
                 <td>Gondia</td>
-                <td>45505</td>
-                <td>6</td>
+                <td>45521</td>
+                <td>22</td>
                 <td>44912</td>
                 <td>587</td>
               </tr>
               <tr>
                 <td>Gadchiroli</td>
-                <td>37143</td>
+                <td>37151</td>
                 <td>41</td>
-                <td>36374</td>
+                <td>36382</td>
                 <td>728</td>
               </tr>
               <tr>
                 <td>Hingoli</td>
-                <td>22255</td>
-                <td>34</td>
-                <td>21707</td>
+                <td>22269</td>
+                <td>38</td>
+                <td>21717</td>
                 <td>514</td>
               </tr>
               <tr>
@@ -854,7 +871,7 @@
           <div class="col s12" id="mum">
             <a href="thavac.html" target="_blank" class="oui-button blue darken-1 white-text">VACCINE SLOT
               TRACKERS</a>
-            <h6 class="white-text">As on July 15 (*As on -, **As on -)</h6>
+            <h6 class="white-text">As on July 15 (*As on July 16, **As on -)</h6>
             <div class="row">
               <div class="col s12 m6 l3">
                 <div class="card-panel grey darken-4 white-text">
@@ -867,7 +884,7 @@
                           <b>Active:</b> 2,640 <br>
                           <b>Recovered:</b> 10,97,346 <br>
                           <b>Deceased:</b> 19,629 <br>
-                          <b>Vaccinated:</b>2,15,71,748 <br>
+                          <b>Vaccinated:</b>2,15,96,035* <br>
                           <b>Tested:</b> 1,76,78,543
                         </td>
                       </tr>
@@ -886,7 +903,7 @@
                           <b>Active:</b> 1,445 <br>
                           <b>Recovered:</b> 7,78,528 <br>
                           <b>Deceased:</b> 11,937 <br>
-                          <b>Vaccinated:</b> 1,37,83,081 <br>
+                          <b>Vaccinated:</b> 1,38,01,661* <br>
                           <b>Tested:</b> -
                         </td>
                       </tr>
@@ -905,7 +922,7 @@
                           <b>Active:</b> 260 <br>
                           <b>Recovered:</b> 1,63,019 <br>
                           <b>Deceased:</b> 3,417 <br>
-                          <b>Vaccinated:</b> 48,23,374 <br>
+                          <b>Vaccinated:</b> 48,33,869* <br>
                           <b>Tested:</b> 14,30,049+
                         </td>
                       </tr>
@@ -924,7 +941,7 @@
                           <b>Active:</b> 458 <br>
                           <b>Recovered:</b> 2,46,273 <br>
                           <b>Deceased:</b> 4,955 <br>
-                          <b>Vaccinated:</b> 45,93,427 <br>
+                          <b>Vaccinated:</b> 45,98,008* <br>
                           <b>Tested:</b> 26,70,894
                         </td>
                       </tr>
