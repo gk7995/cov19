@@ -229,6 +229,8 @@ function lng() {
   var element228 = document.getElementById("en113");
   var element229 = document.getElementById("hi114");
   var element230 = document.getElementById("en114");
+  var element231 = document.getElementById("hi115");
+  var element232 = document.getElementById("en115");
   element1.classList.toggle("hide");
   element2.classList.toggle("hide");
   element3.classList.toggle("hide");
@@ -459,4 +461,6 @@ function lng() {
   element228.classList.toggle("hide");
   element229.classList.toggle("hide");
   element230.classList.toggle("hide");
+  element231.classList.toggle("hide");
+  element232.classList.toggle("hide");
 }
