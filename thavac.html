@@ -72,6 +72,7 @@
   </style>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script type="text/javascript" src="materialize.js"></script>
+  <script type="text/javascript" src="lng.js"></script>
   <script>
     $(document).ready(function () {
       $('.fixed-action-btn').openFAB();
@@ -90,20 +91,28 @@
 
 <body class="black white-text">
   <main class="containr">
+    <div class="fixed-action-btn">
+      <a href="javascript:lng()" class="tooltipped white-text blue darken-1 btn-floating btn-large" data-position="left"
+        data-delay="50" data-tooltip="Change ENG to HIN"><i class="fas fa-language"></i></a>
+    </div>
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <ul class="collection left-align container" style="border-width: 0px;">
         <li class="collection-item avatar grey darken-3 oui-bubble z-depth-1" style="cursor: pointer;"
           onclick="location.href='index.html'">
           <a href="#!"><i class="fas fa-home circle blue darken-1"></i></a>
-          <span style="font-size: x-large;">Cov19 Dashboards - Home</span><br>
-          <span>Back to Home page</span>
+          <span style="font-size: x-large;" id="enA">Cov19 Dashboards - Home<br></span>
+          <span style="font-size: x-large;" id="hiA" class="hide">सिओवी19 डैशबोर्ड्स - होम<br></span>
+          <span id="enB">Go to Home page</span>
+          <span id="hiB" class="hide">होम पेज पर जाएं</span>
         </li><br>
         <li class="collection-item avatar grey darken-3 oui-bubble z-depth-1" style="cursor: pointer;"
           onclick="location.href='about.html'">
           <a href="#!"><i class="fas fa-info circle blue darken-1"></i></a>
-          <span style="font-size: x-large;">About</span><br>
-          <span>About this Website</span>
+          <span style="font-size: x-large;" id="enC">About<br></span>
+          <span style="font-size: x-large;" id="hiC" class="hide">बारे में<br></span>
+          <span id="enD">About this Website</span>
+          <span id="hiD" class="hide">इस वेबसाइट के बारे में</span>
         </li>
         <li class="collection-item transparent"></li>
       </ul>
@@ -119,7 +128,8 @@
         }
       </script>
       <div class="oui-viewing center-align black white-text">
-        <h4>COVID 19 DASHBOARDS</h4>
+        <h4 id="enE">COVID 19 DASHBOARDS</h4>
+        <h4 id="hiE" class="hide">कोविड 19 डैशबोर्ड्स</h4>
       </div>
       <div></div><br>
       <div class="row">
@@ -132,58 +142,83 @@
         <!--Interaction area-->
         <div class="oui-bubble black white-text">
           <a href="https://apps.healthifyme.com/vaccinateme/?type=district" class="oui-button blue darken-1 white-text"
-            target="_blank">VaccinateMe SLOT TRACKER<sup class="yellow-text"> NEW</sup></a>
-          <h5>VACCINE ONLINE SLOT TRACKERS FOR MUMBAI REGION (4 Districts)</h5>
-          <h6 class="grey-text text-lighten-2">Select as per your Age group & Dose <i class="fas fa-syringe"></i> 1, 2
-            below for updates</h6>
+            target="_blank" id="enF">VaccinateMe SLOT TRACKER<sup class="yellow-text"> NEW</sup></a>
+          <a href="https://apps.healthifyme.com/vaccinateme/?type=district"
+            class="oui-button blue darken-1 white-text hide" target="_blank" id="hiF">वैक्सीनेटमी स्लाॅट ट्रैकर<sup
+              class="yellow-text"> न्यू</sup></a>
+          <h5 id="enG">VACCINE ONLINE SLOT TRACKERS FOR MUMBAI REGION (4 Districts)</h5>
+          <h5 id="hiG" class="hide">टीकाकरण ऑनलाइन स्लाॅट ट्रैकर्स मुंबई क्षेत्र (4 जिले)</h5>
+          <h6 class="grey-text text-lighten-2" id="enH"> Select your Age group & Dose <i class="fas fa-syringe"></i> 1,
+            2 </h6>
+          <h6 class="grey-text text-lighten-2 hide" id="hiH"> अपने आयु वर्ग और डोज़ <i class="fas fa-syringe"></i> 1, 2
+            का चयन करें </h6>
           <div class="row">
             <div class="col s12 m6 l3">
               <div class="card-panel grey darken-4 white-text">
-                <h5 class="center"><b>MUMBAI</b></h5>
-                <a href="https://t.me/s/u45mumbaidose1" class="oui-button blue darken-1 white-text" target="_blank">Age
-                  18
-                  to 45 <i class="fas fa-syringe"></i> 1</a><br><br>
-                <a href="https://t.me/s/u45mumbaidose2" class="oui-button blue darken-1 white-text" target="_blank">Age
-                  18
-                  to 45 <i class="fas fa-syringe"></i> 2</a><br><br>
-                <a href="https://t.me/s/cowinvaccinetracker" class="oui-button blue darken-1 white-text"
-                  target="_blank">Age 45+</a>
+                <h5 class="center"><b id="enI">MUMBAI</b><b id="hiI" class="hide">मुंबई</b></h5>
+                <a href="https://t.me/s/u45mumbaidose1" class="oui-button blue darken-1 white-text" target="_blank"
+                  id="en0">Age 18 to 45 <i class="fas fa-syringe"></i> 1</a>
+                <a href="https://t.me/s/u45mumbaidose1" class="oui-button blue darken-1 white-text hide" target="_blank"
+                  id="hi0">आयु 18 to 45 <i class="fas fa-syringe"></i> 1</a><br><br>
+                <a href="https://t.me/s/u45mumbaidose2" class="oui-button blue darken-1 white-text" target="_blank"
+                  id="en1">Age 18 to 45 <i class="fas fa-syringe"></i> 2</a>
+                <a href="https://t.me/s/u45mumbaidose1" class="oui-button blue darken-1 white-text hide" target="_blank"
+                  id="hi1">आयु 18 to 45 <i class="fas fa-syringe"></i> 2</a><br><br>
+                <a href="https://t.me/s/cowinvaccinetracker" class="oui-button blue darken-1 white-text" target="_blank"
+                  id="en2">Age 45+</a>
+                <a href="https://t.me/s/cowinvaccinetracker" class="oui-button blue darken-1 white-text hide"
+                  target="_blank" id="hi2">आयु 45+</a>
               </div>
             </div>
             <div class="col s12 m6 l3">
               <div class="card-panel grey darken-4 white-text">
-                <h5 class="center"><b>PALGHAR</b></h5>
+                <h5 class="center"><b id="en3">PALGHAR</b><b id="hi3" class="hide">पालघर</b></h5>
                 <a href="https://telegram.me/joinchat/PjXux-PpuSBhMTU1" class="oui-button blue darken-1 white-text"
-                  target="_blank">Age 18 to 45 <i class="fas fa-syringe"></i> 1</a><br><br>
-                <a href="https://t.me/s/u45palghardose2" class="oui-button blue darken-1 white-text" target="_blank">Age
-                  18 to 45 <i class="fas fa-syringe"></i> 2</a><br><br>
+                  target="_blank" id="en4">Age 18 to 45 <i class="fas fa-syringe"></i> 1</a>
+                <a href="https://telegram.me/joinchat/PjXux-PpuSBhMTU1" class="oui-button blue darken-1 white-text hide"
+                  target="_blank" id="hi4">आयु 18 to 45 <i class="fas fa-syringe"></i> 1</a><br><br>
+                <a href="https://t.me/s/u45palghardose2" class="oui-button blue darken-1 white-text" target="_blank"
+                  id="en5">Age 18 to 45 <i class="fas fa-syringe"></i> 2</a>
+                <a href="https://t.me/s/u45palghardose2" class="oui-button blue darken-1 white-text hide"
+                  target="_blank" id="hi5">आयु 18 to 45 <i class="fas fa-syringe"></i> 2</a><br><br>
                 <a href="https://t.me/s/A45PALGHARVACCINETRACKER" class="oui-button blue darken-1 white-text"
-                  target="_blank">Age 45+</a>
+                  target="_blank" id="en6">Age 45+</a>
+                <a href="https://t.me/s/A45PALGHARVACCINETRACKER" class="oui-button blue darken-1 white-text hide"
+                  target="_blank" id="hi6">आयु 45+</a>
               </div>
             </div>
             <div class="col s12 m6 l3">
               <div class="card-panel grey darken-4 white-text">
-                <h5 class="center"><b>RAIGAD</b></h5>
+                <h5 class="center"><b id="en7">RAIGAD</b><b id="hi7" class="hide">रायगढ़</b></h5>
                 <a href="https://t.me/s/u45raigaddose1channel" class="oui-button blue darken-1 white-text"
-                  target="_blank">Age 18 to 45 <i class="fas fa-syringe"></i> 1</a><br><br>
-                <a href="https://t.me/s/u45raigaddose2" class="oui-button blue darken-1 white-text" target="_blank">Age
-                  18
-                  to 45 <i class="fas fa-syringe"></i> 2</a><br><br>
+                  target="_blank" id="en8">Age 18 to 45 <i class="fas fa-syringe"></i> 1</a>
+                <a href="https://t.me/s/u45raigaddose1channel" class="oui-button blue darken-1 white-text hide"
+                  target="_blank" id="hi8">आयु 18 to 45 <i class="fas fa-syringe"></i> 1</a><br><br>
+                <a href="https://t.me/s/u45raigaddose2" class="oui-button blue darken-1 white-text" target="_blank"
+                  id="en9">Age 18 to 45 <i class="fas fa-syringe"></i> 2</a>
+                <a href="https://t.me/s/u45raigaddose2" class="oui-button blue darken-1 white-text hide" target="_blank"
+                  id="hi9">आयु 18 to 45 <i class="fas fa-syringe"></i> 2</a><br><br>
                 <a href="https://t.me/s/A45RAIGADVACCINETRACKER" class="oui-button blue darken-1 white-text"
-                  target="_blank">Age 45+</a>
+                  target="_blank" id="en10">Age 45+</a>
+                <a href="https://t.me/s/A45RAIGADVACCINETRACKER" class="oui-button blue darken-1 white-text hide"
+                  target="_blank" id="hi10">आयु 45+</a>
               </div>
             </div>
             <div class="col s12 m6 l3">
               <div class="card-panel grey darken-4 white-text">
-                <h5 class="center"><b>THANE</b></h5>
-                <a href="https://t.me/s/u45thanedose1" class="oui-button blue darken-1 white-text" target="_blank">Age
-                  18
-                  to 45 <i class="fas fa-syringe"></i> 1</a><br><br>
-                <a href="https://t.me/s/u45thanedose2" class="oui-button blue darken-1 white-text" target="_blank">Age
-                  18
-                  to 45 <i class="fas fa-syringe"></i> 2</a><br><br>
+                <h5 class="center"><b id="en11">THANE</b><b id="hi11" class="hide">ठाणे</b></h5>
+                <a href="https://t.me/s/u45thanedose1" class="oui-button blue darken-1 white-text" target="_blank"
+                  id="en12">Age 18 to 45 <i class="fas fa-syringe"></i> 1</a>
+                <a href="https://t.me/s/u45mumbaidose1" class="oui-button blue darken-1 white-text hide" target="_blank"
+                  id="hi12">आयु 18 to 45 <i class="fas fa-syringe"></i> 1</a><br><br>
+                <a href="https://t.me/s/u45thanedose2" class="oui-button blue darken-1 white-text" target="_blank"
+                  id="en13">Age 18 to 45 <i class="fas fa-syringe"></i> 2</a>
+                <a href="https://t.me/s/u45mumbaidose1" class="oui-button blue darken-1 white-text hide" target="_blank"
+                  id="hi13">आयु 18 to 45 <i class="fas fa-syringe"></i> 2</a><br><br>
                 <a href="https://t.me/s/A45THANEVACCINETRACKER" class="oui-button blue darken-1 white-text"
-                  target="_blank">Age 45+</a>
+                  target="_blank" id="en14">Age 45+</a>
+                <a href="https://t.me/s/A45THANEVACCINETRACKER" class="oui-button blue darken-1 white-text hide"
+                  target="_blank" id="hi14">आयु 45+</a>
               </div>
             </div>
           </div>
