@@ -122,6 +122,12 @@
         delay: 50
       });
     })
+    $(document).ready(function () {
+      $('.modal').modal();
+      $('#db1').modal();
+      $('#db2').modal();
+      $('#db3').modal();
+    })
     $(document).bind("contextmenu", function (e) {
       return false;
     });
@@ -206,19 +212,19 @@
           </div>
           <div class="col s12" id="ind">
             <blockquote style="font-size: x-large; border-left-color: #1e88e5;" id="en0">
-              <i class="fas fa-virus"></i> COVID 19 (As on August 9)</blockquote>
+              <i class="fas fa-virus"></i> COVID 19 (As on August 10)</blockquote>
             <blockquote style="font-size: x-large; border-left-color: #1e88e5;" id="hi0" class="hide">
-              <i class="fas fa-virus"></i> कोविड 19 (अगस्त 9 के अनुसार)</blockquote>
+              <i class="fas fa-virus"></i> कोविड 19 (अगस्त 10 के अनुसार)</blockquote>
             <span id="en1">Source: ICMR/ MyGov; &#8595;&#8593; Changes from last 24 hours</span>
             <span id="hi1" class="hide">स्रोत: आईसीएमआर/ मायजीओवी; &#8595;&#8593; पिछले 24 घंटे के बदलाव</span>
             <table class="centered flow-text">
               <tr>
                 <td><b id="en2">TOTAL CASES</b><b id="hi2" class="hide">कुल मामले</b><br>
-                  <span class="red-text">&#8593; 16,047 </span>
-                  &nbsp;&nbsp;<b> 4,41,90,697 </b></td>
+                  <span class="red-text">&#8593; 16,299 </span>
+                  &nbsp;&nbsp;<b> 4,42,06,996 </b></td>
                 <td><b id="en3">VACCINATION DOSES</b><b id="hi3" class="hide">टीकाकरण डोज़</b><br>
-                  <span class="blue-text">&#8593; 15,21,429 </span>
-                  &nbsp;&nbsp;<b> 2,07,03,71,204 </b></td>
+                  <span class="blue-text">&#8593; 25,75,389 </span>
+                  &nbsp;&nbsp;<b> 2,07,29,46,593 </b></td>
               </tr>
             </table>
             <div class="row">
@@ -227,8 +233,8 @@
                   <table class="centered">
                     <tr>
                       <td><b id="en4">ACTIVE</b><b id="hi4" class="hide">सक्रिय</b><br>
-                        <span class="green-text text-accent-2">&#8595; 3,546 </span><br>
-                        <b> 1,28,261 </b></td>
+                        <span class="green-text text-accent-2">&#8595; 3,185 </span><br>
+                        <b> 1,25,076 </b></td>
                     </tr>
                   </table>
                 </div>
@@ -238,8 +244,8 @@
                   <table class="centered">
                     <tr>
                       <td><b id="en5">RECOVERED</b><b id="hi5" class="hide">स्वस्त</b><br>
-                        <span class="green-text">&#8593; 19,539 </span><br>
-                        <b> 4,35,35,610 </b></td>
+                        <span class="green-text">&#8593; 19,431 </span><br>
+                        <b> 4,35,55,041 </b></td>
                     </tr>
                   </table>
                 </div>
@@ -249,8 +255,8 @@
                   <table class="centered">
                     <tr>
                       <td><b id="en6">DECEASED</b><b id="hi6" class="hide">मृत</b><br>
-                        <span class="grey-text text-lighten-1">&#8593; 54 </span><br>
-                        <b> 5,26,826 </b></td>
+                        <span class="grey-text text-lighten-1">&#8593; 53 </span><br>
+                        <b> 5,26,879 </b></td>
                     </tr>
                   </table>
                 </div>
@@ -260,96 +266,96 @@
                   <table class="centered">
                     <tr>
                       <td><b id="en7">TESTED</b><b id="hi7" class="hide">जांच</b><br>
-                        <span class="purple-text text-accent-4">&#8593; 3,25,081 </span><br>
-                        <b> 87,88,77,098 </b></td>
+                        <span class="purple-text text-accent-4">&#8593; 3,56,153 </span><br>
+                        <b> 87,92,33,251 </b></td>
                     </tr>
                   </table>
                 </div>
               </div>
             </div>
-            <h6 id="en8">Below Data as on August 10, 14:15 IST</h6>
-            <h6 id="hi8" class="hide">नीचे दी गई जानकारी अगस्त 10, 14:15 आईएसटी तक के अनुसार</h6>
+            <h6 id="en8">Below Data as on August 11, 18:45 IST</h6>
+            <h6 id="hi8" class="hide">नीचे दी गई जानकारी अगस्त 11, 18:45 आईएसटी तक के अनुसार</h6>
             <div class="row">
               <div class="col s12 m6 l4">
                 <div class="card-panel grey darken-4 white-text" id="en9">
                   <h5><b>Vaccine Doses availability</b></h5>
-                  <p>As on August 10, Source: PIB India</p>
-                  <b>Supply</b>: 198.10 Crores <br>
-                  <b>Balance</b>: 7.09 Crores
+                  <p>As on August 11, Source: PIB India</p>
+                  <b>Supply</b>: 198.34 Crores <br>
+                  <b>Balance</b>: 7.21 Crores
                 </div>
                 <div class="card-panel grey darken-4 white-text hide" id="hi9">
                   <h5><b>टीकाकरण डोज़ की उपलब्धता</b></h5>
-                  <p>अगस्त 10 के अनुसार, स्रोत: पीआईबी इंडिया</p>
-                  सप्लाइ: 198.10 करोड़ <br>
-                  शेष: 7.09 करोड़
+                  <p>अगस्त 11 के अनुसार, स्रोत: पीआईबी इंडिया</p>
+                  सप्लाइ: 198.34 करोड़ <br>
+                  शेष: 7.21 करोड़
                 </div>
               </div>
               <div class="col s12 m6 l4">
                 <div class="card-panel grey darken-4 white-text" id="en10">
                   <h5><b>Vaccine Doses administered</b></h5>
-                  <b>Dose 1</b>: 102.26 Crores <br>
-                  <b>Dose 2</b>: 93.65 Crores <br>
-                  <b>Prec. Dose</b>: 11.23 Crores <br>
-                  <b>Total</b>: 207.16 Crores
+                  <b>Dose 1</b>: 102.27 Crores <br>
+                  <b>Dose 2</b>: 93.70 Crores <br>
+                  <b>Prec. Dose</b>: 11.46 Crores <br>
+                  <b>Total</b>: 207.44 Crores
                 </div>
                 <div class="card-panel grey darken-4 white-text hide" id="hi10">
                   <h5><b>टीके लगाए गए</b></h5>
-                  डोज़ 1: 102.26 करोड़ <br>
-                  डोज़ 2: 93.65 करोड़ <br>
-                  प्रिकाॅशन डोज़: 11.23 करोड़ <br>
-                  कुल: 207.16 करोड़
+                  डोज़ 1: 102.27 करोड़ <br>
+                  डोज़ 2: 93.70 करोड़ <br>
+                  प्रिकाॅशन डोज़: 11.46 करोड़ <br>
+                  कुल: 207.44 करोड़
                 </div>
               </div>
               <div class="col s12 m6 l4">
                 <div class="card-panel grey darken-4 white-text" id="en11">
                   <h5><b>Registered for Vaccine</b></h5>
-                  <b>Age 12 to 14</b>: 4.03 Crores <br>
-                  <b>Age 15 to 17</b>: 6.23 Crores <br>
+                  <b>Age 12 to 14</b>: 4.04 Crores <br>
+                  <b>Age 15 to 17</b>: 6.24 Crores <br>
                   <b>Age 18 to 44</b>: 63.28 Crores <br>
-                  <b>Age 45+</b>: 36.84 Crores <br>
-                  <b>Total</b>: 110.40 Crores
+                  <b>Age 45+</b>: 36.85 Crores <br>
+                  <b>Total</b>: 110.42 Crores
                 </div>
                 <div class="card-panel grey darken-4 white-text hide" id="hi11">
                   <h5><b>टीकाकरण के पंजीकरण</b></h5>
-                  आयु 12 से 14: 4.03 करोड़ <br>
-                  आयु 15 से 17: 6.23 करोड़ <br>
+                  आयु 12 से 14: 4.04 करोड़ <br>
+                  आयु 15 से 17: 6.24 करोड़ <br>
                   आयु 18 से 44: 63.28 करोड़ <br>
-                  आयु 45+: 36.84 करोड़ <br>
-                  कुल: 110.40 करोड़
+                  आयु 45+: 36.85 करोड़ <br>
+                  कुल: 110.42 करोड़
                 </div>
               </div>
               <div class="col s12 m6 l4">
                 <div class="card-panel grey darken-4 white-text" id="en12">
                   <h5><b>Vaccination (Gender)</b></h5>
-                  <b>Male</b>: 99.57 Crores <br>
-                  <b>Female</b>: 95.77 Crores <br>
+                  <b>Male</b>: 99.60 Crores <br>
+                  <b>Female</b>: 95.80 Crores <br>
                   <b>Others</b>: 4.74 Lakhs
                 </div>
                 <div class="card-panel grey darken-4 white-text hide" id="hi12">
                   <h5><b>टीकाकरण (लिंग)</b></h5>
-                  पुरुष: 99.57 करोड़ <br>
-                  स्त्री: 95.77 करोड़ <br>
+                  पुरुष: 99.60 करोड़ <br>
+                  स्त्री: 95.80 करोड़ <br>
                   अन्य: 4.74 लाख
                 </div>
               </div>
               <div class="col s12 m6 l4">
                 <div class="card-panel grey darken-4 white-text" id="en13">
                   <h5><b>Vaccination (Vaccine Name)</b></h5>
-                  <b>CoviShield</b>: 165.14 Crores <br>
-                  <b>Covaxin</b>: 34.51 Crores <br>
-                  <b>Corbevax</b>: 6.84 Crores <br>
+                  <b>CoviShield</b>: 165.38 Crores <br>
+                  <b>Covaxin</b>: 34.55 Crores <br>
+                  <b>Corbevax</b>: 6.86 Crores <br>
                   <b>Sputnik V</b>: 12.32 Lakhs <br>
-                  <b>Covovax</b>: 21650
+                  <b>Covovax</b>: 21663
                   <b>Novavax</b>: -
                   <b>Zycov-D</b>: -
                 </div>
                 <div class="card-panel grey darken-4 white-text hide" id="hi13">
                   <h5><b>टीकाकरण (टीके का नाम)</b></h5>
-                  कोविशील्ड: 165.14 करोड़ <br>
-                  कोवैक्सीन: 34.51 करोड़ <br>
-                  कोर्बेवैक्स: 6.84 करोड़ <br>
+                  कोविशील्ड: 165.38 करोड़ <br>
+                  कोवैक्सीन: 34.55 करोड़ <br>
+                  कोर्बेवैक्स: 6.86 करोड़ <br>
                   स्पुतनिक वी: 12.32 लाख <br>
-                  कोवोवैक्स: 21650
+                  कोवोवैक्स: 21663
                   नोवावैक्स: -
                   ज़ायकोव-डी: -
                 </div>
@@ -357,19 +363,19 @@
               <div class="col s12 m6 l4">
                 <div class="card-panel grey darken-4 white-text" id="en14">
                   <h5><b>Vaccination (Age)</b></h5>
-                  <b>Age 12 to 14</b>: 6.85 Crores <br>
+                  <b>Age 12 to 14</b>: 6.86 Crores <br>
                   <b>Age 15 to 17</b>: 11.30 Crores <br>
-                  <b>Age 18 to 44</b>: 112.07 Crores <br>
-                  <b>Age 45 to 60</b>: 41.74 Crores <br>
-                  <b>Age 60+</b>: 28.73 Crores
+                  <b>Age 18 to 44</b>: 112.10 Crores <br>
+                  <b>Age 45 to 60</b>: 41.75 Crores <br>
+                  <b>Age 60+</b>: 28.77 Crores
                 </div>
                 <div class="card-panel grey darken-4 white-text hide" id="hi14">
                   <h5><b>टीकाकरण (आयु)</b></h5>
-                  आयु 12 से 14: 6.85 करोड़ <br>
+                  आयु 12 से 14: 6.86 करोड़ <br>
                   आयु 15 से 17: 11.30 करोड़ <br>
-                  आयु 18 से 44: 112.07 करोड़ <br>
-                  आयु 45 से 60: 41.74 करोड़ <br>
-                  आयु 60+: 28.73 करोड़
+                  आयु 18 से 44: 112.10 करोड़ <br>
+                  आयु 45 से 60: 41.75 करोड़ <br>
+                  आयु 60+: 28.77 करोड़
                 </div>
               </div>
             </div>
@@ -378,15 +384,17 @@
             <div class="row">
               <div class="col s12 m6 l6">
                 <blockquote style="font-size: x-large; border-left-color: #1e88e5;" id="en15">
-                  <i class="fas fa-virus"></i> Covid 19 (August 9)</blockquote>
+                  <i class="fas fa-virus"></i> Covid 19 (August 10)</blockquote>
                 <blockquote style="font-size: x-large; border-left-color: #1e88e5;" id="hi15" class="hide">
-                  <i class="fas fa-virus"></i> कोविड 19 (अगस्त 9)</blockquote>
+                  <i class="fas fa-virus"></i> कोविड 19 (अगस्त 10)</blockquote>
               </div>
               <div class="col s12 m6 l6">
-                <a href="vac10aug.pdf" target="_blank" class="oui-button blue darken-1 white-text" id="en16">
-                  <i class="fas fa-syringe"></i> VACCINATION (August 10)</a>
-                <a href="vac10aug.pdf" target="_blank" class="oui-button blue darken-1 white-text hide" id="hi16">
-                  <i class="fas fa-syringe"></i> टीकाकरण (अगस्त 10)</a>
+                <a href="https://www.mohfw.gov.in/pdf/CummulativeCovidVaccinationReport11Aug2022.pdf" target="_blank"
+                  class="oui-button blue darken-1 white-text" id="en16">
+                  <i class="fas fa-syringe"></i> VACCINATION (August 11)</a>
+                <a href="https://www.mohfw.gov.in/pdf/CummulativeCovidVaccinationReport11Aug2022.pdf" target="_blank"
+                  class="oui-button blue darken-1 white-text hide" id="hi16">
+                  <i class="fas fa-syringe"></i> टीकाकरण (अगस्त 11)</a>
               </div>
             </div>
             <table class="centered">
@@ -672,9 +680,9 @@
           </div>
           <div class="col s12" id="mah">
             <blockquote style="font-size: x-large; border-left-color: #1e88e5;" id="en19">
-              <i class="fas fa-virus"></i> Covid 19 (August 9)</blockquote>
+              <i class="fas fa-virus"></i> Covid 19 (August 11)</blockquote>
             <blockquote style="font-size: x-large; border-left-color: #1e88e5;" id="hi19" class="hide">
-              <i class="fas fa-virus"></i> कोविड 19 (अगस्त 9)</blockquote>
+              <i class="fas fa-virus"></i> कोविड 19 (अगस्त 11)</blockquote>
             <table class="centered">
               <tr id="en20">
                 <td><b>Districts</b></td>
@@ -958,24 +966,31 @@
               TRACKERS</a>
             <a href="thavac.html" target="_blank" class="oui-button blue darken-1 white-text hide" id="hi21">वैक्सीन
               स्लाॅट ट्रैकर्स</a>
-            <h6 class="white-text" id="en22">As on August 9 (*As on August 10, **As on -)</h6>
-            <h6 class="white-text hide" id="hi22">अगस्त 9 के अनुसार (*अगस्त 10 के अनुसार, **- के अनुसार)</h6>
+            <h6 class="white-text" id="en22">As on August 11 (*As on August 10, **As on -)</h6>
+            <h6 class="white-text hide" id="hi22">अगस्त 11 के अनुसार (*अगस्त 10 के अनुसार, **- के अनुसार)</h6>
             <div class="row">
               <div class="col s12 m6 l3">
                 <div class="card-panel grey darken-4 white-text">
-                  <h5 id="en23"><b>MUMBAI (852*)</b></h5>
-                  <h5 id="hi23" class="hide"><b>मुंबई (852*)</b></h5>
+                  <h5 id="en23"><b>MUMBAI (683)</b></h5>
+                  <h5 id="hi23" class="hide"><b>मुंबई (683)</b></h5>
                   <table class="centered">
                     <tbody>
                       <tr>
                         <td colspan="4">
-                          <b id="en24">Total:</b><b id="hi24" class="hide">कुल:</b> 11,28,363* <br>
-                          <b id="en25">Active:</b><b id="hi25" class="hide">सक्रिय:</b> 3,545* <br>
-                          <b id="en26">Recovered:</b><b id="hi26" class="hide">स्वस्त:</b> 11,05,157* <br>
-                          <b id="en27">Deceased:</b><b id="hi27" class="hide">मृत:</b> 19,661* <br>
-                          <b id="en28">Vaccinated:</b><b id="hi28" class="hide">टीकाकरण:</b> 2,19,09,788* <br>
-                          <b id="en29">Tested:</b><b id="hi29" class="hide">जांच:</b> 1,79,13,809*
+                          <b id="en24">Total:</b><b id="hi24" class="hide">कुल:</b> 11,29,046 <br>
+                          <b id="en25">Active:</b><b id="hi25" class="hide">सक्रिय:</b> 3,818 <br>
+                          <b id="en26">Recovered:</b><b id="hi26" class="hide">स्वस्त:</b> 11,05,566 <br>
+                          <b id="en27">Deceased:</b><b id="hi27" class="hide">मृत:</b> 19,662 <br>
+                          <b id="en28">Vaccinated:</b><b id="hi28" class="hide">टीकाकरण:</b> 2,19,17,739 <br>
+                          <b id="en29">Tested:</b><b id="hi29" class="hide">जांच:</b> 1,79,22,056
                         </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a href="#db1" class="oui-button blue darken-1 white-text modal-trigger"
+                            id="en51">Dashboard</a>
+                          <a href="#db1" class="oui-button blue darken-1 white-text modal-trigger hide"
+                            id="hi51">डैशबोर्ड</a></td>
                       </tr>
                     </tbody>
                   </table>
@@ -983,39 +998,25 @@
               </div>
               <div class="col s12 m6 l3">
                 <div class="card-panel grey darken-4 white-text">
-                  <h5 id="en30"><b>THANE (208)</b></h5>
-                  <h5 id="hi30" class="hide"><b>ठाणे (208)</b></h5>
+                  <h5 id="en30"><b>THANE (234)</b></h5>
+                  <h5 id="hi30" class="hide"><b>ठाणे (234)</b></h5>
                   <table class="centered">
                     <tbody>
                       <tr>
                         <td colspan="4">
-                          <b id="en31">Total:</b><b id="hi31" class="hide">कुल:</b> 7,95,651 <br>
-                          <b id="en32">Active:</b><b id="hi32" class="hide">सक्रिय:</b> 1,120 <br>
-                          <b id="en33">Recovered:</b><b id="hi33" class="hide">स्वस्त:</b> 7,82,578 <br>
-                          <b id="en34">Deceased:</b><b id="hi34" class="hide">मृत:</b> 11,953 <br>
-                          <b id="en35">Vaccinated:</b><b id="hi35" class="hide">टीकाकरण:</b> 1,41,00,544* <br>
+                          <b id="en31">Total:</b><b id="hi31" class="hide">कुल:</b> 7,96,128 <br>
+                          <b id="en32">Active:</b><b id="hi32" class="hide">सक्रिय:</b> 1,219 <br>
+                          <b id="en33">Recovered:</b><b id="hi33" class="hide">स्वस्त:</b> 7,82,952 <br>
+                          <b id="en34">Deceased:</b><b id="hi34" class="hide">मृत:</b> 11,957 <br>
+                          <b id="en35">Vaccinated:</b><b id="hi35" class="hide">टीकाकरण:</b> 1,41,05,568 <br>
                           <b id="en36">Tested:</b><b id="hi36" class="hide">जांच:</b> -
                         </td>
                       </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <div class="col s12 m6 l3">
-                <div class="card-panel grey darken-4 white-text">
-                  <h5 id="en37"><b>PALGHAR (34)</b></h5>
-                  <h5 id="hi37" class="hide"><b>पालघर (34)</b></h5>
-                  <table class="centered">
-                    <tbody>
                       <tr>
-                        <td colspan="4">
-                          <b id="en38">Total:</b><b id="hi38" class="hide">कुल:</b> 1,67,287 <br>
-                          <b id="en39">Active:</b><b id="hi39" class="hide">सक्रिय:</b> 195 <br>
-                          <b id="en40">Recovered:</b><b id="hi40" class="hide">स्वस्त:</b> 1,63,673 <br>
-                          <b id="en41">Deceased:</b><b id="hi41" class="hide">मृत:</b> 3,419 <br>
-                          <b id="en42">Vaccinated:</b><b id="hi42" class="hide">टीकाकरण:</b> 50,06,026* <br>
-                          <b id="en43">Tested:</b><b id="hi43" class="hide">जांच:</b> 14,30,049+
-                        </td>
+                        <td><br></td>
+                      </tr>
+                      <tr>
+                        <td></td>
                       </tr>
                     </tbody>
                   </table>
@@ -1023,50 +1024,78 @@
               </div>
               <div class="col s12 m6 l3">
                 <div class="card-panel grey darken-4 white-text">
-                  <h5 id="en44"><b>RAIGAD (60)</b></h5>
-                  <h5 id="hi44" class="hide"><b>रायगढ़ (60)</b></h5>
+                  <h5 id="en37"><b>PALGHAR (38)</b></h5>
+                  <h5 id="hi37" class="hide"><b>पालघर (38)</b></h5>
                   <table class="centered">
                     <tbody>
                       <tr>
                         <td colspan="4">
-                          <b id="en45">Total:</b><b id="hi45" class="hide">कुल:</b> 2,53,082 <br>
-                          <b id="en46">Active:</b><b id="hi46" class="hide">सक्रिय:</b> 234 <br>
-                          <b id="en47">Recovered:</b><b id="hi47" class="hide">स्वस्त:</b> 2,47,888 <br>
-                          <b id="en48">Deceased:</b><b id="hi48" class="hide">मृत:</b> 4,960 <br>
-                          <b id="en49">Vaccinated:</b><b id="hi49" class="hide">टीकाकरण:</b> 47,19,904* <br>
-                          <b id="en50">Tested:</b><b id="hi50" class="hide">जांच:</b> 27,17,578
+                          <b id="en38">Total:</b><b id="hi38" class="hide">कुल:</b> 1,67,364 <br>
+                          <b id="en39">Active:</b><b id="hi39" class="hide">सक्रिय:</b> 232 <br>
+                          <b id="en40">Recovered:</b><b id="hi40" class="hide">स्वस्त:</b> 1,63,713 <br>
+                          <b id="en41">Deceased:</b><b id="hi41" class="hide">मृत:</b> 3,419 <br>
+                          <b id="en42">Vaccinated:</b><b id="hi42" class="hide">टीकाकरण:</b> 50,08,881 <br>
+                          <b id="en43">Tested:</b><b id="hi43" class="hide">जांच:</b> 14,30,049+
                         </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a href="#db2" class="oui-button blue darken-1 white-text modal-trigger"
+                            id="en53">Dashboard</a>
+                          <a href="#db2" class="oui-button blue darken-1 white-text modal-trigger hide"
+                            id="hi53">डैशबोर्ड</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="col s12 m6 l3">
+                <div class="card-panel grey darken-4 white-text">
+                  <h5 id="en44"><b>RAIGAD (66)</b></h5>
+                  <h5 id="hi44" class="hide"><b>रायगढ़ (66)</b></h5>
+                  <table class="centered">
+                    <tbody>
+                      <tr>
+                        <td colspan="4">
+                          <b id="en45">Total:</b><b id="hi45" class="hide">कुल:</b> 2,53,187 <br>
+                          <b id="en46">Active:</b><b id="hi46" class="hide">सक्रिय:</b> 216 <br>
+                          <b id="en47">Recovered:</b><b id="hi47" class="hide">स्वस्त:</b> 2,48,011 <br>
+                          <b id="en48">Deceased:</b><b id="hi48" class="hide">मृत:</b> 4,960 <br>
+                          <b id="en49">Vaccinated:</b><b id="hi49" class="hide">टीकाकरण:</b> 47,20,824 <br>
+                          <b id="en50">Tested:</b><b id="hi50" class="hide">जांच:</b> 27,18,902*
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a href="#db3" class="oui-button blue darken-1 white-text modal-trigger" target="_blank"
+                            id="en55">Dashboard</a>
+                          <a href="#db3" class="oui-button blue darken-1 white-text modal-trigger hide" target="_blank"
+                            id="hi55">डैशबोर्ड</a></td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
               </div>
             </div>
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;" id="en51">Mumbai Dashboard</blockquote>
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;" id="hi51" class="hide">मुंबई डैशबोर्ड
-            </blockquote>
-            <h6 id="en52">Source: Official MCGM Website</h6>
-            <h6 id="hi52" class="hide">स्रोत: आधिकारिक एमसीजीएम वेबसाइट</h6>
-            <img src="https://stopcoronavirus.mcgm.gov.in/assets/images/bmc-dashboard-slide/Slide21.PNG" alt="Mum"
-              width="100%" class="responsive-img materialboxed">
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;" id="en53">Palghar Dashboard</blockquote>
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;" id="hi53" class="hide">पालघर डैशबोर्ड
-            </blockquote>
-            <h6 id="en54">Source: Twitter - Palghar Mitra<br>As on July 12</h6>
-            <h6 id="hi54" class="hide">स्रोत: ट्विटर - पालघर मित्र<br>जुलाई 12 के अनुसार</h6>
-            <img src="https://pbs.twimg.com/media/FXcfg5-UUAAHR5M?format=jpg&name=medium" alt="Pal" width="100%"
-              class="responsive-img materialboxed">
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;" id="en55">Raigad Dashboard</blockquote>
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;" id="hi55" class="hide">रायगढ़ डैशबोर्ड
-            </blockquote>
-            <h6 id="en56">Source: Twitter - Raigad District<br>As on August 9</h6>
-            <h6 id="hi56" class="hide">स्रोत: ट्विटर - रायगढ़ जिला<br>अगस्त 9 के अनुसार</h6>
-            <!-- <img src="https://pbs.twimg.com/media/FX9WeE3UsAEQueI?format=jpg&name=large" alt="Rai" width="100%"
+            <div id="db1" class="modal grey darken-4 white-text">
+              <h6 id="en52">Source: Official MCGM Website</h6>
+              <h6 id="hi52" class="hide">स्रोत: आधिकारिक एमसीजीएम वेबसाइट</h6>
+              <img src="https://stopcoronavirus.mcgm.gov.in/assets/images/bmc-dashboard-slide/Slide21.PNG" alt="Mum"
+                width="100%" class="responsive-img materialboxed">
+            </div>
+            <div id="db2" class="modal grey darken-4 white-text">
+              <h6 id="en54">Source: Twitter - Palghar Mitra<br>As on July 12</h6>
+              <h6 id="hi54" class="hide">स्रोत: ट्विटर - पालघर मित्र<br>जुलाई 12 के अनुसार</h6>
+              <img src="https://pbs.twimg.com/media/FXcfg5-UUAAHR5M?format=jpg&name=medium" alt="Pal" width="100%"
+                class="responsive-img materialboxed">
+            </div>
+            <div id="db3" class="modal grey darken-4 white-text">
+              <h6 id="en56">Source: Twitter - Raigad District<br>As on August 10</h6>
+              <h6 id="hi56" class="hide">स्रोत: ट्विटर - रायगढ़ जिला<br>अगस्त 10 के अनुसार</h6>
+              <!-- <img src="https://pbs.twimg.com/media/FX9WeE3UsAEQueI?format=jpg&name=large" alt="Rai" width="100%"
               class="responsive-img materialboxed"> -->
-            <img src="2022081017.jpg" alt="Rai" width="100%" class="responsive-img materialboxed">
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;" id="en57">THANE DASHBOARD</blockquote>
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;" id="hi57" class="hide">ठाणे डैशबोर्ड
-            </blockquote>
+              <img src="2022081183.jpg" alt="Rai" width="100%" class="responsive-img materialboxed">
+            </div>
             <h6 id="en58">Source: Official Twitter handles/ Websites of Mun. Corp.s & DIO Thane</h6>
             <h6 id="hi58" class="hide">स्रोत: मनपाओं और डीआइओ ठाणे की आधिकारिक ट्विटर हैंडल/ वेबसाइट द्बारा</h6>
             <div class="row">
@@ -1105,14 +1134,14 @@
                 <div class="card-panel grey darken-4 white-text">
                   <h5><b id="en65">KALYAN KDMC</b><b id="hi65" class="hide">कल्याण कडोंमपा</b></h5>
                   <table class="centered">
-                    <caption id="en66">New Cases: 11 (As on August 9)</caption>
-                    <caption id="hi66" class="hide">नए मामले: 11 (अगस्त 9 के अनुसार)</caption>
+                    <caption id="en66">New Cases: 21 (As on August 10)</caption>
+                    <caption id="hi66" class="hide">नए मामले: 21 (अगस्त 10 के अनुसार)</caption>
                     <tbody>
                       <tr>
                         <td colspan="4">
-                          <b id="en67">Total:</b><b id="hi67" class="hide">कुल:</b> 169146# <br>
-                          <b id="en68">Active:</b><b id="hi68" class="hide">सक्रिय:</b> 78 <br>
-                          <b id="en69">Recovered:</b><b id="hi69" class="hide">स्वस्त:</b> 166207 <br>
+                          <b id="en67">Total:</b><b id="hi67" class="hide">कुल:</b> 169167# <br>
+                          <b id="en68">Active:</b><b id="hi68" class="hide">सक्रिय:</b> 81 <br>
+                          <b id="en69">Recovered:</b><b id="hi69" class="hide">स्वस्त:</b> 166225 <br>
                           <b id="en70">Deceased:</b><b id="hi70" class="hide">मृत:</b> 2960
                         </td>
                       </tr>
@@ -1121,26 +1150,26 @@
                   <hr>
                   <p class="grey-text text-lighten-1">
                     Kalyan (E) [कल्याण (पू)]: 1<br>
-                    Kalyan (W) [कल्याण (प)]: 3<br>
-                    Dombivli (E) [डोंबिवली (पू)]: 4<br>
-                    Dombivli (W) [डोंबिवली (प)]: 2<br>
-                    Manda-Titwala [मांडा-टिटवाला]: 1<br>
+                    Kalyan (W) [कल्याण (प)]: 8<br>
+                    Dombivli (E) [डोंबिवली (पू)]: 6<br>
+                    Dombivli (W) [डोंबिवली (प)]: 4<br>
+                    Manda-Titwala [मांडा-टिटवाला]: 2<br>
                     Mohana [मोहना]: 0<br>
-                    Pisavli [पिसवली]: 0 [August 9]<br><br><br><br></p>
+                    Pisavli [पिसवली]: 0 [August 10]<br><br><br><br></p>
                 </div>
               </div>
               <div class="col s12 m6 l4">
                 <div class="card-panel grey darken-4 white-text">
                   <h5><b id="en71">NAVI MUMBAI NMMC</b><b id="hi71" class="hide">नवी मुंबई नमुंमपा</b></h5>
                   <table class="centered">
-                    <caption id="en72">New Cases: 82 (As on August 10)</caption>
-                    <caption id="hi72" class="hide">नए मामले: 82 (अगस्त 10 के अनुसार)</caption>
+                    <caption id="en72">New Cases: 78 (As on August 11)</caption>
+                    <caption id="hi72" class="hide">नए मामले: 78 (अगस्त 11 के अनुसार)</caption>
                     <tbody>
                       <tr>
                         <td colspan="4">
-                          <b id="en73">Total:</b><b id="hi73" class="hide">कुल:</b> 161118 <br>
-                          <b id="en74">Active:</b><b id="hi74" class="hide">सक्रिय:</b> 455 <br>
-                          <b id="en75">Recovered:</b><b id="hi75" class="hide">स्वस्त:</b> 158610 <br>
+                          <b id="en73">Total:</b><b id="hi73" class="hide">कुल:</b> 161196 <br>
+                          <b id="en74">Active:</b><b id="hi74" class="hide">सक्रिय:</b> 464 <br>
+                          <b id="en75">Recovered:</b><b id="hi75" class="hide">स्वस्त:</b> 158679 <br>
                           <b id="en76">Deceased:</b><b id="hi76" class="hide">मृत:</b> 2053
                         </td>
                       </tr>
@@ -1162,14 +1191,14 @@
                 <div class="card-panel grey darken-4 white-text">
                   <h5><b id="en77">MIRA BHAYANDER MBMC</b><b id="hi77" class="hide">मिरा भाईंदर मिभामपा</b></h5>
                   <table class="centered">
-                    <caption id="en78">New Cases: 27 (As on August 7)</caption>
-                    <caption id="hi78" class="hide">नए मामले: 27 (अगस्त 7 के अनुसार)</caption>
+                    <caption id="en78">New Cases: 21 (As on August 10)</caption>
+                    <caption id="hi78" class="hide">नए मामले: 21 (अगस्त 10 के अनुसार)</caption>
                     <tbody>
                       <tr>
                         <td colspan="4">
-                          <b id="en79">Total:</b><b id="hi79" class="hide">कुल:</b> 71367 <br>
-                          <b id="en80">Active:</b><b id="hi80" class="hide">सक्रिय:</b> 162 <br>
-                          <b id="en81">Recovered:</b><b id="hi81" class="hide">स्वस्त:</b> 69806 <br>
+                          <b id="en79">Total:</b><b id="hi79" class="hide">कुल:</b> 71429 <br>
+                          <b id="en80">Active:</b><b id="hi80" class="hide">सक्रिय:</b> 172 <br>
+                          <b id="en81">Recovered:</b><b id="hi81" class="hide">स्वस्त:</b> 69858 <br>
                           <b id="en82">Deceased:</b><b id="hi82" class="hide">मृत:</b> 1401
                         </td>
                       </tr>
@@ -1206,14 +1235,14 @@
                 <div class="card-panel grey darken-4 white-text">
                   <h5><b id="en89">ULHASNAGAR UMC</b><b id="hi89" class="hide">उल्हासनगर उमपा</b></h5>
                   <table class="centered">
-                    <caption id="en90">New Cases: 2 (As on August 9)</caption>
-                    <caption id="hi90" class="hide">नए मामले: 2 (अगस्त 9 के अनुसार)</caption>
+                    <caption id="en90">New Cases: 8 (As on August 10)</caption>
+                    <caption id="hi90" class="hide">नए मामले: 8 (अगस्त 10 के अनुसार)</caption>
                     <tbody>
                       <tr>
                         <td colspan="4">
-                          <b id="en91">Total:</b><b id="hi91" class="hide">कुल:</b> 26907 <br>
-                          <b id="en92">Active:</b><b id="hi92" class="hide">सक्रिय:</b> 25 <br>
-                          <b id="en93">Recovered:</b><b id="hi93" class="hide">स्वस्त:</b> 26220 <br>
+                          <b id="en91">Total:</b><b id="hi91" class="hide">कुल:</b> 26915 <br>
+                          <b id="en92">Active:</b><b id="hi92" class="hide">सक्रिय:</b> 32 <br>
+                          <b id="en93">Recovered:</b><b id="hi93" class="hide">स्वस्त:</b> 26221 <br>
                           <b id="en94">Deceased:</b><b id="hi94" class="hide">मृत:</b> 662
                         </td>
                       </tr>
