@@ -40,46 +40,6 @@
   <link rel="icon" type="image/png" sizes="512x512" href="images/picture1.png">
   <link rel="apple-touch-icon" type="image/png" sizes="512x512" href="images/picture1.png">
   <style>
-    .sidenav {
-      height: 100%;
-      width: 0;
-      position: fixed;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      background-color: black;
-      overflow-x: hidden;
-      transition: 0.5s;
-      padding-top: 80px;
-    }
-
-    .sidenav a {
-      padding: 8px 8px 8px 10px;
-      text-decoration: none;
-      font-size: 25px;
-      color: #f1f1f1;
-      display: block;
-      transition: 0.3s;
-    }
-
-    .sidenav a:hover {
-      color: #818181;
-    }
-
-    .sidenav .closebtn {
-      position: absolute;
-      top: 5px;
-      right: 25px;
-      font-size: 36px;
-      margin-left: 10px;
-    }
-
-    @media screen and (max-height: 450px) {
-      .sidenav a {
-        font-size: 18px;
-      }
-    }
-
     @font-face {
       font-family: 'SamsungOne 400';
       src: local('SamsungOne 400'), url('SamsungOne-400.woff') format('woff');
@@ -94,23 +54,8 @@
       font-family: 'SamsungOne 400';
     }
 
-    img {
+    iframe {
       border-radius: 15px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .card-panel {
-      border-radius: 15px;
-    }
-
-    table {
-      color: white;
-    }
-
-    th {
-      text-align: center;
     }
 
     #curr {
@@ -134,10 +79,8 @@
     })
     $(document).ready(function () {
       $('.modal').modal();
-      $('#db1').modal();
-      $('#db2').modal();
-      $('#db3').modal();
     })
+
     $(document).bind("contextmenu", function (e) {
       return false;
     });
@@ -150,1249 +93,127 @@
       <a href="javascript:lng()" class="tooltipped blue darken-1 white-text btn-floating btn-large" data-position="top"
         data-delay="50" data-tooltip="Change ENG to HIN"><i class="fas fa-language"></i></a>
     </div>
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <ul class="collection left-align container" style="border-width: 0px;">
-        <li class="collection-item avatar grey darken-3 oui-bubble z-depth-1" style="cursor: pointer;"
-          onclick="location.href='country.html'">
-          <a href="#!"><i class="fas fa-globe circle blue darken-1"></i></a>
-          <span style="font-size: x-large;" id="enA">World<br></span>
-          <span style="font-size: x-large;" id="hiA" class="hide">दुनिया<br></span>
-        </li><br>
-        <li class="collection-item avatar grey darken-3 oui-bubble z-depth-1" style="cursor: pointer;"
-          onclick="location.href='thavac.html'">
-          <a href="#!"><i class="fas fa-globe circle blue darken-1"></i></a>
-          <span style="font-size: x-large;" id="enB">Slot Trackers<br></span>
-          <span style="font-size: x-large;" id="hiB" class="hide">स्लाॅट ट्रैकर्स<br></span>
-        </li><br>
-        <li class="collection-item avatar grey darken-3 oui-bubble z-depth-1" style="cursor: pointer;"
-          onclick="location.href='about.html'">
-          <a href="#!"><i class="fas fa-info circle blue darken-1"></i></a>
-          <span style="font-size: x-large;" id="enC">About<br></span>
-          <span style="font-size: x-large;" id="hiC" class="hide">बारे में<br></span>
-        </li>
-        <li class="collection-item transparent"></li>
-      </ul>
-    </div>
     <div id="main">
-      <script>
-        function openNav() {
-          document.getElementById("mySidenav").style.width = "100%";
-        }
-
-        function closeNav() {
-          document.getElementById("mySidenav").style.width = "0";
-        }
-      </script>
       <div class="oui-viewing center-align black white-text">
-        <h4 id="enE">COVID 19 DASHBOARDS</h4>
-        <h4 id="hiE" class="hide">कोविड 19 डैशबोर्ड्स</h4>
+        <h4 id="enA">COVID 19 DASHBOARDS</h4>
+        <h4 id="hiA" class="hide">कोविड 19 डैशबोर्ड्स</h4>
       </div>
       <div id="view"></div><br>
       <div class="row">
-        <div class="col s1 m1 l1 show-on-small hide-on-med-and-up" style="font-size: x-large;">
-          <a href="javascript:openNav()" class="tooltipped white-text" data-position="right" data-delay="50"
-            data-tooltip="Menu">&#9776;</a></div>
-        <div class="col s11 m11 l11"></div>
-        <div class="show-on-medium-and-up hide-on-small-only center" style="font-size: large;">
-          <a href="#!" class="col m3 l3 blue-text text-darken-1" id="enD"><span id="curr">Home</span></a>
-          <a href="#!" class="col m3 l3 blue-text text-darken-1 hide" id="hiD"><span id="curr">होम</span></a>
-          <a href="country.html" class="col m3 l3 white-text" id="en189">World</a>
-          <a href="country.html" class="col m3 l3 white-text hide" id="hi189">दुनिया</a>
-          <a href="thavac.html" class="col m3 l3 white-text" id="en190">Slot Trackers</a>
-          <a href="thavac.html" class="col m3 l3 white-text hide" id="hi190">स्लाॅट ट्रैकर्स</a>
-          <a href="about.html" class="col m3 l3 white-text" id="en21">About</a>
-          <a href="about.html" class="col m3 l3 white-text hide" id="hi21">बारे में</a>
+        <div class="center" style="font-size: large;">
+          <a href="#!" class="col s6 m6 l6 blue-text text-darken-1" id="enB"><span id="curr">Home</span></a>
+          <a href="#!" class="col s6 m6 l6 blue-text text-darken-1 hide" id="hiB"><span id="curr">होम</span></a>
+          <a href="about.html" class="col s6 m6 l6 white-text" id="enC">About</a>
+          <a href="about.html" class="col s6 m6 l6 white-text hide" id="hiC">बारे में</a>
         </div>
       </div>
       <div class="oui-interaction center-align">
         <!--Interaction area-->
         <div class="oui-bubble black white-text">
           <h1 class="hide"></h1>
+          <blockquote style="font-size: x-large; border-left-color: #1e88e5;" id="en0">
+            <i class="fas fa-virus"></i> Covid 19 India (As on November 13)</blockquote>
+          <blockquote style="font-size: x-large; border-left-color: #1e88e5;" id="hi0" class="hide">
+            <i class="fas fa-virus"></i> कोविड 19 भारत (नवंबर 13 के अनुसार)</blockquote>
+          <span id="en1">Source: ICMR/ MyGov</span>
+          <span id="hi1" class="hide">स्रोत: आईसीएमआर/ मायजीओवी</span>
+          <div class="row"><br>
+            <div class="col s12 m6 l4">
+              <iframe class="airtable-embed"
+                src="https://airtable.com/embed/shrHPIUNNepOpUZiO?backgroundColor=orange&layout=card" frameborder="0"
+                onmousewheel="" width="100%" height="140" style="background: transparent;"></iframe>
+            </div>
+            <div class="col s12 m6 l4">
+              <iframe class="airtable-embed"
+                src="https://airtable.com/embed/shr7jcqhbM35O3hAB?backgroundColor=orange&layout=card" frameborder="0"
+                onmousewheel="" width="100%" height="140" style="background: transparent;"></iframe>
+            </div>
+            <div class="col s12 m6 l4">
+              <iframe class="airtable-embed"
+                src="https://airtable.com/embed/shrUTBX8EUi5VKVkC?backgroundColor=orange&layout=card" frameborder="0"
+                onmousewheel="" width="100%" height="140" style="background: transparent;"></iframe>
+            </div>
+            <div class="col s12 m6 l4">
+              <iframe class="airtable-embed"
+                src="https://airtable.com/embed/shrOstsT0yCKiSjFF?backgroundColor=orange&layout=card" frameborder="0"
+                onmousewheel="" width="100%" height="140" style="background: transparent;"></iframe>
+            </div>
+            <div class="col s12 m6 l4">
+              <iframe class="airtable-embed"
+                src="https://airtable.com/embed/shrDeKssGV8wyya43?backgroundColor=orange&layout=card" frameborder="0"
+                onmousewheel="" width="100%" height="140" style="background: transparent;"></iframe>
+            </div>
+            <div class="col s12 m6 l4">
+              <iframe class="airtable-embed"
+                src="https://airtable.com/embed/shre4lffRhYhCGZUf?backgroundColor=orange&layout=card" frameborder="0"
+                onmousewheel="" width="100%" height="140" style="background: transparent;"></iframe>
+            </div>
+          </div>
           <div class="row">
-            <div class="col s12">
-              <ul class="tabs tabs-fixed-width">
-                <li class="tab"><a href="#ind" class="black white-text">
-                    <h6 id="enF">INDIA</h6>
-                    <h6 id="hiF" class="hide">इंडिया</h6>
-                  </a></li>
-                <li class="tab"><a href="#sta" class="black white-text">
-                    <h6 id="enG">STATES</h6>
-                    <h6 id="hiG" class="hide">राज्य</h6>
-                  </a></li>
-                <li class="tab"><a href="#mah" class="black white-text">
-                    <h6 id="enH">MAHARASHTRA</h6>
-                    <h6 id="hiH" class="hide">महाराष्ट्र</h6>
-                  </a></li>
-                <li class="tab"><a href="#mum" class="active black white-text">
-                    <h6 id="enI">MUMBAI<br>REGION</h6>
-                    <h6 id="hiI" class="hide">मुंबई<br>क्षेत्र</h6>
-                  </a></li>
-                <div class="indicator blue darken-1"></div>
-              </ul>
+            <div class="col s12 m6 l6">
+              <a href="#WoDb" class="modal-trigger oui-button blue darken-1 white-text" id="en10">
+                <i class="fas fa-virus"></i> World</a>
+              <a href="#WoDb" class="modal-trigger oui-button blue darken-1 white-text hide" id="hi10">
+                <i class="fas fa-virus"></i> दुनिया</a>
+            </div>
+            <div class="col s12 m6 l6">
+              <a href="#StDb" class="modal-trigger oui-button blue darken-1 white-text" id="en2">
+                <i class="fas fa-virus"></i> States (November 13)</a>
+              <a href="#StDb" class="modal-trigger oui-button blue darken-1 white-text hide" id="hi2">
+                <i class="fas fa-virus"></i> राज्य (नवंबर 13)</a>
+            </div>
+            <div class="col s12 m6 l6">
+              <a href="https://www.mohfw.gov.in/pdf/CummulativeCovidVaccinationReport14Nov2022.pdf" target="_blank"
+                class="oui-button blue darken-1 white-text" id="en3">
+                <i class="fas fa-syringe"></i> States Vaccination</a>
+              <a href="https://www.mohfw.gov.in/pdf/CummulativeCovidVaccinationReport14Nov2022.pdf" target="_blank"
+                class="oui-button blue darken-1 white-text hide" id="hi3">
+                <i class="fas fa-syringe"></i> राज्य टीकाकरण</a>
+            </div>
+            <div class="col s12 m6 l6">
+              <a href="#MhDb" class="modal-trigger oui-button blue darken-1 white-text" id="en4">
+                <i class="fas fa-virus"></i> Maharashtra (November 13)</a>
+              <a href="#MhDb" class="modal-trigger oui-button blue darken-1 white-text hide" id="hi4">
+                <i class="fas fa-virus"></i> महाराष्ट्र (नवंबर 13)</a>
             </div>
           </div>
-          <div class="col s12" id="ind">
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;" id="en0">
-              <i class="fas fa-virus"></i> COVID 19 (As on November 11)</blockquote>
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;" id="hi0" class="hide">
-              <i class="fas fa-virus"></i> कोविड 19 (नवंबर 11 के अनुसार)</blockquote>
-            <span id="en1">Source: ICMR/ MyGov; &#8595;&#8593; Changes from last 24 hours</span>
-            <span id="hi1" class="hide">स्रोत: आईसीएमआर/ मायजीओवी; &#8595;&#8593; पिछले 24 घंटे के बदलाव</span>
-            <table class="centered flow-text">
-              <tr>
-                <td><b id="en2">TOTAL CASES</b><b id="hi2" class="hide">कुल मामले</b><br>
-                  <span class="red-text">&#8593; 830 </span>
-                  &nbsp;&nbsp;<b> 4,46,65,643 </b></td>
-                <td><b id="en3">VACCINATION DOSES</b><b id="hi3" class="hide">टीकाकरण डोज़</b><br>
-                  <span class="blue-text">&#8593; 1,16,228 </span>
-                  &nbsp;&nbsp;<b> 2,19,79,09,506 </b></td>
-              </tr>
-            </table>
-            <div class="row">
-              <div class="col s6 m6 l3">
-                <div class="card-panel grey darken-4 flow-text">
-                  <table class="centered">
-                    <tr>
-                      <td><b id="en4">ACTIVE</b><b id="hi4" class="hide">सक्रिय</b><br>
-                        <span class="green-text text-accent-2">&#8595; 199 </span><br>
-                        <b> 12,553 </b></td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-              <div class="col s6 m6 l3">
-                <div class="card-panel grey darken-4 flow-text">
-                  <table class="centered">
-                    <tr>
-                      <td><b id="en5">RECOVERED</b><b id="hi5" class="hide">स्वस्त</b><br>
-                        <span class="green-text">&#8593; 1,024 </span><br>
-                        <b> 4,41,22,562 </b></td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-              <div class="col s6 m6 l3">
-                <div class="card-panel grey darken-4 flow-text">
-                  <table class="centered">
-                    <tr>
-                      <td><b id="en6">DECEASED</b><b id="hi6" class="hide">मृत</b><br>
-                        <span class="grey-text text-lighten-1">&#8593; 5 </span><br>
-                        <b> 5,30,528 </b></td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-              <div class="col s6 m6 l3">
-                <div class="card-panel grey darken-4 flow-text">
-                  <table class="centered">
-                    <tr>
-                      <td><b id="en7">TESTED</b><b id="hi7" class="hide">जांच</b><br>
-                        <span class="purple-text text-accent-4">&#8593; 1,57,660 </span><br>
-                        <b> 90,27,09,553 </b></td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-            </div>
-            <h6 id="en8" class="hide transparent-text">Below Data as on October 17, 16:55 IST</h6>
-            <h6 id="hi8" class="hide transparent-text">नीचे दी गई जानकारी अक्टूबर 17, 16:55 आईएसटी तक के अनुसार</h6>
-            <div class="row hide">
-              <div class="col s12 m6 l4">
-                <div class="card-panel transparent transparent-text">
-                  <h5 id="en9"><b>Vaccine Doses administered</b></h5>
-                  <h5 id="hi9" class="hide"><b>टीके लगाए गए</b></h5>
-                  <h5 id="en10"><b>Vaccine Doses administered</b></h5>
-                  <h5 id="hi10" class="hide"><b>टीके लगाए गए</b></h5>
-                  <span id="en191"><b>Dose 1</b></span><span id="hi191" class="hide">डोज़ 1</span>: 102.67
-                  <span id="en192"><b>Dose 1</b></span><span id="hi192" class="hide">डोज़ 1</span>: 102.67
-                  <span id="en193"><b>Dose 1</b></span><span id="hi193" class="hide">डोज़ 1</span>: 102.67
-                  <span id="en194"><b>Dose 1</b></span><span id="hi194" class="hide">डोज़ 1</span>: 102.67
-                  <span id="en195"><b>Dose 1</b></span><span id="hi195" class="hide">डोज़ 1</span>: 102.67
-                  <span id="en196"><b>Dose 1</b></span><span id="hi196" class="hide">डोज़ 1</span>: 102.67
-                  <span id="en197">Crores</span><span id="hi197" class="hide">करोड़</span> <br>
-                  <span id="en198"><b>Dose 2</b></span><span id="hi198" class="hide">डोज़ 2</span>: 94.95
-                  <span id="en199">Crores</span><span id="hi199" class="hide">करोड़</span> <br>
-                  <span id="en200"><b>Prec. Dose</b></span><span id="hi200" class="hide">प्रिकाॅशन डोज़</span>: 21.74
-                  <span id="en201">Crores</span><span id="hi201" class="hide">करोड़</span> <br>
-                  <span id="en202"><b>Total</b></span><span id="hi202" class="hide">कुल</span>: 219.36
-                  <span id="en203">Crores</span><span id="hi203" class="hide">करोड़</span>
-                </div>
-              </div>
-              <div class="col s12 m6 l4">
-                <div class="card-panel transparent transparent-text">
-                  <h5 id="en11"><b>Registered for Vaccine</b></h5>
-                  <h5 id="hi11" class="hide"><b>टीकाकरण के पंजीकरण</b></h5>
-                  <span id="en204"><b>Age 12-14</b></span><span id="hi204" class="hide">आयु 12-14</span>: 4.19
-                  <span id="en205">Crores</span><span id="hi205" class="hide">करोड़</span> <br>
-                  <span id="en206"><b>Age 15-17</b></span><span id="hi206" class="hide">आयु 15 से 17</span>: 6.29
-                  <span id="en207">Crores</span><span id="hi207" class="hide">करोड़</span> <br>
-                  <span id="en208"><b>Age 18-44</b></span><span id="hi208" class="hide">आयु 18 से 44</span>: 63.29
-                  <span id="en209">Crores</span><span id="hi209" class="hide">करोड़</span> <br>
-                  <span id="en210"><b>Age 45+</b></span><span id="hi210" class="hide">आयु 45+</span>: 37.01
-                  <span id="en211">Crores</span><span id="hi211" class="hide">करोड़</span> <br>
-                  <span id="en212"><b>Total</b></span><span id="hi212" class="hide">कुल</span>: 110.80
-                  <span id="en213">Crores</span><span id="hi213" class="hide">करोड़</span>
-                </div>
-              </div>
-              <div class="col s12 m6 l4">
-                <div class="card-panel transparent transparent-text">
-                  <h5 id="en12"><b>Vaccination (Gender)</b></h5>
-                  <h5 id="hi12" class="hide"><b>टीकाकरण (लिंग)</b></h5>
-                  <span id="en214"><b>Male</b></span><span id="hi214" class="hide">पुरुष</span>: 100.44
-                  <span id="en215">Crores</span><span id="hi215" class="hide">करोड़</span> <br>
-                  <span id="en216"><b>Female</b></span><span id="hi216" class="hide">स्त्री</span>: 96.60
-                  <span id="en217">Crores</span><span id="hi217" class="hide">करोड़</span> <br>
-                  <span id="en218"><b>Others</b></span><span id="hi218" class="hide">अन्य</span>: 4.80
-                  <span id="en219">Lakhs</span><span id="hi219" class="hide">लाख</span>
-                </div>
-              </div>
-              <div class="col s12 m6 l4">
-                <div class="card-panel transparent transparent-text">
-                  <h5 id="en13"><b>Vaccination (Vaccine Name)</b></h5>
-                  <h5 id="hi13" class="hide"><b>टीकाकरण (टीके का नाम)</b></h5>
-                  <span id="en220"><b>CoviShield</b></span><span id="hi220" class="hide">कोविशील्ड</span>: 174.18
-                  <span id="en221">Crores</span><span id="hi221" class="hide">करोड़</span> <br>
-                  <span id="en222"><b>Covaxin</b></span><span id="hi222" class="hide">कोवैक्सीन</span>: 35.98
-                  <span id="en223">Crores</span><span id="hi223" class="hide">करोड़</span> <br>
-                  <span id="en224"><b>Corbevax</b></span><span id="hi224" class="hide">कोर्बेवैक्स</span>: 7.33
-                  <span id="en225">Crores</span><span id="hi225" class="hide">करोड़</span> <br>
-                  <span id="en226"><b>Sputnik V</b></span><span id="hi226" class="hide">स्पुतनिक वी</span>: 12.32
-                  <span id="en227">Lakhs</span><span id="hi227" class="hide">लाख</span> <br>
-                  <span id="en228"><b>Covovax</b></span><span id="hi228" class="hide">कोवोवैक्स</span>: 25,092
-                  <span id="en229"><b>Novavax</b></span><span id="hi229" class="hide">नोवावैक्स</span>: -
-                  <span id="en230"><b>Zycov-D</b></span><span id="hi230" class="hide">ज़ायकोव-डी</span>: -
-                </div>
-              </div>
-              <div class="col s12 m6 l4">
-                <div class="card-panel transparent transparent-text">
-                  <h5 id="en14"><b>Vaccination (Age)</b></h5>
-                  <h5 id="hi14" class="hide"><b>टीकाकरण (आयु)</b></h5>
-                  <span id="en231"><b>Age 12-14</b></span><span id="hi231" class="hide">आयु 12-14</span>: 7.33
-                  <span id="en232">Crores</span><span id="hi232" class="hide">करोड़</span> <br>
-                  <span id="en233"><b>Age 15-17</b></span><span id="hi233" class="hide">आयु 15-17</span>: 11.52
-                  <span id="en234">Crores</span><span id="hi234" class="hide">करोड़</span> <br>
-                  <span id="en235"><b>Age 18-44</b></span><span id="hi235" class="hide">आयु 18-44</span>: 112.92
-                  <span id="en236">Crores</span><span id="hi236" class="hide">करोड़</span> <br>
-                  <span id="en237"><b>Age 45-60</b></span><span id="hi237" class="hide">आयु 45-60</span>: 41.95
-                  <span id="en238">Crores</span><span id="hi238" class="hide">करोड़</span> <br>
-                  <span id="en239"><b>Age 60+</b></span><span id="hi239" class="hide">आयु 60+</span>: 30.11
-                  <span id="en240">Crores</span><span id="hi240" class="hide">करोड़</span>
-                </div>
-              </div>
-            </div>
+          <div id="WoDb" class="modal blue-grey darken-4 white-text">
+            <h6 class="grey-text text-lighten-2" id="en9">Website Courtesy: ncov2019.live/</h6>
+            <h6 class="grey-text text-lighten-2 hide" id="hi9">वेबसाइट सौजन्य: ncov2019.live/</h6>
+            <iframe src="https://ncov2019.live/" width="100%" height="1400px" style="border-radius: 15px;"></iframe>
           </div>
-          <div class="col s12" id="sta">
-            <div class="row">
-              <div class="col s12 m6 l6">
-                <blockquote style="font-size: x-large; border-left-color: #1e88e5;" id="en15">
-                  <i class="fas fa-virus"></i> Covid 19 (November 10)</blockquote>
-                <blockquote style="font-size: x-large; border-left-color: #1e88e5;" id="hi15" class="hide">
-                  <i class="fas fa-virus"></i> कोविड 19 (नवंबर 10)</blockquote>
-              </div>
-              <div class="col s12 m6 l6">
-                <a href="https://www.mohfw.gov.in/pdf/CummulativeCovidVaccinationReport12Nov2022.pdf" target="_blank"
-                  class="oui-button blue darken-1 white-text" id="en16">
-                  <i class="fas fa-syringe"></i> VACCINATION (November 12)</a>
-                <a href="https://www.mohfw.gov.in/pdf/CummulativeCovidVaccinationReport12Nov2022.pdf" target="_blank"
-                  class="oui-button blue darken-1 white-text hide" id="hi16">
-                  <i class="fas fa-syringe"></i> टीकाकरण (नवंबर 12)</a>
-              </div>
-            </div>
+          <div id="StDb" class="modal blue-grey darken-4 white-text">
             <iframe class="airtable-embed"
               src="https://airtable.com/embed/shrAdMPAHNQBPchGt?backgroundColor=blue&layout=card" frameborder="0"
               onmousewheel="" width="100%" height="3500" style="background: transparent;"></iframe>
-            <script>
-              function stFunc() {
-                var input, filter, table, tr, td, i, txtValue;
-                input = document.getElementById("stIpt");
-                filter = input.value.toUpperCase();
-                table = document.getElementById("stTbl");
-                tr = table.getElementsByTagName("tr");
-                for (i = 0; i < tr.length; i++) {
-                  td = tr[i].getElementsByTagName("td")[0];
-                  if (td) {
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                      tr[i].style.display = "";
-                    } else {
-                      tr[i].style.display = "none";
-                    }
-                  }
-                }
-              }
-            </script>
-            <div class="input-field hide">
-              <i class="fa-solid fa-magnifying-glass prefix"></i>
-              <input type="text" id="stIpt" onkeyup="stFunc()">
-              <label for="stIpt">Search for States</label>
-            </div>
-            <table class="centered hide" id="stTbl">
-              <tr id="en17">
-                <th><b>States/ UTs</b></th>
-                <th><b>Total cases</b></th>
-                <th><b>Active</b></th>
-                <th><b>Recovered</b></th>
-                <th><b>Deceased</b></th>
-              </tr>
-              <tr class="hide" id="hi17">
-                <th><b>राज्य/संघ राज्य</b></th>
-                <th><b>कुल मामले</b></th>
-                <th><b>सक्रिय</b></th>
-                <th><b>स्वस्त</b></th>
-                <th><b>मृत</b></th>
-              </tr>
-              <tr>
-                <td><span id="en115">Andaman and Nicobar</span><span class="hide" id="hi115">अंडमान व निकोबार</span>
-                </td>
-                <td>10740</td>
-                <td>0</td>
-                <td>10611</td>
-                <td>129</td>
-              </tr>
-              <tr>
-                <td><span id="en116">Andhra Pradesh</span><span class="hide" id="hi116">आंध्र प्रदेश</span></td>
-                <td>2339006</td>
-                <td>86</td>
-                <td>2324187</td>
-                <td>14733</td>
-              </tr>
-              <tr>
-                <td><span id="en117">Arunachal Pradesh</span><span class="hide" id="hi117">अरुणाचल प्रदेश</span></td>
-                <td>66884</td>
-                <td>4</td>
-                <td>66584</td>
-                <td>296</td>
-              </tr>
-              <tr>
-                <td><span id="en118">Assam</span><span class="hide" id="hi118">असम</span></td>
-                <td>746079</td>
-                <td>2552</td>
-                <td>735492</td>
-                <td>6688</td>
-              </tr>
-              <tr>
-                <td><span id="en119">Bihar</span><span class="hide" id="hi119">बिहार</span></td>
-                <td>851282</td>
-                <td>59</td>
-                <td>838920</td>
-                <td>12302</td>
-              </tr>
-              <tr>
-                <td><span id="en120">Chandigarh</span><span class="hide" id="hi120">चंडीगढ़</span></td>
-                <td>99319</td>
-                <td>7</td>
-                <td>98131</td>
-                <td>1181</td>
-              </tr>
-              <tr>
-                <td><span id="en121">Chhattisgarh</span><span class="hide" id="hi121">छत्तीसगढ</span></td>
-                <td>1177659</td>
-                <td>72</td>
-                <td>1163443</td>
-                <td>14144</td>
-              </tr>
-              <tr>
-                <td><span id="en122">DNHDD</span><span class="hide" id="hi122">दा. न. ह. द. दी</span></td>
-                <td>11591</td>
-                <td>1</td>
-                <td>11554</td>
-                <td>4</td>
-              </tr>
-              <tr>
-                <td><span id="en123">Delhi</span><span class="hide" id="hi123">दिल्ली</span></td>
-                <td>2006644</td>
-                <td>228</td>
-                <td>1979903</td>
-                <td>26513</td>
-              </tr>
-              <tr>
-                <td><span id="en124">Goa</span><span class="hide" id="hi124">गोवा</span></td>
-                <td>258893</td>
-                <td>79</td>
-                <td>254801</td>
-                <td>4013</td>
-              </tr>
-              <tr>
-                <td><span id="en125">Gujarat</span><span class="hide" id="hi125">गुजरात</span></td>
-                <td>1277162</td>
-                <td>385</td>
-                <td>1265737</td>
-                <td>11040</td>
-              </tr>
-              <tr>
-                <td><span id="en126">Haryana</span><span class="hide" id="hi126">हरियाणा</span></td>
-                <td>1056371</td>
-                <td>125</td>
-                <td>1045534</td>
-                <td>10712</td>
-              </tr>
-              <tr>
-                <td><span id="en127">Himachal Pradesh</span><span class="hide" id="hi127">हिमाचल प्रदेश</span></td>
-                <td>312502</td>
-                <td>37</td>
-                <td>308254</td>
-                <td>4190</td>
-              </tr>
-              <tr>
-                <td><span id="en128">Jammu and Kashmir</span><span class="hide" id="hi128">जम्मू और कश्मीर</span></td>
-                <td>479314</td>
-                <td>20</td>
-                <td>474509</td>
-                <td>4785</td>
-              </tr>
-              <tr>
-                <td><span id="en129">Jharkhand</span><span class="hide" id="hi129">झारखंड</span></td>
-                <td>442554</td>
-                <td>26</td>
-                <td>437197</td>
-                <td>5331</td>
-              </tr>
-              <tr>
-                <td><span id="en130">Karnataka</span><span class="hide" id="hi130">कर्नाटक</span></td>
-                <td>4070198</td>
-                <td>1843</td>
-                <td>4028055</td>
-                <td>40258</td>
-              </tr>
-              <tr>
-                <td><span id="en131">Kerala</span><span class="hide" id="hi131">केरल</span></td>
-                <td>6823702</td>
-                <td>1619</td>
-                <td>6749764</td>
-                <td>71434</td>
-              </tr>
-              <tr>
-                <td><span id="en132">Ladakh</span><span class="hide" id="hi132">लद्दाख</span></td>
-                <td>29395</td>
-                <td>1</td>
-                <td>29163</td>
-                <td>231</td>
-              </tr>
-              <tr>
-                <td><span id="en133">Lakshadweep</span><span class="hide" id="hi133">लक्षद्वीप</span></td>
-                <td>11415</td>
-                <td>0</td>
-                <td>11319</td>
-                <td>52</td>
-              </tr>
-              <tr>
-                <td><span id="en134">Madhya Pradesh</span><span class="hide" id="hi134">मध्य प्रदेश</span></td>
-                <td>1054836</td>
-                <td>61</td>
-                <td>1043999</td>
-                <td>10776</td>
-              </tr>
-              <tr>
-                <td><span id="en135">Maharashtra</span><span class="hide" id="hi135">महाराष्ट्र</span></td>
-                <td>8133981</td>
-                <td>1224</td>
-                <td>7984359</td>
-                <td>148398</td>
-              </tr>
-              <tr>
-                <td><span id="en136">Manipur</span><span class="hide" id="hi136">मणिपुर</span></td>
-                <td>139897</td>
-                <td>10</td>
-                <td>137738</td>
-                <td>2149</td>
-              </tr>
-              <tr>
-                <td><span id="en137">Meghalaya</span><span class="hide" id="hi137">मेघालय</span></td>
-                <td>96769</td>
-                <td>5</td>
-                <td>95140</td>
-                <td>1624</td>
-              </tr>
-              <tr>
-                <td><span id="en138">Mizoram</span><span class="hide" id="hi138">मिजोरम</span></td>
-                <td>238883</td>
-                <td>36</td>
-                <td>238121</td>
-                <td>726</td>
-              </tr>
-              <tr>
-                <td><span id="en139">Nagaland</span><span class="hide" id="hi139">नागालँड</span></td>
-                <td>35985</td>
-                <td>1</td>
-                <td>33685</td>
-                <td>782</td>
-              </tr>
-              <tr>
-                <td><span id="en140">Odisha</span><span class="hide" id="hi140">ओडिशा</span></td>
-                <td>1336304</td>
-                <td>132</td>
-                <td>1326915</td>
-                <td>9257</td>
-              </tr>
-              <tr>
-                <td><span id="en141">Puducherry</span><span class="hide" id="hi141">पुदुचेरी</span></td>
-                <td>175452</td>
-                <td>46</td>
-                <td>173431</td>
-                <td>1975</td>
-              </tr>
-              <tr>
-                <td><span id="en142">Punjab</span><span class="hide" id="hi142">पंजाब</span></td>
-                <td>785268</td>
-                <td>59</td>
-                <td>764697</td>
-                <td>20512</td>
-              </tr>
-              <tr>
-                <td><span id="en143">Rajasthan</span><span class="hide" id="hi143">राजस्थान</span></td>
-                <td>1314828</td>
-                <td>247</td>
-                <td>1304933</td>
-                <td>9648</td>
-              </tr>
-              <tr>
-                <td><span id="en144">Sikkim</span><span class="hide" id="hi144">सिक्किम</span></td>
-                <td>44302</td>
-                <td>7</td>
-                <td>43012</td>
-                <td>499</td>
-              </tr>
-              <tr>
-                <td><span id="en145">State Unassigned</span><span class="hide" id="hi145">अनियंत्रित राज्य</span></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-              </tr>
-              <tr>
-                <td><span id="en146">Tamil Nadu</span><span class="hide" id="hi146">तमिलनाडु</span></td>
-                <td>3593207</td>
-                <td>826</td>
-                <td>3554333</td>
-                <td>38048</td>
-              </tr>
-              <tr>
-                <td><span id="en147">Telangana</span><span class="hide" id="hi147">तेलंगाना</span></td>
-                <td>840732</td>
-                <td>321</td>
-                <td>836300</td>
-                <td>4111</td>
-              </tr>
-              <tr>
-                <td><span id="en148">Tripura</span><span class="hide" id="hi148">त्रिपुरा</span></td>
-                <td>108023</td>
-                <td>8</td>
-                <td>107012</td>
-                <td>937</td>
-              </tr>
-              <tr>
-                <td><span id="en149">Uttar Pradesh</span><span class="hide" id="hi149">उत्तर प्रदेश</span></td>
-                <td>2127828</td>
-                <td>258</td>
-                <td>2103939</td>
-                <td>23631</td>
-              </tr>
-              <tr>
-                <td><span id="en150">Uttarakhand</span><span class="hide" id="hi150">उत्तराखंड</span></td>
-                <td>449214</td>
-                <td>50</td>
-                <td>431398</td>
-                <td>7751</td>
-              </tr>
-              <tr>
-                <td><span id="en151">West Bengal</span><span class="hide" id="hi151">पश्चिम बंगाल</span></td>
-                <td>2118276</td>
-                <td>291</td>
-                <td>2096455</td>
-                <td>21530</td>
-              </tr>
-            </table>
-            <h6 id="en18" class="hide"><b>Abbreviations</b> - UT: Union Territory, DNHDD: Dadra and Nagar Haveli and
-              Daman and Diu
-            </h6>
-            <h6 id="hi18" class="hide"><b>संक्षेपाक्षर</b> - दा. न. ह. द. दी: दादरा और नगर हवेली और दमन और दीव
-            </h6>
           </div>
-          <div class="col s12" id="mah">
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;" id="en19">
-              <i class="fas fa-virus"></i> Covid 19 (November 10)</blockquote>
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;" id="hi19" class="hide">
-              <i class="fas fa-virus"></i> कोविड 19 (नवंबर 10)</blockquote>
+          <div id="MhDb" class="modal blue-grey darken-4 white-text">
             <iframe class="airtable-embed"
               src="https://airtable.com/embed/shrT8iMHFEvIw65ut?backgroundColor=blue&layout=card" frameborder="0"
               onmousewheel="" width="100%" height="3500" style="background: transparent;"></iframe>
-            <script>
-              function mhFunc() {
-                var input, filter, table, tr, td, i, txtValue;
-                input = document.getElementById("mhIpt");
-                filter = input.value.toUpperCase();
-                table = document.getElementById("mhTbl");
-                tr = table.getElementsByTagName("tr");
-                for (i = 0; i < tr.length; i++) {
-                  td = tr[i].getElementsByTagName("td")[0];
-                  if (td) {
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                      tr[i].style.display = "";
-                    } else {
-                      tr[i].style.display = "none";
-                    }
-                  }
-                }
-              }
-            </script>
-            <div class="input-field hide">
-              <i class="fa-solid fa-magnifying-glass prefix"></i>
-              <input type="text" id="mhIpt" onkeyup="mhFunc()">
-              <label for="mhIpt">Search for Maharashtra's Districts</label>
-            </div>
-            <table class="centered hide" id="mhTbl">
-              <tr id="en20">
-                <th><b>Districts</b></th>
-                <th><b>Total Cases</b></th>
-                <th><b>Active</b></th>
-                <th><b>Recovered</b></th>
-                <th><b>Deceased</b></th>
-              </tr>
-              <tr class="hide" id="hi20">
-                <th><b>जिले</b></th>
-                <th><b>कुल मामले</b></th>
-                <th><b>सक्रिय</b></th>
-                <th><b>स्वस्त</b></th>
-                <th><b>मृत</b></th>
-              </tr>
-              <tr>
-                <td><span id="en152">Ahmednagar</span><span class="hide" id="hi152">अहमदनगर</span></td>
-                <td>381063</td>
-                <td>15</td>
-                <td>373797</td>
-                <td>7251</td>
-              </tr>
-              <tr>
-                <td><span id="en153">Akola</span><span class="hide" id="hi153">अकोला</span></td>
-                <td>67109</td>
-                <td>20</td>
-                <td>65612</td>
-                <td>1477</td>
-              </tr>
-              <tr>
-                <td><span id="en154">Amravati</span><span class="hide" id="hi154">अमरावती</span></td>
-                <td>107145</td>
-                <td>3</td>
-                <td>105515</td>
-                <td>1627</td>
-              </tr>
-              <tr>
-                <td><span id="en155">Aurangabad<br>(Sambhaji Nagar)</span><span class="hide"
-                    id="hi155">औरंगाबाद<br>(संभाजी नगर)</span></td>
-                <td>178900</td>
-                <td>8</td>
-                <td>174604</td>
-                <td>4288</td>
-              </tr>
-              <tr>
-                <td><span id="en156">Beed</span><span class="hide" id="hi156">बीड</span></td>
-                <td>109769</td>
-                <td>1</td>
-                <td>106878</td>
-                <td>2890</td>
-              </tr>
-              <tr>
-                <td><span id="en157">Bhandara</span><span class="hide" id="hi157">भंडारा</span></td>
-                <td>70046</td>
-                <td>8</td>
-                <td>68895</td>
-                <td>1143</td>
-              </tr>
-              <tr>
-                <td><span id="en158">Buldhana</span><span class="hide" id="hi158">बुलढाना</span></td>
-                <td>93225</td>
-                <td>1</td>
-                <td>92385</td>
-                <td>839</td>
-              </tr>
-              <tr>
-                <td><span id="en159">Chandrapur</span><span class="hide" id="hi159">चंद्रपुर</span></td>
-                <td>100221</td>
-                <td>2</td>
-                <td>98621</td>
-                <td>1598</td>
-              </tr>
-              <tr>
-                <td><span id="en160">Dhule</span><span class="hide" id="hi160">धुले</span></td>
-                <td>51462</td>
-                <td>2</td>
-                <td>50790</td>
-                <td>670</td>
-              </tr>
-              <tr>
-                <td><span id="en161">Gadchiroli</span><span class="hide" id="hi161">गडचिरोली</span></td>
-                <td>37809</td>
-                <td>3</td>
-                <td>37074</td>
-                <td>732</td>
-              </tr>
-              <tr>
-                <td><span id="en162">Gondia</span><span class="hide" id="hi162">गोंदिया</span></td>
-                <td>46036</td>
-                <td>0</td>
-                <td>45448</td>
-                <td>588</td>
-              </tr>
-              <tr>
-                <td><span id="en163">Hingoli</span><span class="hide" id="hi163">हिंगोली</span></td>
-                <td>22468</td>
-                <td>0</td>
-                <td>21949</td>
-                <td>519</td>
-              </tr>
-              <tr>
-                <td><span id="en164">Jalgaon</span><span class="hide" id="hi164">जलगांव</span></td>
-                <td>150297</td>
-                <td>4</td>
-                <td>147531</td>
-                <td>2762</td>
-              </tr>
-              <tr>
-                <td><span id="en165">Jalna</span><span class="hide" id="hi165">जालना</span></td>
-                <td>67628</td>
-                <td>7</td>
-                <td>66395</td>
-                <td>1226</td>
-              </tr>
-              <tr>
-                <td><span id="en166">Kolhapur</span><span class="hide" id="hi166">कोल्हापुर</span></td>
-                <td>221875</td>
-                <td>18</td>
-                <td>215934</td>
-                <td>5923</td>
-              </tr>
-              <tr>
-                <td><span id="en167">Latur</span><span class="hide" id="hi167">लातूर</span></td>
-                <td>106604</td>
-                <td>4</td>
-                <td>104111</td>
-                <td>2489</td>
-              </tr>
-              <tr>
-                <td><span id="en168">Mumbai</span><span class="hide" id="hi168">मुंबई</span></td>
-                <td>1153644</td>
-                <td>337</td>
-                <td>1133565</td>
-                <td>19742</td>
-              </tr>
-              <tr>
-                <td><span id="en169">Mumbai Suburban</span><span class="hide" id="hi169">मुंबई उपनगरीय</span></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-              </tr>
-              <tr>
-                <td><span id="en170">Nagpur</span><span class="hide" id="hi170">नागपुर</span></td>
-                <td>586369</td>
-                <td>29</td>
-                <td>577111</td>
-                <td>9229</td>
-              </tr>
-              <tr>
-                <td><span id="en171">Nanded</span><span class="hide" id="hi171">नांदेड़</span></td>
-                <td>103338</td>
-                <td>1</td>
-                <td>100632</td>
-                <td>2705</td>
-              </tr>
-              <tr>
-                <td><span id="en172">Nandurbar</span><span class="hide" id="hi172">नंदुरबार</span></td>
-                <td>47024</td>
-                <td>0</td>
-                <td>46061</td>
-                <td>963</td>
-              </tr>
-              <tr>
-                <td><span id="en173">Nashik</span><span class="hide" id="hi173">नासिक</span></td>
-                <td>478911</td>
-                <td>32</td>
-                <td>469961</td>
-                <td>8918</td>
-              </tr>
-              <tr>
-                <td><span id="en174">Osmanabad<br>(Dharashiv)</span><span class="hide"
-                    id="hi174">उस्मानबाद<br>(धाराशिव)</span></td>
-                <td>77050</td>
-                <td>11</td>
-                <td>74899</td>
-                <td>2140</td>
-              </tr>
-              <tr>
-                <td><span id="en175">Other State</span><span class="hide" id="hi175">अन्य राज्य</span></td>
-                <td>144</td>
-                <td>0</td>
-                <td>31</td>
-                <td>113</td>
-              </tr>
-              <tr>
-                <td><span id="en176">Palghar</span><span class="hide" id="hi176">पालघर</span></td>
-                <td>168655</td>
-                <td>2</td>
-                <td>165228</td>
-                <td>3425</td>
-              </tr>
-              <tr>
-                <td><span id="en177">Parbhani</span><span class="hide" id="hi177">परभनी</span></td>
-                <td>58817</td>
-                <td>4</td>
-                <td>57532</td>
-                <td>1281</td>
-              </tr>
-              <tr>
-                <td><span id="en178">Pune</span><span class="hide" id="hi178">पुणे</span></td>
-                <td>1504371</td>
-                <td>358</td>
-                <td>1483407</td>
-                <td>20606</td>
-              </tr>
-              <tr>
-                <td><span id="en179">Raigad</span><span class="hide" id="hi179">रायगढ़</span></td>
-                <td>256640</td>
-                <td>50</td>
-                <td>251613</td>
-                <td>4977</td>
-              </tr>
-              <tr>
-                <td><span id="en180">Ratnagiri</span><span class="hide" id="hi180">रत्नागिरि</span></td>
-                <td>85748</td>
-                <td>6</td>
-                <td>83185</td>
-                <td>2557</td>
-              </tr>
-              <tr>
-                <td><span id="en181">Sangli</span><span class="hide" id="hi181">सांगली</span></td>
-                <td>229045</td>
-                <td>9</td>
-                <td>223365</td>
-                <td>5671</td>
-              </tr>
-              <tr>
-                <td><span id="en182">Satara</span><span class="hide" id="hi182">सतारा</span></td>
-                <td>280321</td>
-                <td>8</td>
-                <td>273557</td>
-                <td>6756</td>
-              </tr>
-              <tr>
-                <td><span id="en183">Sindhudurg</span><span class="hide" id="hi183">सिंधुदुर्ग</span></td>
-                <td>58074</td>
-                <td>0</td>
-                <td>56532</td>
-                <td>1542</td>
-              </tr>
-              <tr>
-                <td><span id="en184">Solapur</span><span class="hide" id="hi184">सोलापुर</span></td>
-                <td>229452</td>
-                <td>32</td>
-                <td>223525</td>
-                <td>5895</td>
-              </tr>
-              <tr>
-                <td><span id="en185">Thane</span><span class="hide" id="hi185">ठाणे</span></td>
-                <td>808040</td>
-                <td>239</td>
-                <td>795817</td>
-                <td>11984</td>
-              </tr>
-              <tr>
-                <td><span id="en186">Wardha</span><span class="hide" id="hi186">वर्धा</span></td>
-                <td>66382</td>
-                <td>0</td>
-                <td>64972</td>
-                <td>1410</td>
-              </tr>
-              <tr>
-                <td><span id="en187">Washim</span><span class="hide" id="hi187">वाशिम</span></td>
-                <td>47613</td>
-                <td>8</td>
-                <td>46964</td>
-                <td>641</td>
-              </tr>
-              <tr>
-                <td><span id="en188">Yavatmal</span><span class="hide" id="hi188">यावतमल</span></td>
-                <td>82686</td>
-                <td>2</td>
-                <td>80863</td>
-                <td>1821</td>
-              </tr>
-            </table>
           </div>
-          <div class="col s12" id="mum">
-            <h6 class="white-text" id="en22">As on November 13 (*RAIGAD TESTED As on November 10)</h6>
-            <h6 class="white-text hide" id="hi22">नवंबर 13 के अनुसार (*रायगढ़ जांच नवंबर 10 के अनुसार)</h6>
-            <iframe class="airtable-embed"
-              src="https://airtable.com/embed/shrnlaqQvoboS7tTG?backgroundColor=blue&layout=card" frameborder="0"
-              onmousewheel="" width="100%" height="450" style="background: transparent;"></iframe>
-            <div class="row hide">
-              <div class="col s12 m6 l3">
-                <div class="card-panel grey darken-4 white-text">
-                  <h5 id="en23"><b>MUMBAI [42]</b></h5>
-                  <h5 id="hi23" class="hide"><b>मुंबई [42]</b></h5>
-                  <table class="centered">
-                    <tbody>
-                      <tr>
-                        <td colspan="4">
-                          <b id="en24">Total:</b><b id="hi24" class="hide">कुल:</b> 11,53,644 <br>
-                          <b id="en25">Active:</b><b id="hi25" class="hide">सक्रिय:</b> 337 <br>
-                          <b id="en26">Recovered:</b><b id="hi26" class="hide">स्वस्त:</b> 11,33,565 <br>
-                          <b id="en27">Deceased:</b><b id="hi27" class="hide">मृत:</b> 19,742 <br>
-                          <b id="en28">Vaccinated:</b><b id="hi28" class="hide">टीकाकरण:</b> 2,21,37,468 <br>
-                          <b id="en29">Tested:</b><b id="hi29" class="hide">जांच:</b> 1,84,95,449
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <a href="#db1" class="oui-button blue darken-1 white-text modal-trigger"
-                            id="en51">Dashboard</a>
-                          <a href="#db1" class="oui-button blue darken-1 white-text modal-trigger hide"
-                            id="hi51">डैशबोर्ड</a></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <div class="col s12 m6 l3">
-                <div class="card-panel grey darken-4 white-text">
-                  <h5 id="en30"><b>THANE [38]</b></h5>
-                  <h5 id="hi30" class="hide"><b>ठाणे [38]</b></h5>
-                  <table class="centered">
-                    <tbody>
-                      <tr>
-                        <td colspan="4">
-                          <b id="en31">Total:</b><b id="hi31" class="hide">कुल:</b> 8,08,040 <br>
-                          <b id="en32">Active:</b><b id="hi32" class="hide">सक्रिय:</b> 239 <br>
-                          <b id="en33">Recovered:</b><b id="hi33" class="hide">स्वस्त:</b> 7,95,817 <br>
-                          <b id="en34">Deceased:</b><b id="hi34" class="hide">मृत:</b> 11,984 <br>
-                          <b id="en35">Vaccinated:</b><b id="hi35" class="hide">टीकाकरण:</b> 1,42,84,479 <br>
-                          <b id="en36">Tested:</b><b id="hi36" class="hide">जांच:</b> -
-                        </td>
-                      </tr>
-                      <tr>
-                        <td><br></td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <div class="col s12 m6 l3">
-                <div class="card-panel grey darken-4 white-text">
-                  <h5 id="en37"><b>PALGHAR [0]</b></h5>
-                  <h5 id="hi37" class="hide"><b>पालघर [0]</b></h5>
-                  <table class="centered">
-                    <tbody>
-                      <tr>
-                        <td colspan="4">
-                          <b id="en38">Total:</b><b id="hi38" class="hide">कुल:</b> 1,68,655 <br>
-                          <b id="en39">Active:</b><b id="hi39" class="hide">सक्रिय:</b> 2 <br>
-                          <b id="en40">Recovered:</b><b id="hi40" class="hide">स्वस्त:</b> 1,65,228 <br>
-                          <b id="en41">Deceased:</b><b id="hi41" class="hide">मृत:</b> 3,425 <br>
-                          <b id="en42">Vaccinated:</b><b id="hi42" class="hide">टीकाकरण:</b> 51,01,440 <br>
-                          <b id="en43">Tested:</b><b id="hi43" class="hide">जांच:</b> 14,30,049+
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <a href="#db2" class="oui-button blue darken-1 white-text modal-trigger"
-                            id="en53">Dashboard</a>
-                          <a href="#db2" class="oui-button blue darken-1 white-text modal-trigger hide"
-                            id="hi53">डैशबोर्ड</a></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <div class="col s12 m6 l3">
-                <div class="card-panel grey darken-4 white-text">
-                  <h5 id="en44"><b>RAIGAD [10]</b></h5>
-                  <h5 id="hi44" class="hide"><b>रायगढ़ [10]</b></h5>
-                  <table class="centered">
-                    <tbody>
-                      <tr>
-                        <td colspan="4">
-                          <b id="en45">Total:</b><b id="hi45" class="hide">कुल:</b> 2,56,640 <br>
-                          <b id="en46">Active:</b><b id="hi46" class="hide">सक्रिय:</b> 50 <br>
-                          <b id="en47">Recovered:</b><b id="hi47" class="hide">स्वस्त:</b> 2,51,613 <br>
-                          <b id="en48">Deceased:</b><b id="hi48" class="hide">मृत:</b> 4,977 <br>
-                          <b id="en49">Vaccinated:</b><b id="hi49" class="hide">टीकाकरण:</b> 48,03,078 <br>
-                          <b id="en50">Tested:</b><b id="hi50" class="hide">जांच:</b> 28,08,916*
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <a href="#db3" class="oui-button blue darken-1 white-text modal-trigger" target="_blank"
-                            id="en55">Dashboard</a>
-                          <a href="#db3" class="oui-button blue darken-1 white-text modal-trigger hide" target="_blank"
-                            id="hi55">डैशबोर्ड</a></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-            <div id="db1" class="modal grey darken-4 white-text">
-              <h6 id="en52">Source: Official MCGM Website</h6>
-              <h6 id="hi52" class="hide">स्रोत: आधिकारिक एमसीजीएम वेबसाइट</h6>
-              <img src="https://stopcoronavirus.mcgm.gov.in/assets/images/bmc-dashboard-slide/Slide21.PNG" alt="Mum"
-                width="100%" class="responsive-img materialboxed">
-            </div>
-            <div id="db2" class="modal grey darken-4 white-text">
-              <h6 id="en54">Source: Twitter - Palghar Mitra<br>As on July 12</h6>
-              <h6 id="hi54" class="hide">स्रोत: ट्विटर - पालघर मित्र<br>जुलाई 12 के अनुसार</h6>
-              <img src="https://pbs.twimg.com/media/FXcfg5-UUAAHR5M?format=jpg&name=medium" alt="Pal" width="100%"
-                class="responsive-img materialboxed">
-            </div>
-            <div id="db3" class="modal grey darken-4 white-text">
-              <h6 id="en56">Source: Twitter - Raigad District<br>As on November 10</h6>
-              <h6 id="hi56" class="hide">स्रोत: ट्विटर - रायगढ़ जिला<br>नवंबर 10 के अनुसार</h6>
-              <!-- <img src="https://pbs.twimg.com/media/FX9WeE3UsAEQueI?format=jpg&name=large" alt="Rai" width="100%"
-              class="responsive-img materialboxed"> -->
-              <img src="2022111178.jpg" alt="Rai" width="100%" class="responsive-img materialboxed">
-            </div>
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;" id="en57">
-              THANE DASHBOARD </blockquote>
-            <blockquote style="font-size: x-large; border-left-color: #1e88e5;" id="hi57" class="hide">
-              ठाणे डैशबोर्ड </blockquote>
-            <h6 id="en58">Source: Official Twitter handles/ Websites of Mun. Corp.s & DIO Thane</h6>
-            <h6 id="hi58" class="hide">स्रोत: मनपाओं और डीआइओ ठाणे की आधिकारिक ट्विटर हैंडल/ वेबसाइट द्बारा</h6>
-            <iframe class="airtable-embed"
-              src="https://airtable.com/embed/shrMC6HoGtnPpxRsW?backgroundColor=blue&layout=card" frameborder="0"
-              onmousewheel="" width="100%" height="900" style="background: transparent;"></iframe>
-            <div class="row hide">
-              <div class="col s12 m6 l4">
-                <div class="card-panel grey darken-4 white-text">
-                  <h5><b id="en59">THANE TMC</b><b id="hi59" class="hide">ठाणे ठामपा</b></h5>
-                  <table class="centered">
-                    <caption id="en60">New Cases: 96 (As on July 10)</caption>
-                    <caption id="hi60" class="hide">नए मामले: 96 (जुलाई 10 के अनुसार)</caption>
-                    <tbody>
-                      <tr>
-                        <td colspan="4">
-                          <b id="en61">Total:</b><b id="hi61" class="hide">कुल:</b> 1,92,164 <br>
-                          <b id="en62">Active:</b><b id="hi62" class="hide">सक्रिय:</b> 910 <br>
-                          <b id="en63">Recovered:</b><b id="hi63" class="hide">स्वस्त:</b> 1,89,020 <br>
-                          <b id="en64">Deceased:</b><b id="hi64" class="hide">मृत:</b> 2,138
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <hr>
-                  <p class="transparent-text">
-                    Majiwada Manpada: 39<br>
-                    Vartaknagar: 21<br>
-                    Lokmanyanagar Savarkarnagar: 13<br>
-                    Naupada-Kopari: 1<br>
-                    Uthalsar: 7<br>
-                    Wagale: 7<br>
-                    Kalwa: 3<br>
-                    Mumbra: 3<br>
-                    Diva: 3<br>
-                    Others: 1 [June 6]</p>
-                </div>
-              </div>
-              <div class="col s12 m6 l4">
-                <div class="card-panel grey darken-4 white-text">
-                  <h5><b id="en65">KALYAN KDMC</b><b id="hi65" class="hide">कल्याण कडोंमपा</b></h5>
-                  <table class="centered">
-                    <caption id="en66">New Cases: 4 (As on November 10)</caption>
-                    <caption id="hi66" class="hide">नए मामले: 4 (नवंबर 10 के अनुसार)</caption>
-                    <tbody>
-                      <tr>
-                        <td colspan="4">
-                          <b id="en67">Total:</b><b id="hi67" class="hide">कुल:</b> 1,70,441 <br>
-                          <b id="en68">Active:</b><b id="hi68" class="hide">सक्रिय:</b> 32 <br>
-                          <b id="en69">Recovered:</b><b id="hi69" class="hide">स्वस्त:</b> 1,67,447 <br>
-                          <b id="en70">Deceased:</b><b id="hi70" class="hide">मृत:</b> 2,962
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <hr>
-                  <p class="grey-text text-lighten-1">
-                    Kalyan (E) [कल्याण (पू)]: 0<br>
-                    Kalyan (W) [कल्याण (प)]: 0<br>
-                    Dombivli (E) [डोंबिवली (पू)]: 4<br>
-                    Dombivli (W) [डोंबिवली (प)]: 0<br>
-                    Manda-Titwala [मांडा-टिटवाला]: 0<br>
-                    Mohana [मोहना]: 0<br>
-                    Pisavli [पिसवली]: 0 [November नवंबर 10]<br><br><br><br></p>
-                </div>
-              </div>
-              <div class="col s12 m6 l4">
-                <div class="card-panel grey darken-4 white-text">
-                  <h5><b id="en71">NAVI MUMBAI NMMC</b><b id="hi71" class="hide">नवी मुंबई नमुंमपा</b></h5>
-                  <table class="centered">
-                    <caption id="en72">New Cases: 14 (As on November 10)</caption>
-                    <caption id="hi72" class="hide">नए मामले: 14 (नवंबर 10 के अनुसार)</caption>
-                    <tbody>
-                      <tr>
-                        <td colspan="4">
-                          <b id="en73">Total:</b><b id="hi73" class="hide">कुल:</b> 1,65,689 <br>
-                          <b id="en74">Active:</b><b id="hi74" class="hide">सक्रिय:</b> 70 <br>
-                          <b id="en75">Recovered:</b><b id="hi75" class="hide">स्वस्त:</b> 1,63,562 <br>
-                          <b id="en76">Deceased:</b><b id="hi76" class="hide">मृत:</b> 2,057
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <hr>
-                  <p class="transparent-text">
-                    Belapur: 0<br>
-                    Nerul: 0<br>
-                    Vashi: 0<br>
-                    Turbhe: 0<br>
-                    Koparkhairne: 0<br>
-                    Ghansoli: 0<br>
-                    Airoli: 0<br>
-                    Digha: 0 [May 9]<br><br><br></p>
-                </div>
-              </div>
-              <div class="col s12 m6 l4">
-                <div class="card-panel grey darken-4 white-text">
-                  <h5><b id="en77">MIRA BHAYANDER MBMC</b><b id="hi77" class="hide">मिरा भाईंदर मिभामपा</b></h5>
-                  <table class="centered">
-                    <caption id="en78">New Cases: 2 (As on November 10)</caption>
-                    <caption id="hi78" class="hide">नए मामले: 2 (नवंबर 10 के अनुसार)</caption>
-                    <tbody>
-                      <tr>
-                        <td colspan="4">
-                          <b id="en79">Total:</b><b id="hi79" class="hide">कुल:</b> 72,120 <br>
-                          <b id="en80">Active:</b><b id="hi80" class="hide">सक्रिय:</b> 11 <br>
-                          <b id="en81">Recovered:</b><b id="hi81" class="hide">स्वस्त:</b> 70,702 <br>
-                          <b id="en82">Deceased:</b><b id="hi82" class="hide">मृत:</b> 1,407
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <hr>
-                  <p class="grey-text text-lighten-1">Bhayander (E) [भाईंदर (पू)]: 3<br>Bhayander (W) [भाईंदर (प)]: 0
-                    <br>Mira Road [मिरा रोड]: 3 [October अक्टूबर 13]
-                    <br><br><br>
-                  </p>
-                </div>
-              </div>
-              <div class="col s12 m6 l4">
-                <div class="card-panel grey darken-4 white-text">
-                  <h5><b id="en83">THANE RURAL</b><b id="hi83" class="hide">ठाणे ग्रामीण</b></h5>
-                  <table class="centered">
-                    <caption id="en84">New Cases: 19 (As on July 10)</caption>
-                    <caption id="hi84" class="hide">नए मामले: 19 (जुलाई 10 के अनुसार)</caption>
-                    <tbody>
-                      <tr>
-                        <td colspan="4">
-                          <b id="en85">Total:</b><b id="hi85" class="hide">कुल:</b> 50,252 <br>
-                          <b id="en86">Active:</b><b id="hi86" class="hide">सक्रिय:</b> 119 <br>
-                          <b id="en87">Recovered:</b><b id="hi87" class="hide">स्वस्त:</b> 48,858 <br>
-                          <b id="en88">Deceased:</b><b id="hi88" class="hide">मृत:</b> 1,256
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <hr><br><br><br><br><br>
-                </div>
-              </div>
-              <div class="col s12 m6 l4">
-                <div class="card-panel grey darken-4 white-text">
-                  <h5><b id="en89">ULHASNAGAR UMC</b><b id="hi89" class="hide">उल्हासनगर उमपा</b></h5>
-                  <table class="centered">
-                    <caption id="en90">New Cases: 3 (As on November 10)</caption>
-                    <caption id="hi90" class="hide">नए मामले: 3 (नवंबर 10 के अनुसार)</caption>
-                    <tbody>
-                      <tr>
-                        <td colspan="4">
-                          <b id="en91">Total:</b><b id="hi91" class="hide">कुल:</b> 27,242 <br>
-                          <b id="en92">Active:</b><b id="hi92" class="hide">सक्रिय:</b> 6 <br>
-                          <b id="en93">Recovered:</b><b id="hi93" class="hide">स्वस्त:</b> 26,570 <br>
-                          <b id="en94">Deceased:</b><b id="hi94" class="hide">मृत:</b> 666
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <hr>
-                  <p class="grey-text text-lighten-1">Unr-1: 0<br>Unr-2: 0<br>Unr-3: 0<br>Unr-4: 0<br>Unr-5: 0
-                    [November नवंबर 9]
-                  </p>
-                </div>
-              </div>
-              <div class="col s12 m6 l4">
-                <div class="card-panel grey darken-4 white-text">
-                  <h5><b id="en95">BADLAPUR KBMC</b><b id="hi95" class="hide">बदलापुर कुबमपा</b></h5>
-                  <table class="centered">
-                    <caption id="en96">New Cases: 0 (As on July 10)</caption>
-                    <caption id="hi96" class="hide">नए मामले: 0 (जुलाई 10 के अनुसार)</caption>
-                    <tbody>
-                      <tr>
-                        <td colspan="4">
-                          <b id="en97">Total:</b><b id="hi97" class="hide">कुल:</b> 25,832 <br>
-                          <b id="en98">Active:</b><b id="hi98" class="hide">सक्रिय:</b> 29 <br>
-                          <b id="en99">Recovered:</b><b id="hi99" class="hide">स्वस्त:</b> 25,414 <br>
-                          <b id="en100">Deceased:</b><b id="hi100" class="hide">मृत:</b> 389
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <hr>
-                  <p class="transparent-text">Badlapur (E): 0<br>Badlapur (W): 0 [May 23]<br><br></p>
-                </div>
-              </div>
-              <div class="col s12 m6 l4">
-                <div class="card-panel grey darken-4 white-text">
-                  <h5><b id="en101">AMBERNATH MUN. COU.</b><b id="hi101" class="hide">अंबरनाथ नगरपरिषद</b></h5>
-                  <table class="centered">
-                    <caption id="en102">New Cases: NU (As on -)</caption>
-                    <caption id="hi102" class="hide">नए मामले: अ.न (- के अनुसार)</caption>
-                    <tbody>
-                      <tr>
-                        <td colspan="4">
-                          <b id="en103">Total:</b><b id="hi103" class="hide">कुल:</b> 24,438 <br>
-                          <b id="en104">Active:</b><b id="hi104" class="hide">सक्रिय:</b> 0 <br>
-                          <b id="en105">Recovered:</b><b id="hi105" class="hide">स्वस्त:</b> 23,858 <br>
-                          <b id="en106">Deceased:</b><b id="hi106" class="hide">मृत:</b> 580
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <hr>
-                  <p class="transparent-text">Ambernath (E): 0<br>Ambernath (W): 0 [May 23]<br><br></p>
-                </div>
-              </div>
-              <div class="col s12 m6 l4">
-                <div class="card-panel grey darken-4 white-text">
-                  <h5><b id="en107">BHIWANDI City</b><b id="hi107" class="hide">भिवंडी शहर</b></h5>
-                  <table class="centered">
-                    <caption id="en108">New Cases: 3 (As on July 10)</caption>
-                    <caption id="hi108" class="hide">नए मामले: 3 (जुलाई 10 के अनुसार)</caption>
-                    <tbody>
-                      <tr>
-                        <td colspan="4">
-                          <b id="en109">Total:</b><b id="hi109" class="hide">कुल:</b> 12,771 <br>
-                          <b id="en110">Active:</b><b id="hi110" class="hide">सक्रिय:</b> 37 <br>
-                          <b id="en111">Recovered:</b><b id="hi111" class="hide">स्वस्त:</b> 12,246 <br>
-                          <b id="en112">Deceased:</b><b id="hi112" class="hide">मृत:</b> 485
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <hr><br><br><br>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <h6 class="center hide" id="en113"><b>Abbreviations</b> - NU: No Updates</h6>
-            <h6 class="center hide" id="hi113"><b>संक्षेपाक्षर</b> - अ.न: अपडेट नहीं हैं</h6>
-            <h6 class="center hide" id="en114">NOTE - 3 Cases have been added into Kalyan's Total & Deceased, as per DIO
-              Thane report (consolidated) shows 3 less in Kalyan which seems incorrect..</h6>
-            <h6 class="center hide" id="hi114">नोट - 3 मामले कल्याण के कुल और मृत में जोडे़ गए हैं, जिसे डीआइओ
-              ठाणे की रिपोर्ट में कम गिने गए हैं जो ग़लत लगते हैं..</h6>
-          </div>
+          <blockquote style="font-size: x-large; border-left-color: #1e88e5;" id="en5">
+            MUMBAI REGION DASHBOARD </blockquote>
+          <blockquote style="font-size: x-large; border-left-color: #1e88e5;" id="hi5" class="hide">
+            मुंबई क्षेत्र डैशबोर्ड </blockquote>
+          <h6 class="white-text" id="en6">As on November 13 (*RAIGAD TESTED As on November 13)</h6>
+          <h6 class="white-text hide" id="hi6">नवंबर 13 के अनुसार (*रायगढ़ जांच नवंबर 13 के अनुसार)</h6>
+          <iframe class="airtable-embed"
+            src="https://airtable.com/embed/shrnlaqQvoboS7tTG?backgroundColor=blue&layout=card" frameborder="0"
+            onmousewheel="" width="100%" height="450" style="background: transparent;"></iframe>
+          <blockquote style="font-size: x-large; border-left-color: #1e88e5;" id="en7">
+            THANE DASHBOARD </blockquote>
+          <blockquote style="font-size: x-large; border-left-color: #1e88e5;" id="hi7" class="hide">
+            ठाणे डैशबोर्ड </blockquote>
+          <h6 id="en8">Source: Official Twitter handles/ Websites of Mun. Corp.s & DIO Thane</h6>
+          <h6 id="hi8" class="hide">स्रोत: मनपाओं और डीआइओ ठाणे की आधिकारिक ट्विटर हैंडल/ वेबसाइट द्बारा</h6>
+          <iframe class="airtable-embed"
+            src="https://airtable.com/embed/shrMC6HoGtnPpxRsW?backgroundColor=blue&layout=card" frameborder="0"
+            onmousewheel="" width="100%" height="900" style="background: transparent;"></iframe>
         </div>
       </div>
-      <br>
+    </div>
+    <br>
   </main>
   <script>
     if ('serviceWorker' in navigator) {
