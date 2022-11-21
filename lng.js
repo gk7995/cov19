@@ -15,18 +15,6 @@ function lng() {
   var element8 = document.getElementById("en3");
   var element9 = document.getElementById("hi4");
   var element10 = document.getElementById("en4");
-  var element11 = document.getElementById("hi5");
-  var element12 = document.getElementById("en5");
-  var element13 = document.getElementById("hi6");
-  var element14 = document.getElementById("en6");
-  var element15 = document.getElementById("hi7");
-  var element16 = document.getElementById("en7");
-  var element17 = document.getElementById("hi8");
-  var element18 = document.getElementById("en8");
-  var element19 = document.getElementById("hi9");
-  var element20 = document.getElementById("en9");
-  var element21 = document.getElementById("hi10");
-  var element22 = document.getElementById("en10");
   elementA.classList.toggle("hide");
   elementB.classList.toggle("hide");
   elementC.classList.toggle("hide");
@@ -43,16 +31,4 @@ function lng() {
   element8.classList.toggle("hide");
   element9.classList.toggle("hide");
   element10.classList.toggle("hide");
-  element11.classList.toggle("hide");
-  element12.classList.toggle("hide");
-  element13.classList.toggle("hide");
-  element14.classList.toggle("hide");
-  element15.classList.toggle("hide");
-  element16.classList.toggle("hide");
-  element17.classList.toggle("hide");
-  element18.classList.toggle("hide");
-  element19.classList.toggle("hide");
-  element20.classList.toggle("hide");
-  element21.classList.toggle("hide");
-  element22.classList.toggle("hide");
 }
