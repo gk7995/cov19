@@ -67,6 +67,7 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script type="text/javascript" src="materialize.js"></script>
   <script type="text/javascript" src="lng.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
     $(document).ready(function () {
       $('.fixed-action-btn').openFAB();
@@ -89,22 +90,26 @@
 
 <body class="black white-text" onload="location.href='#view'">
   <main class="containr">
-    <div class="fixed-action-btn">
-      <a href="javascript:lng()" class="tooltipped blue darken-1 white-text btn-floating btn-large" data-position="top"
-        data-delay="50" data-tooltip="Change ENG to HIN"><i class="fas fa-language"></i></a>
-    </div>
+    <!-- <div class="fixed-action-btn">
+      <a href="javascript:dm()" class="tooltipped blue darken-1 white-text btn-floating btn-large" data-position="top"
+        data-delay="50" data-tooltip="Dark Mode"><i class="fas fa-moon"></i></a>
+    </div> -->
     <div id="main">
       <div class="oui-viewing center-align black white-text">
-        <h4 id="enA">COVID 19 DASHBOARDS</h4>
-        <h4 id="hiA" class="hide">कोविड 19 डैशबोर्ड्स</h4>
+        <p id="enA" class="text-4xl">COVID 19 DASHBOARDS</p>
+        <p id="hiA" class="hide text-4xl">कोविड 19 डैशबोर्ड्स</p>
       </div>
       <div id="view"></div><br>
       <div class="row">
         <div class="center" style="font-size: large;">
-          <a href="#!" class="col s6 m6 l6 blue-text text-darken-1" id="enB"><span id="curr">Home</span></a>
-          <a href="#!" class="col s6 m6 l6 blue-text text-darken-1 hide" id="hiB"><span id="curr">होम</span></a>
-          <a href="about.html" class="col s6 m6 l6 white-text" id="enC">About</a>
-          <a href="about.html" class="col s6 m6 l6 white-text hide" id="hiC">बारे में</a>
+          <a href="#!" class="col s5 m5 l5 blue-text text-darken-1" id="enB"><span id="curr">Home</span></a>
+          <a href="#!" class="col s5 m5 l5 blue-text text-darken-1 hide" id="hiB"><span id="curr">होम</span></a>
+          <a href="about.html" class="col s5 m5 l5 white-text" id="enC">About</a>
+          <a href="about.html" class="col s5 m5 l5 white-text hide" id="hiC">बारे में</a>
+          <!-- <a href="javascript:dm()" class="tooltipped col s1 m1 l1 white-text" data-position="top" data-delay="50"
+            data-tooltip="Dark Mode"><i class="fa-solid fa-sun"></i></a> -->
+          <a href="javascript:lng()" class="tooltipped col s1 m1 l1 white-text" data-position="top" data-delay="50"
+            data-tooltip="Change Language"><i class="fa-solid fa-language"></i></a>
         </div>
       </div>
       <div class="oui-interaction center-align">
@@ -117,21 +122,28 @@
             <i class="fas fa-virus"></i> कोविड 19 भारत</blockquote>
           <span id="en1">Source: ICMR/ MyGov</span>
           <span id="hi1" class="hide">स्रोत: आईसीएमआर/ मायजीओवी</span>
-          <div class="row"><br>
-            <div class="col s12 m6 l4">
+          <div class="row hide-on-med-and-down"><br>
+            <div class="col l4">
               <iframe class="airtable-embed"
                 src="https://airtable.com/embed/shrlEHiPI99T1t1qn?backgroundColor=blue&layout=card" frameborder="0"
                 onmousewheel="" width="100%" height="215" style="background: transparent;"></iframe>
             </div>
-            <div class="col s12 m6 l4">
+            <div class="col l4">
               <iframe class="airtable-embed"
                 src="https://airtable.com/embed/shregdS29k8xMxu3r?backgroundColor=blue&layout=card" frameborder="0"
                 onmousewheel="" width="100%" height="215" style="background: transparent;"></iframe>
             </div>
-            <div class="col s12 m6 l4">
+            <div class="col l4">
               <iframe class="airtable-embed"
                 src="https://airtable.com/embed/shr8Iv4bn1NeOxs0e?backgroundColor=blue&layout=card" frameborder="0"
                 onmousewheel="" width="100%" height="215" style="background: transparent;"></iframe>
+            </div>
+          </div>
+          <div class="row hide-on-large-only"><br>
+            <div class="col s12 m12">
+              <iframe class="airtable-embed"
+                src="https://airtable.com/embed/shriKH3dz5Gidqkj7?backgroundColor=blue&layout=card" frameborder="0"
+                onmousewheel="" width="100%" height="645" style="background: transparent;"></iframe>
             </div>
           </div>
           <div class="row">

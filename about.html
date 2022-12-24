@@ -49,6 +49,7 @@
   </style>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script type="text/javascript" src="materialize.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
     $(document).ready(function () {
       $('.fixed-action-btn').openFAB();
@@ -69,8 +70,8 @@
   <main class="containr">
     <div id="main">
       <div class="oui-viewing center-align black white-text">
-        <h4>COVID 19 DASHBOARDS</h4>
-        <h5 class="grey-text text-darken-1">Version 2022.2.8</h5>
+        <p class="text-4xl">COVID 19 DASHBOARDS</p>
+        <p class="text-3xl grey-text text-darken-1">Version 2022.2.8</p>
       </div><br>
       <div class="row">
         <div class="center" style="font-size: large;">
@@ -81,10 +82,10 @@
       <div class="oui-interaction center-align">
         <!-- Interaction area -->
         <div class="oui-bubble black white-text">
-          <h5>Website Developed by</h5>
-          <img src="images/GK Logo New 2020 blackbg.png" class="responsive-img" alt="GK" width="20%" height="20%"
-            id="image">
-          <h5>Gaurav Khatri</h5>
+          <p class="text-3xl">Website Developed by</p>
+          <img src="images/GK Logo New 2020 blackbg.png" class="row col offset-l4 offset-s4 offset-m4 responsive-img"
+            alt="GK" width="20%" height="20%" id="image">
+          <p class="text-3xl">Gaurav Khatri</p>
           <div class="row">
             <div class="col s1 m1"></div>
             <div class="col s4 m4 oui-button grey darken-3 waves-effect" onclick="location.href='#new'">
@@ -96,7 +97,6 @@
             </div>
             <div class="col s1 m1"></div>
           </div><br><br><br><br><br>
-          <hr style="border: dashed 0.5px black;">
           <table class="bordered">
             <thead>
               <tr id="new">
@@ -192,8 +192,8 @@
               </tr>
             </tbody>
           </table>
-          <h4 id="term" class="center">Feedback OR any suggestions to this website</h4>
-          <h6 class="center"><span class="red-text">Kindly fill the * required fields</span></h6>
+          <p id="term" class="center text-4xl">Feedback OR any suggestions to this website</p>
+          <p class="center text-xl"><span class="red-text">Kindly fill the * required fields</span></p>
           <div class="row">
             <form method="POST" autocomplete="off" name="google-sheet">
               <div class="form">
